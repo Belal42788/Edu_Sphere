@@ -1,0 +1,25 @@
+.Instructor_parent{
+  justify-content: space-between !important;
+}
+.Instructor_parent_inner{
+    position: relative !important;
+    font-weight: 700 !important;
+
+}
+.Instructor_details{
+    background-color: #fff !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, 50%) !important;
+    padding: 20px 20px !important;
+}
+.Instructor_details a:hover{
+    color: blue !important;
+    cursor:alias;
+}
+
+.container{
+    font-family: "Rubik", sans-serif !important;
+  
+}
