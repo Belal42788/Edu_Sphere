@@ -1,0 +1,176 @@
+.page-banner {
+    height: 550px;
+    background-color: #e7f8ee;
+    display: flex;
+    align-items: center;
+    padding-top: 189px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .page-banner {
+      height: 400px;
+      padding-top: 103px;
+    }
+  }
+  .page-banner .shape-1 {
+    position: absolute;
+    top: 32%;
+    left: 100px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner .shape-1 {
+      width: 60px;
+      left: 30px;
+    }
+  }
+  .page-banner .shape-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+    .page-banner .shape-2 {
+      width: 220px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner .shape-2 {
+      width: 180px;
+    }
+  }
+  .page-banner .shape-3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .page-banner .shape-3 {
+      width: 305px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page-banner .shape-3 {
+      width: 225px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner .shape-3 {
+      width: 195px;
+    }
+  }
+  .page-banner .shape-author {
+    position: absolute;
+    top: 45%;
+    right: 9.5%;
+    border-radius: 50%;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .page-banner .shape-author {
+      width: 150px;
+      top: 63%;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page-banner .shape-author {
+      width: 150px;
+      top: 52%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner .shape-author {
+      width: 100px;
+      top: auto;
+      bottom: 11%;
+      right: 11%;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .page-banner .shape-author {
+      bottom: 6%;
+      width: 80px;
+    }
+  }
+  
+  .page-banner-content {
+    max-width: 570px;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .page-banner-content {
+      max-width: 500px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .page-banner-content {
+      max-width: 360px;
+    }
+  }
+  .page-banner-content .breadcrumb {
+    margin-bottom: 0;
+  }
+  .page-banner-content .breadcrumb li {
+    font-size: 17px;
+    font-weight: 500;
+    color: #212832;
+    position: relative;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner-content .breadcrumb li {
+      font-size: 15px;
+    }
+  }
+  .page-banner-content .breadcrumb li + li::before {
+    content: "//";
+    font-size: 17px;
+    font-weight: 500;
+    color: #212832;
+    margin: 0 8px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-banner-content .breadcrumb li + li::before {
+      font-size: 15px;
+    }
+  }
+  .page-banner-content .breadcrumb li.active {
+    color: #309255;
+  }
+  .page-banner-content .title {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.6;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .page-banner-content .title {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .page-banner-content .title {
+      font-size: 24px;
+    }
+  }
+  .page-banner-content .title span {
+    position: relative;
+    color: #309255;
+  }
+  .page-banner-content .title span::before {
+    position: absolute;
+    content: "";
+    background-image: url("../assets/images/shape/shape-4.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 13px;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .page-banner-content .title span::before {
+      display: none;
+    }
+  }
