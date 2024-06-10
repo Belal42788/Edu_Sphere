@@ -70,8 +70,9 @@ function Home() {
                                     <li>
                                         <a href="#">All Course</a>
                                         <ul className="sub-menu">
-                                            <li><a href="courses">Courses</a></li>
-                                            <li><a href="courses-details">Courses Details</a></li>
+                                            <li><a href="courses">All Courses</a></li>
+                                            <li><a href="MyCourses">My Courses</a></li>
+                                            <li><a href="Coursedetails">Courses Details</a></li>
                                         </ul>
                                     </li>
                                     <li>
