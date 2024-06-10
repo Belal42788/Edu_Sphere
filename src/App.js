@@ -10,17 +10,17 @@ import Courses from "./Components/pages/Courses";
 import Faq from "./Components/pages/faq";
 import Register from "./Components/pages/register";
 import Afterenroll from "./Components/pages/afterenroll";
-import Overview from "./Components/pages/overview";
 import Home from "./Components/pages/Home";
 import Createcourse from "./Components/pages/createcourse";
+import CoursesAdmin from "./Components/pages/CoursesAdmin";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
+        <Route path="/CoursesAdmin" element={<CoursesAdmin />} />
         <Route path="/createcourse" element={<Createcourse />} />
-        <Route path="/Overview" element={<Overview />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />

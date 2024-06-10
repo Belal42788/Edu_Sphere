@@ -83,8 +83,7 @@ function Home() {
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="404-error">404 Error</a></li>
                                             <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="courses-admin">Instructor Dashboard (Course List)</a></li>
-                                            <li><a href="overview">Instructor Dashboard (Performance)</a></li>
+                                            <li><a href="CoursesAdmin">Instructor Dashboard (Course List)</a></li>
                                             <li><a href="students">Students</a></li>
                                             <li><a href="reviews">Reviews</a></li>
                                             <li><a href="engagement">Course engagement</a></li>
@@ -145,8 +144,7 @@ function Home() {
                                 <li><a href="faq">FAQ</a></li>
                                 <li><a href="404-error">404 Error</a></li>
                                 <li><a href="after-enroll">After Enroll</a></li>
-                                <li><a href="courses-admin">Instructor Dashboard (Course List)</a></li>
-                                <li><a href="overview">Instructor Dashboard (Performance)</a></li>
+                                <li><a href="CoursesAdmin">Instructor Dashboard (Course List)</a></li>
                                 <li><a href="students">Students</a></li>
                                 <li><a href="reviews">Reviews</a></li>
                                 <li><a href="engagement">Course engagement</a></li>
@@ -1865,7 +1863,7 @@ function Home() {
                         </div>
                     </div>
                     <div class="courses-btn text-center">
-                        <a href="courses.html" class="btn btn-secondary btn-hover-primary">Other Course</a>
+                        <a href="courses" class="btn btn-secondary btn-hover-primary">Other Course</a>
                     </div>
                 </div>
             </div>
@@ -1884,7 +1882,7 @@ function Home() {
                             </div>
                             <div class="col-md-6">
                                 <div class="call-to-action-btn">
-                                    <a class="btn btn-primary btn-hover-dark" href="contact.html">Drop Information</a>
+                                    <a class="btn btn-primary btn-hover-dark" href="contact">Drop Information</a>
                                 </div>
                             </div>
                         </div>
