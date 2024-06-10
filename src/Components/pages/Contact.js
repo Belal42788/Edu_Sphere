@@ -44,7 +44,7 @@ function Contact() {
                     />
                     <div className="single-contact-info">
                       <div className="info-icon">
-                        <i class="flaticon-phone-call"></i>
+                        <i className="flaticon-phone-call"></i>
                       </div>
                       <div className="info-content">
                         <h6 className="title">Phone No.</h6>

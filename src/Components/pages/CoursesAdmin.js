@@ -58,54 +58,54 @@ function CoursesAdmin() {
         <>
             <div><AdminHeader /></div>
             {/* <!-- Courses Admin Start -->*/}
-            <div class="section overflow-hidden position-relative" id="wrapper">
+            <div className="section overflow-hidden position-relative" id="wrapper">
                 {/* <!-- Page Content Wrapper Start -->*/}
-                <div class="page-content-wrapper">
-                    <div class="container-fluid custom-container">
+                <div className="page-content-wrapper">
+                    <div className="container-fluid custom-container">
                         {/* <!-- Admin Courses Tab Start -->*/}
-                        <div class="admin-courses-tab">
-                            <h3 class="title">Courses</h3>
-                            <div class="courses-tab-wrapper">
-                                <div class="tab-btn">
-                                    <a href="#" class="btn btn-primary btn-hover-dark">New Course</a>
+                        <div className="admin-courses-tab">
+                            <h3 className="title">Courses</h3>
+                            <div className="courses-tab-wrapper">
+                                <div className="tab-btn">
+                                    <a href="#" className="btn btn-primary btn-hover-dark">New Course</a>
                                 </div>
                             </div>
                         </div>
                         {/* <!-- Admin Courses Tab End -->*/}
                         {/* <!-- Admin Courses Tab Content Start -->*/}
-                        <div class="admin-courses-tab-content">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab1">
+                        <div className="admin-courses-tab-content">
+                            <div className="tab-content">
+                                <div className="tab-pane fade show active" id="tab1">
                                     {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Public</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">Live</a>
+            <a href="#" className="action">Free</a>
+            <a href="#" className="action">Public</a>
         </div>
-        <h3 class="title"><a href="#">Build An eCommerce Site With WooCommerce and WooLentor.</a></h3>
+        <h3 className="title"><a href="#">Build An eCommerce Site With WooCommerce and WooLentor.</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$5,68.00</span>
+            <span className="count">$5,68.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">1,852</span>
+            <span className="count">1,852</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.5
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '80%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '80%'}}></span>
                 </span>
             </span>
         </div>
@@ -114,35 +114,35 @@ function CoursesAdmin() {
 {/* <!-- Courses Item End --> */}
 
 {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Private</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">Live</a>
+            <a href="#" className="action">Paid</a>
+            <a href="#" className="action">Private</a>
         </div>
-        <h3 class="title"><a href="#">Learn React for Beginners</a></h3>
+        <h3 className="title"><a href="#">Learn React for Beginners</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$3,200.00</span>
+            <span className="count">$3,200.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">2,135</span>
+            <span className="count">2,135</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.7
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '94%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '94%'}}></span>
                 </span>
             </span>
         </div>
@@ -151,35 +151,35 @@ function CoursesAdmin() {
 {/* <!-- Courses Item End --> */}
 
 {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">On-Demand</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Public</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">On-Demand</a>
+            <a href="#" className="action">Free</a>
+            <a href="#" className="action">Public</a>
         </div>
-        <h3 class="title"><a href="#">Mastering Python Programming</a></h3>
+        <h3 className="title"><a href="#">Mastering Python Programming</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$7,450.00</span>
+            <span className="count">$7,450.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">5,728</span>
+            <span className="count">5,728</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.9
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '98%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '98%'}}></span>
                 </span>
             </span>
         </div>
@@ -188,35 +188,35 @@ function CoursesAdmin() {
 {/* <!-- Courses Item End --> */}
 
 {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Public</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">Live</a>
+            <a href="#" className="action">Paid</a>
+            <a href="#" className="action">Public</a>
         </div>
-        <h3 class="title"><a href="#">Advanced JavaScript Techniques</a></h3>
+        <h3 className="title"><a href="#">Advanced JavaScript Techniques</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$2,870.00</span>
+            <span className="count">$2,870.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">1,420</span>
+            <span className="count">1,420</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.6
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '92%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '92%'}}></span>
                 </span>
             </span>
         </div>
@@ -225,35 +225,35 @@ function CoursesAdmin() {
 {/* <!-- Courses Item End --> */}
 
 {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Private</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">Live</a>
+            <a href="#" className="action">Free</a>
+            <a href="#" className="action">Private</a>
         </div>
-        <h3 class="title"><a href="#">Design Principles for Beginners</a></h3>
+        <h3 className="title"><a href="#">Design Principles for Beginners</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$4,500.00</span>
+            <span className="count">$4,500.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">3,980</span>
+            <span className="count">3,980</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.8
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '96%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '96%'}}></span>
                 </span>
             </span>
         </div>
@@ -262,35 +262,35 @@ function CoursesAdmin() {
 {/* <!-- Courses Item End --> */}
 
 {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
+<div className="courses-item">
+    <div className="item-thumb">
         <a href="#">
             <img src={course1} alt="Courses" />
         </a>
     </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">On-Demand</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Public</a>
+    <div className="content-title">
+        <div className="meta">
+            <a href="#" className="action">On-Demand</a>
+            <a href="#" className="action">Paid</a>
+            <a href="#" className="action">Public</a>
         </div>
-        <h3 class="title"><a href="#">Introduction to Machine Learning</a></h3>
+        <h3 className="title"><a href="#">Introduction to Machine Learning</a></h3>
     </div>
-    <div class="content-wrapper">
-        <div class="content-box">
+    <div className="content-wrapper">
+        <div className="content-box">
             <p>Earned</p>
-            <span class="count">$6,200.00</span>
+            <span className="count">$6,200.00</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Enrollment’s</p>
-            <span class="count">4,120</span>
+            <span className="count">4,120</span>
         </div>
-        <div class="content-box">
+        <div className="content-box">
             <p>Course Rating</p>
-            <span class="count">
+            <span className="count">
                 4.7
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '94%'}}></span>
+                <span className="rating-star">
+                    <span className="rating-bar" style={{width: '94%'}}></span>
                 </span>
             </span>
         </div>
