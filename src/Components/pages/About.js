@@ -39,17 +39,17 @@ function About() {
   return (
     <>
       <Navbar name='About' name2='US' name3='About' />
-      <div className="section">
-        <div className="section-padding-02 mt-n10">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="about-images">
-                  <div className="images">
+      <div class="section">
+        <div class="section-padding-02 mt-n10">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="about-images">
+                  <div class="images">
                     <img src={about1} alt="About" />
                   </div>
-                  <div className="about-years">
-                    <div className="years-icon">
+                  <div class="about-years">
+                    <div class="years-icon">
                       <img src={about2} alt="About" />
                     </div>
                     <p>
@@ -58,10 +58,10 @@ function About() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="about-content">
-                  <h5 className="sub-title">Welcome to EduSp.</h5>
-                  <h2 className="main-title">
+              <div class="col-lg-6">
+                <div class="about-content">
+                  <h5 class="sub-title">Welcome to EduSp.</h5>
+                  <h2 class="main-title">
                     You can join with Edusphere and upgrade your skill for your{" "}
                     <span>bright future.</span>
                   </h2>
@@ -70,7 +70,7 @@ function About() {
                     since unknown printer took galley type and scmbled make type
                     specimen book. It has survived not only five centuries.
                   </p>
-                  <a href="#" className="btn btn-primary btn-hover-dark">
+                  <a href="#" class="btn btn-primary btn-hover-dark">
                     Start A Course
                   </a>
                 </div>
@@ -78,39 +78,18 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="section-padding-02 mt-n6">
-          <div className="container">
-            <div className="about-items-wrapper">
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="about-item">
-                    <div className="item-icon-title">
-                      <div className="item-icon">
-                        <i className="flaticon-tutor"></i>
+        <div class="section-padding-02 mt-n6">
+          <div class="container">
+            <div class="about-items-wrapper">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="about-item">
+                    <div class="item-icon-title">
+                      <div class="item-icon">
+                        <i class="flaticon-tutor"></i>
                       </div>
-                      <div className="item-title">
-                        <h3 className="title">Top Instructors</h3>
-                      </div>
-                    </div>
-                    <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled to make type specimen
-                      book has survived.
-                    </p>
-                    <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled make.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="about-item">
-                    <div className="item-icon-title">
-                      <div className="item-icon">
-                        <i className="flaticon-coding"></i>
-                      </div>
-                      <div className="item-title">
-                        <h3 className="title">Portable Program</h3>
+                      <div class="item-title">
+                        <h3 class="title">Top Instructors</h3>
                       </div>
                     </div>
                     <p>
@@ -124,14 +103,35 @@ function About() {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-4">
-                  <div className="about-item">
-                    <div className="item-icon-title">
-                      <div className="item-icon">
-                        <i className="flaticon-increase"></i>
+                <div class="col-lg-4">
+                  <div class="about-item">
+                    <div class="item-icon-title">
+                      <div class="item-icon">
+                        <i class="flaticon-coding"></i>
                       </div>
-                      <div className="item-title">
-                        <h3 className="title">Improve Quickly</h3>
+                      <div class="item-title">
+                        <h3 class="title">Portable Program</h3>
+                      </div>
+                    </div>
+                    <p>
+                      Lorem Ipsum has been the industry's standard dumy text
+                      since the when took and scrambled to make type specimen
+                      book has survived.
+                    </p>
+                    <p>
+                      Lorem Ipsum has been the industry's standard dumy text
+                      since the when took and scrambled make.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="about-item">
+                    <div class="item-icon-title">
+                      <div class="item-icon">
+                        <i class="flaticon-increase"></i>
+                      </div>
+                      <div class="item-title">
+                        <h3 class="title">Improve Quickly</h3>
                       </div>
                     </div>
                     <p>
@@ -150,32 +150,32 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="section section-padding-02">
-        <div className="container">
-          <div className="call-to-action-wrapper">
+      <div class="section section-padding-02">
+        <div class="container">
+          <div class="call-to-action-wrapper">
             <img
-              className="cat-shape-01 animation-round"
+              class="cat-shape-01 animation-round"
               src={shape12}
               alt="Shape"
             />
-            <img className="cat-shape-02" src={shape13} alt="Shape" />
+            <img class="cat-shape-02" src={shape13} alt="Shape" />
             <img
-              className="cat-shape-03 animation-round"
+              class="cat-shape-03 animation-round"
               src={shape12}
               alt="Shape"
             />
-            <div className="row align-items-center">
-              <div className="col-md-6">
-                <div className="section-title shape-02">
-                  <h5 className="sub-title">Become A Instructor</h5>
-                  <h2 className="main-title">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="section-title shape-02">
+                  <h5 class="sub-title">Become A Instructor</h5>
+                  <h2 class="main-title">
                     You can join with Edusphere as <span>a instructor?</span>
                   </h2>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="call-to-action-btn">
-                  <a className="btn btn-primary btn-hover-dark" href="#">
+              <div class="col-md-6">
+                <div class="call-to-action-btn">
+                  <a class="btn btn-primary btn-hover-dark" href="#">
                     Drop Information
                   </a>
                 </div>
@@ -184,173 +184,173 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="section section-padding mt-n1">
-        <div className="container">
-          <div className="section-title shape-03 text-center">
-            <h5 className="sub-title">Team Member’s</h5>
-            <h2 className="main-title">
+      <div class="section section-padding mt-n1">
+        <div class="container">
+          <div class="section-title shape-03 text-center">
+            <h5 class="sub-title">Team Member’s</h5>
+            <h2 class="main-title">
               Edusphere Skilled <span> Instructor</span>
             </h2>
           </div>
-          <div className="team-wrapper">
-            <div className="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+          <div class="team-wrapper">
+            <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author1} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Margarita James</h4>
-                    <span className="designation">MSC, Instructor</span>
+                    <h4 class="name">Margarita James</h4>
+                    <span class="designation">MSC, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author2} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Mitchell Colon</h4>
-                    <span className="designation">BBA, Instructor</span>
+                    <h4 class="name">Mitchell Colon</h4>
+                    <span class="designation">BBA, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author3} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Sonya Gordon</h4>
-                    <span className="designation">MBA, Instructor</span>
+                    <h4 class="name">Sonya Gordon</h4>
+                    <span class="designation">MBA, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author4} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Archie Neal</h4>
-                    <span className="designation">BBS, Instructor</span>
+                    <h4 class="name">Archie Neal</h4>
+                    <span class="designation">BBS, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author5} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Randal Ramsey</h4>
-                    <span className="designation">MBBS, Instructor</span>
+                    <h4 class="name">Randal Ramsey</h4>
+                    <span class="designation">MBBS, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author6} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Rochelle Thomas</h4>
-                    <span className="designation">MSC, Instructor</span>
+                    <h4 class="name">Rochelle Thomas</h4>
+                    <span class="designation">MSC, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author7} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Della Salazar</h4>
-                    <span className="designation">BBA, Instructor</span>
+                    <h4 class="name">Della Salazar</h4>
+                    <span class="designation">BBA, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author8} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Ricardo Patrick</h4>
-                    <span className="designation">MBA, Instructor</span>
+                    <h4 class="name">Ricardo Patrick</h4>
+                    <span class="designation">MBA, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author9} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Kurt Stewart</h4>
-                    <span className="designation">BBS, Instructor</span>
+                    <h4 class="name">Kurt Stewart</h4>
+                    <span class="designation">BBS, Instructor</span>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="single-team">
-                  <div className="team-thumb">
+              <div class="col">
+                <div class="single-team">
+                  <div class="team-thumb">
                     <img src={author10} alt="Author" />
                   </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">4.9</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+                  <div class="team-content">
+                    <div class="rating">
+                      <span class="count">4.9</span>
+                      <i class="icofont-star"></i>
+                      <span class="text">(rating)</span>
                     </div>
-                    <h4 className="name">Rodney Terry</h4>
-                    <span className="designation">MBBS, Instructor</span>
+                    <h4 class="name">Rodney Terry</h4>
+                    <span class="designation">MBBS, Instructor</span>
                   </div>
                 </div>
               </div>
@@ -358,28 +358,28 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="section section-padding-02 mt-n1">
-        <div className="container">
-          <div className="section-title shape-03 text-center">
-            <h5 className="sub-title">Student Testimonial</h5>
-            <h2 className="main-title">
+      <div class="section section-padding-02 mt-n1">
+        <div class="container">
+          <div class="section-title shape-03 text-center">
+            <h5 class="sub-title">Student Testimonial</h5>
+            <h2 class="main-title">
               Feedback From <span> Student</span>
             </h2>
           </div>
-          <div className="testimonial-wrapper testimonial-active">
-            <div className="swiper-container">
-              <div className="swiper-wrapper">
-                <div className="single-testimonial col-md-4 col-lg-6">
-                  <div className="testimonial-author">
-                    <div className="author-thumb">
+          <div class="testimonial-wrapper testimonial-active">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="single-testimonial col-md-4 col-lg-6">
+                  <div class="testimonial-author">
+                    <div class="author-thumb">
                       <img src={author6} alt="Author" />
-                      <i className="icofont-quote-left"></i>
+                      <i class="icofont-quote-left"></i>
                     </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
+                    <span class="rating-star">
+                      <span class="rating-bar"></span>
                     </span>
                   </div>
-                  <div className="testimonial-content">
+                  <div class="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
@@ -387,21 +387,21 @@ function About() {
                       survived not five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 className="name">Sara Alexander</h4>
-                    <span className="designation">Product Designer, USA</span>
+                    <h4 class="name">Sara Alexander</h4>
+                    <span class="designation">Product Designer, USA</span>
                   </div>
                 </div>
-                <div className="single-testimonial col-md-4 col-lg-6">
-                  <div className="testimonial-author">
-                    <div className="author-thumb">
+                <div class="single-testimonial col-md-4 col-lg-6">
+                  <div class="testimonial-author">
+                    <div class="author-thumb">
                       <img src={author7} alt="Author" />
-                      <i className="icofont-quote-left"></i>
+                      <i class="icofont-quote-left"></i>
                     </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
+                    <span class="rating-star">
+                      <span class="rating-bar"></span>
                     </span>
                   </div>
-                  <div className="testimonial-content">
+                  <div class="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
@@ -409,21 +409,21 @@ function About() {
                       survived not five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 className="name">Melissa Roberts</h4>
-                    <span className="designation">Product Designer, USA</span>
+                    <h4 class="name">Melissa Roberts</h4>
+                    <span class="designation">Product Designer, USA</span>
                   </div>
                 </div>
-                <div className="single-testimonial col-md-4 col-xl-6">
-                  <div className="testimonial-author">
-                    <div className="author-thumb">
+                <div class="single-testimonial col-md-4 col-xl-6">
+                  <div class="testimonial-author">
+                    <div class="author-thumb">
                       <img src={author3} alt="Author" />
-                      <i className="icofont-quote-left"></i>
+                      <i class="icofont-quote-left"></i>
                     </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
+                    <span class="rating-star">
+                      <span class="rating-bar"></span>
                     </span>
                   </div>
-                  <div className="testimonial-content">
+                  <div class="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
@@ -431,12 +431,12 @@ function About() {
                       survived not five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 className="name">Sara Alexander</h4>
-                    <span className="designation">Product Designer, USA</span>
+                    <h4 class="name">Sara Alexander</h4>
+                    <span class="designation">Product Designer, USA</span>
                   </div>
                 </div>
               </div>
-              {/* <div className="swiper-pagination"></div> */}
+              {/* <div class="swiper-pagination"></div> */}
             </div>
           </div>
         </div>

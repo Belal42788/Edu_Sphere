@@ -30,54 +30,54 @@ function FreeCourse() {
   return (
     <>
       <Navbar name='Courses' name2='Details' name3='Courses' />
-      <div className="section section-padding mt-n10">
-        <div className="container">
-          <div className="row gx-10">
-            <div className="col-lg-8">
-              <div className="courses-details">
-                <div className="courses-details-images">
+      <div class="section section-padding mt-n10">
+        <div class="container">
+          <div class="row gx-10">
+            <div class="col-lg-8">
+              <div class="courses-details">
+                <div class="courses-details-images">
                   <img src={detail1} alt="Courses Details" />
-                  <span className="tags">Finance</span>
-                  <div className="courses-play">
+                  <span class="tags">Finance</span>
+                  <div class="courses-play">
                     <img src={detail2} alt="Play" />
                     <a
-                      className="play video-popup"
+                      class="play video-popup"
                       href="https://www.youtube.com/watch?v=Wif4ZkwC0AM"
                     >
-                      <i className="flaticon-play"></i>
+                      <i class="flaticon-play"></i>
                     </a>
                   </div>
                 </div>
-                <h2 className="title">
+                <h2 class="title">
                   Finance & Investment Series: Learn to Budget and Calculate
                   Your Net Worth.
                 </h2>
-                <div className="courses-details-admin">
-                  <div className="admin-author">
-                    <div className="author-thumb">
+                <div class="courses-details-admin">
+                  <div class="admin-author">
+                    <div class="author-thumb">
                       <img src={author1} alt="Author" />
                     </div>
-                    <div className="author-content">
-                      <a className="name" href="#">
+                    <div class="author-content">
+                      <a class="name" href="#">
                         Pamela Foster
                       </a>
-                      <span className="Enroll">286 Enrolled Students</span>
+                      <span class="Enroll">286 Enrolled Students</span>
                     </div>
                   </div>
-                  <div className="admin-rating">
-                    <span className="rating-count">4.9</span>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
+                  <div class="admin-rating">
+                    <span class="rating-count">4.9</span>
+                    <span class="rating-star">
+                      <span class="rating-bar"></span>
                     </span>
-                    <span className="rating-text">(5,764 Rating)</span>
+                    <span class="rating-text">(5,764 Rating)</span>
                   </div>
                 </div>
-                <div className="courses-details-tab">
-                  <div className="details-tab-menu">
-                    <ul className="nav justify-content-center">
+                <div class="courses-details-tab">
+                  <div class="details-tab-menu">
+                    <ul class="nav justify-content-center">
                       <li>
                         <button
-                          className="active"
+                          class="active"
                           data-bs-toggle="tab"
                           data-bs-target="#description"
                         >
@@ -99,12 +99,12 @@ function FreeCourse() {
                       </li>
                     </ul>
                   </div>
-                  <div className="details-tab-content">
-                    <div className="tab-content">
-                      <div className="tab-pane fade show active" id="description">
-                        <div className="tab-description">
-                          <div className="description-wrapper">
-                            <h3 className="tab-title">Description:</h3>
+                  <div class="details-tab-content">
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="description">
+                        <div class="tab-description">
+                          <div class="description-wrapper">
+                            <h3 class="tab-title">Description:</h3>
                             <p>
                               Lorem Ipsum is simply dummy text of the printing
                               and typesetting industry. Lorem Ipsum has been the
@@ -126,8 +126,8 @@ function FreeCourse() {
                               passages desktop publishing software.
                             </p>
                           </div>
-                          {/* <div className="description-wrapper">
-                            <h3 className="tab-title">Curriculum:</h3>
+                          {/* <div class="description-wrapper">
+                            <h3 class="tab-title">Curriculum:</h3>
                             <p>
                               Lorem Ipsum is simply dummy text of the printing
                               and typesetting industry. Lorem Ipsum has been the
@@ -141,8 +141,8 @@ function FreeCourse() {
                               passages desktop publishing software.
                             </p>
                           </div>
-                          <div className="description-wrapper">
-                            <h3 className="tab-title">Certification:</h3>
+                          <div class="description-wrapper">
+                            <h3 class="tab-title">Certification:</h3>
                             <p>
                               Lorem Ipsum is simply dummy text of the printing
                               and typesetting industry. Lorem Ipsum has been the
@@ -158,87 +158,87 @@ function FreeCourse() {
                           </div> */}
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="instructors">
-                        <div className="tab-instructors">
-                          <h3 className="tab-title">Course Instructor:</h3>
-                          <div className="row">
-                            <div className="col-md-3 col-6">
-                              <div className="single-team">
-                                <div className="team-thumb">
+                      <div class="tab-pane fade" id="instructors">
+                        <div class="tab-instructors">
+                          <h3 class="tab-title">Course Instructor:</h3>
+                          <div class="row">
+                            <div class="col-md-3 col-6">
+                              <div class="single-team">
+                                <div class="team-thumb">
                                   <img src={author1} alt="Author" />
                                 </div>
-                                <div className="team-content">
-                                  <div className="rating">
-                                    <span className="count">4.9</span>
-                                    <i className="icofont-star"></i>
-                                    <span className="text">(rating)</span>
+                                <div class="team-content">
+                                  <div class="rating">
+                                    <span class="count">4.9</span>
+                                    <i class="icofont-star"></i>
+                                    <span class="text">(rating)</span>
                                   </div>
-                                  <h4 className="name">Margarita James</h4>
-                                  <span className="designation">
+                                  <h4 class="name">Margarita James</h4>
+                                  <span class="designation">
                                     MSC, Instructor
                                   </span>
                                 </div>
                               </div>
                             </div>
-                            <div className="col-md-3 col-6">
-                              <div className="single-team">
-                                <div className="team-thumb">
+                            <div class="col-md-3 col-6">
+                              <div class="single-team">
+                                <div class="team-thumb">
                                   <img src={author2} alt="Author" />
                                 </div>
-                                <div className="team-content">
-                                  <div className="rating">
-                                    <span className="count">4.9</span>
-                                    <i className="icofont-star"></i>
-                                    <span className="text">(rating)</span>
+                                <div class="team-content">
+                                  <div class="rating">
+                                    <span class="count">4.9</span>
+                                    <i class="icofont-star"></i>
+                                    <span class="text">(rating)</span>
                                   </div>
-                                  <h4 className="name">Mitchell Colon</h4>
-                                  <span className="designation">
+                                  <h4 class="name">Mitchell Colon</h4>
+                                  <span class="designation">
                                     BBA, Instructor
                                   </span>
                                 </div>
                               </div>
                             </div>
-                            <div className="col-md-3 col-6">
-                              <div className="single-team">
-                                <div className="team-thumb">
+                            <div class="col-md-3 col-6">
+                              <div class="single-team">
+                                <div class="team-thumb">
                                   <img src={author3} alt="Author" />
                                 </div>
-                                <div className="team-content">
-                                  <div className="rating">
-                                    <span className="count">4.9</span>
-                                    <i className="icofont-star"></i>
-                                    <span className="text">(rating)</span>
+                                <div class="team-content">
+                                  <div class="rating">
+                                    <span class="count">4.9</span>
+                                    <i class="icofont-star"></i>
+                                    <span class="text">(rating)</span>
                                   </div>
-                                  <h4 className="name">Sonya Gordon</h4>
-                                  <span className="designation">
+                                  <h4 class="name">Sonya Gordon</h4>
+                                  <span class="designation">
                                     MBA, Instructor
                                   </span>
                                 </div>
                               </div>
                             </div>
-                            <div className="col-md-3 col-6">
-                              <div className="single-team">
-                                <div className="team-thumb">
+                            <div class="col-md-3 col-6">
+                              <div class="single-team">
+                                <div class="team-thumb">
                                   <img src={author4} alt="Author" />
                                 </div>
-                                <div className="team-content">
-                                  <div className="rating">
-                                    <span className="count">4.9</span>
-                                    <i className="icofont-star"></i>
-                                    <span className="text">(rating)</span>
+                                <div class="team-content">
+                                  <div class="rating">
+                                    <span class="count">4.9</span>
+                                    <i class="icofont-star"></i>
+                                    <span class="text">(rating)</span>
                                   </div>
-                                  <h4 className="name">Archie Neal</h4>
-                                  <span className="designation">
+                                  <h4 class="name">Archie Neal</h4>
+                                  <span class="designation">
                                     BBS, Instructor
                                   </span>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div className="row gx-10">
-                            <div className="col-lg-6">
-                              <div className="tab-rating-content">
-                                <h3 className="tab-title">Rating:</h3>
+                          <div class="row gx-10">
+                            <div class="col-lg-6">
+                              <div class="tab-rating-content">
+                                <h3 class="tab-title">Rating:</h3>
                                 <p>
                                   Lorem Ipsum is simply dummy text of printing
                                   and typesetting industry. Lorem Ipsum has been
@@ -258,51 +258,51 @@ function FreeCourse() {
                                 </p>
                               </div>
                             </div>
-                            <div className="col-lg-6">
-                              <div className="tab-rating-box">
-                                <span className="count">
-                                  4.8 <i className="icofont-star"></i>
+                            <div class="col-lg-6">
+                              <div class="tab-rating-box">
+                                <span class="count">
+                                  4.8 <i class="icofont-star"></i>
                                 </span>
                                 <p>Rating (86K+)</p>
-                                <div className="rating-box-wrapper">
-                                  <div className="single-rating">
-                                    <span className="rating-star">
-                                      <span className="rating-bar"></span>
+                                <div class="rating-box-wrapper">
+                                  <div class="single-rating">
+                                    <span class="rating-star">
+                                      <span class="rating-bar"></span>
                                     </span>
-                                    <div className="rating-progress-bar">
-                                      <div className="rating-line"></div>
+                                    <div class="rating-progress-bar">
+                                      <div class="rating-line"></div>
                                     </div>
                                   </div>
-                                  <div className="single-rating">
-                                    <span className="rating-star">
-                                      <span className="rating-bar"></span>
+                                  <div class="single-rating">
+                                    <span class="rating-star">
+                                      <span class="rating-bar"></span>
                                     </span>
-                                    <div className="rating-progress-bar">
-                                      <div className="rating-line"></div>
+                                    <div class="rating-progress-bar">
+                                      <div class="rating-line"></div>
                                     </div>
                                   </div>
-                                  <div className="single-rating">
-                                    <span className="rating-star">
-                                      <span className="rating-bar"></span>
+                                  <div class="single-rating">
+                                    <span class="rating-star">
+                                      <span class="rating-bar"></span>
                                     </span>
-                                    <div className="rating-progress-bar">
-                                      <div className="rating-line"></div>
+                                    <div class="rating-progress-bar">
+                                      <div class="rating-line"></div>
                                     </div>
                                   </div>
-                                  <div className="single-rating">
-                                    <span className="rating-star">
-                                      <span className="rating-bar"></span>
+                                  <div class="single-rating">
+                                    <span class="rating-star">
+                                      <span class="rating-bar"></span>
                                     </span>
-                                    <div className="rating-progress-bar">
-                                      <div className="rating-line"></div>
+                                    <div class="rating-progress-bar">
+                                      <div class="rating-line"></div>
                                     </div>
                                   </div>
-                                  <div className="single-rating">
-                                    <span className="rating-star">
-                                      <span className="rating-bar"></span>
+                                  <div class="single-rating">
+                                    <span class="rating-star">
+                                      <span class="rating-bar"></span>
                                     </span>
-                                    <div className="rating-progress-bar">
-                                      <div className="rating-line"></div>
+                                    <div class="rating-progress-bar">
+                                      <div class="rating-line"></div>
                                     </div>
                                   </div>
                                 </div>
@@ -311,25 +311,25 @@ function FreeCourse() {
                           </div>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="reviews">
-                        <div className="tab-reviews">
-                          <h3 className="tab-title">Student Reviews:</h3>
-                          <div className="reviews-wrapper reviews-active">
-                            <div className="swiper-container">
-                              <div className="swiper-wrapper">
-                                <div className="single-review swiper-slide">
-                                  <div className="review-author">
-                                    <div className="author-thumb">
+                      <div class="tab-pane fade" id="reviews">
+                        <div class="tab-reviews">
+                          <h3 class="tab-title">Student Reviews:</h3>
+                          <div class="reviews-wrapper reviews-active">
+                            <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                <div class="single-review swiper-slide">
+                                  <div class="review-author">
+                                    <div class="author-thumb">
                                       <img src={author6} alt="Author" />
-                                      <i className="icofont-quote-left"></i>
+                                      <i class="icofont-quote-left"></i>
                                     </div>
-                                    <div className="author-content">
-                                      <h4 className="name">Sara Alexander</h4>
-                                      <span className="designation">
+                                    <div class="author-content">
+                                      <h4 class="name">Sara Alexander</h4>
+                                      <span class="designation">
                                         Product Designer, USA
                                       </span>
-                                      <span className="rating-star">
-                                        <span className="rating-bar"></span>
+                                      <span class="rating-star">
+                                        <span class="rating-bar"></span>
                                       </span>
                                     </div>
                                   </div>
@@ -342,19 +342,19 @@ function FreeCourse() {
                                     electronic type and book.
                                   </p>
                                 </div>
-                                <div className="single-review swiper-slide">
-                                  <div className="review-author">
-                                    <div className="author-thumb">
+                                <div class="single-review swiper-slide">
+                                  <div class="review-author">
+                                    <div class="author-thumb">
                                       <img src={author7} alt="Author" />
-                                      <i className="icofont-quote-left"></i>
+                                      <i class="icofont-quote-left"></i>
                                     </div>
-                                    <div className="author-content">
-                                      <h4 className="name">Karol Bachman</h4>
-                                      <span className="designation">
+                                    <div class="author-content">
+                                      <h4 class="name">Karol Bachman</h4>
+                                      <span class="designation">
                                         Product Designer, USA
                                       </span>
-                                      <span className="rating-star">
-                                        <span className="rating-bar"></span>
+                                      <span class="rating-star">
+                                        <span class="rating-bar"></span>
                                       </span>
                                     </div>
                                   </div>
@@ -367,19 +367,19 @@ function FreeCourse() {
                                     electronic type and book.
                                   </p>
                                 </div>
-                                <div className="single-review swiper-slide">
-                                  <div className="review-author">
-                                    <div className="author-thumb">
+                                <div class="single-review swiper-slide">
+                                  <div class="review-author">
+                                    <div class="author-thumb">
                                       <img src={author3} alt="Author" />
-                                      <i className="icofont-quote-left"></i>
+                                      <i class="icofont-quote-left"></i>
                                     </div>
-                                    <div className="author-content">
-                                      <h4 className="name">Gertude Culbertson</h4>
-                                      <span className="designation">
+                                    <div class="author-content">
+                                      <h4 class="name">Gertude Culbertson</h4>
+                                      <span class="designation">
                                         Product Designer, USA
                                       </span>
-                                      <span className="rating-star">
-                                        <span className="rating-bar"></span>
+                                      <span class="rating-star">
+                                        <span class="rating-bar"></span>
                                       </span>
                                     </div>
                                   </div>
@@ -393,100 +393,100 @@ function FreeCourse() {
                                   </p>
                                 </div>
                               </div>
-                              =<div className="swiper-pagination"></div>
+                              =<div class="swiper-pagination"></div>
                             </div>
                           </div>
-                          <div className="reviews-btn">
+                          <div class="reviews-btn">
                             <button
                               type="button"
-                              className="btn btn-primary btn-hover-dark"
+                              class="btn btn-primary btn-hover-dark"
                               data-bs-toggle="modal"
                               data-bs-target="#reviewsModal"
                             >
                               Write A Review
                             </button>
                           </div>
-                          <div className="modal fade" id="reviewsModal">
-                            <div className="modal-dialog modal-dialog-centered">
-                              <div className="modal-content">
-                                <div className="modal-header">
-                                  <h5 className="modal-title">Add a Review</h5>
+                          <div class="modal fade" id="reviewsModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Add a Review</h5>
                                   <button
                                     type="button"
-                                    className="btn-close"
+                                    class="btn-close"
                                     data-bs-dismiss="modal"
                                     aria-label="Close"
                                   ></button>
                                 </div>
-                                <div className="modal-body reviews-form">
+                                <div class="modal-body reviews-form">
                                   <form action="#">
-                                    <div className="row">
-                                      <div className="col-md-6">
-                                        <div className="single-form">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="single-form">
                                           <input
                                             type="text"
                                             placeholder="Enter your name"
                                           />
                                         </div>
                                       </div>
-                                      <div className="col-md-6">
-                                        <div className="single-form">
+                                      <div class="col-md-6">
+                                        <div class="single-form">
                                           <input
                                             type="text"
                                             placeholder="Enter your Email"
                                           />
                                         </div>
                                       </div>
-                                      <div className="col-md-12">
-                                        <div className="reviews-rating">
+                                      <div class="col-md-12">
+                                        <div class="reviews-rating">
                                           <label>Rating</label>
-                                          <ul id="rating" className="rating">
+                                          <ul id="rating" class="rating">
                                             <li
-                                              className="star"
+                                              class="star"
                                               title="Poor"
                                               data-value="1"
                                             >
-                                              <i className="icofont-star"></i>
+                                              <i class="icofont-star"></i>
                                             </li>
                                             <li
-                                              className="star"
+                                              class="star"
                                               title="Poor"
                                               data-value="2"
                                             >
-                                              <i className="icofont-star"></i>
+                                              <i class="icofont-star"></i>
                                             </li>
                                             <li
-                                              className="star"
+                                              class="star"
                                               title="Poor"
                                               data-value="3"
                                             >
-                                              <i className="icofont-star"></i>
+                                              <i class="icofont-star"></i>
                                             </li>
                                             <li
-                                              className="star"
+                                              class="star"
                                               title="Poor"
                                               data-value="4"
                                             >
-                                              <i className="icofont-star"></i>
+                                              <i class="icofont-star"></i>
                                             </li>
                                             <li
-                                              className="star"
+                                              class="star"
                                               title="Poor"
                                               data-value="5"
                                             >
-                                              <i className="icofont-star"></i>
+                                              <i class="icofont-star"></i>
                                             </li>
                                           </ul>
                                         </div>
                                       </div>
-                                      <div className="col-md-12">
-                                        <div className="single-form">
+                                      <div class="col-md-12">
+                                        <div class="single-form">
                                           <textarea placeholder="Write your comments here"></textarea>
                                         </div>
                                       </div>
-                                      <div className="col-md-12">
-                                        <div className="single-form">
-                                          <button className="btn btn-primary btn-hover-dark">
+                                      <div class="col-md-12">
+                                        <div class="single-form">
+                                          <button class="btn btn-primary btn-hover-dark">
                                             Submit Review
                                           </button>
                                         </div>
@@ -504,72 +504,72 @@ function FreeCourse() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="sidebar">
-                <div className="sidebar-widget widget-information">
-                  <div className="info-price">
-                    <span className="price">$420.38</span>
+            <div class="col-lg-4">
+              <div class="sidebar">
+                <div class="sidebar-widget widget-information">
+                  <div class="info-price">
+                    <span class="price">$420.38</span>
                   </div>
-                  <div className="info-list">
+                  <div class="info-list">
                     <ul>
                       <li>
-                        <i className="icofont-man-in-glasses"></i>{" "}
+                        <i class="icofont-man-in-glasses"></i>{" "}
                         <strong>Instructor</strong> <span>Pamela Foster</span>
                       </li>
                       <li>
-                        <i className="icofont-clock-time"></i>{" "}
+                        <i class="icofont-clock-time"></i>{" "}
                         <strong>Duration</strong> <span>08 hr 15 mins</span>
                       </li>
                       <li>
-                        <i className="icofont-ui-video-play"></i>{" "}
+                        <i class="icofont-ui-video-play"></i>{" "}
                         <strong>Lectures</strong> <span>29</span>
                       </li>
                       <li>
-                        <i className="icofont-bars"></i> <strong>Level</strong>{" "}
+                        <i class="icofont-bars"></i> <strong>Level</strong>{" "}
                         <span>Secondary</span>
                       </li>
                       <li>
-                        <i className="icofont-book-alt"></i>{" "}
+                        <i class="icofont-book-alt"></i>{" "}
                         <strong>Language</strong> <span>English</span>
                       </li>
                       <li>
-                        <i className="icofont-certificate-alt-1"></i>{" "}
+                        <i class="icofont-certificate-alt-1"></i>{" "}
                         <strong>Certificate</strong> <span>Yes</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="info-btn">
-                    <a href="#" className="btn btn-primary btn-hover-dark">
+                  <div class="info-btn">
+                    <a href="#" class="btn btn-primary btn-hover-dark">
                       Enroll Now
                     </a>
                   </div>
                 </div>
-                <div className="sidebar-widget">
-                  <h4 className="widget-title">Share Course:</h4>
-                  <ul className="social">
+                <div class="sidebar-widget">
+                  <h4 class="widget-title">Share Course:</h4>
+                  <ul class="social">
                     <li>
                       <a href="#">
-                        <i className="flaticon-facebook"></i>
+                        <i class="flaticon-facebook"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="flaticon-linkedin"></i>
+                        <i class="flaticon-linkedin"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="flaticon-twitter"></i>
+                        <i class="flaticon-twitter"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="flaticon-skype"></i>
+                        <i class="flaticon-skype"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="flaticon-instagram"></i>
+                        <i class="flaticon-instagram"></i>
                       </a>
                     </li>
                   </ul>
