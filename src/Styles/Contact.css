@@ -15015,7 +15015,7 @@ img {
 /*  3.1 -sidebar CSS
 /*----------------------------------------*/
 
-.sidebar {
+.sidebarprofile {
   height: 100%;
   width: 250px;
   position: fixed;
@@ -15026,7 +15026,7 @@ img {
   font-family: Arial, sans-serif;
 }
 
-.sidebar h4 {
+.sidebarprofile h4 {
   color: white;
   text-align: center;
   margin-top: 10px;
@@ -15034,21 +15034,21 @@ img {
 
 
 
-.sidebar ul li {
+.sidebarprofile ul li {
   padding: 8px;
   text-align: center;
 }
 
-.sidebar ul li a {
+.sidebarprofile ul li a {
   color: white;
 }
 
-.sidebar ul li a:hover {
+.sidebarprofile ul li a:hover {
   color: #20c997;
   
 }
 
-.img1 {
+.sidebarprofile .img1 {
   width: '150px';
   height: '150px';
   border-radius: 50%;
