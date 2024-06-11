@@ -1,5 +1,5 @@
 /* src/Sidebar.css */
-.sidebar {
+.sidebar-1 {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -10,28 +10,28 @@
     font-family: Arial, sans-serif;
   }
   
-  .sidebar h2 {
+  .sidebar-1 h2 {
     color: white;
     text-align: center;
   }
   
-  .sidebar ul {
+  .sidebar-1 ul {
     list-style-type: none;
     padding: 0;
   }
   
-  .sidebar ul li {
+  .sidebar-1 ul li {
     padding: 8px;
     text-align: center;
   }
   
-  .sidebar ul li a {
+  .sidebar-1 ul li a {
     color: white;
     text-decoration: none;
     display: block;
   }
   
-  .sidebar ul li a:hover {
+  .sidebar-1 ul li a:hover {
     color: #20c997;
     
   }

@@ -5,7 +5,7 @@ import studentImage from '../../assets/images/author/author-04.jpg';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar-1">
       <h2>Admin Student</h2>
 <div> <img className="img1" src={studentImage} alt="Student" /></div>
       <ul>
