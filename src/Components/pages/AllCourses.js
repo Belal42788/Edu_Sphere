@@ -68,8 +68,8 @@ function Courses() {
                     <div className="courses-wrapper-02">
                         <div className="row">
                             {coursesinf.map((item) => (
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="single-courses">
+                                <div className="col-lg-4 col-md-6" >
+                                    <div className="single-courses" style={{height:'400px'}}>
                                         <div className="courses-images">
                                             <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div className="courses-option dropdown">
@@ -86,7 +86,7 @@ function Courses() {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="courses-content">
+                                        <div className="courses-content" style={{marginBottom:'20px'}}>
                                             <div className="courses-author">
                                                 <div className="author">
                                                     <div className="author-thumb">
@@ -97,7 +97,7 @@ function Courses() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
+                                            <h4 className="title" ><a href="Coursedetails">{item.title}</a></h4>
                                         </div>
                                     </div>
                                 </div>
