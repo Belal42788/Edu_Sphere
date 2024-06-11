@@ -25,8 +25,8 @@ import '../../Styles/plugins/jqvmap.min.css'
 function FreeCourse() {
   const coursesinf = [
     {
-      id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', duration: '4 weeks', price: '428'
-    }]
+      id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428' ,Language:'English',
+      Certificate:'Yes'}]
   return (
     <>
       <Navbar name='Courses' name2='Details' name3='Courses' />
@@ -504,40 +504,40 @@ function FreeCourse() {
                 </div>
               </div>
             </div>
+            {coursesinf.map((item) => (
+
             <div class="col-lg-4">
               <div class="sidebar">
                 <div class="sidebar-widget widget-information">
+               
+
                   <div class="info-price">
-                    <span class="price">$420.38</span>
+                    <span class="price">${item.price}</span>
                   </div>
                   <div class="info-list">
                     <ul>
                       <li>
                         <i class="icofont-man-in-glasses"></i>{" "}
-                        <strong>Instructor</strong> <span>Pamela Foster</span>
+                        <strong>Instructor</strong> <span>{item.instructor}</span>
                       </li>
-                      <li>
-                        <i class="icofont-clock-time"></i>{" "}
-                        <strong>Duration</strong> <span>08 hr 15 mins</span>
-                      </li>
+                     
                       <li>
                         <i class="icofont-ui-video-play"></i>{" "}
-                        <strong>Lectures</strong> <span>29</span>
+                        <strong>Lectures</strong> <span>{item.lecture}</span>
                       </li>
-                      <li>
-                        <i class="icofont-bars"></i> <strong>Level</strong>{" "}
-                        <span>Secondary</span>
-                      </li>
+                    
                       <li>
                         <i class="icofont-book-alt"></i>{" "}
-                        <strong>Language</strong> <span>English</span>
+                        <strong>Language</strong> <span>{item.Language}</span>
                       </li>
                       <li>
                         <i class="icofont-certificate-alt-1"></i>{" "}
-                        <strong>Certificate</strong> <span>Yes</span>
+                        <strong>Certificate</strong> <span>{item.Certificate}</span>
                       </li>
                     </ul>
                   </div>
+              
+
                   <div class="info-btn">
                     <a href="#" class="btn btn-primary btn-hover-dark">
                       Enroll Now
@@ -576,6 +576,7 @@ function FreeCourse() {
                 </div>
               </div>
             </div>
+            ))}
           </div>
         </div>
       </div>

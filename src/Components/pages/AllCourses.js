@@ -1,19 +1,9 @@
 import React from "react";
 import courseImg1 from "../../assets/images/courses/courses-01.jpg";
 import courseImg2 from "../../assets/images/courses/courses-02.jpg";
-import courseImg3 from "../../assets/images/courses/courses-03.jpg";
-import courseImg4 from "../../assets/images/courses/courses-04.jpg";
+
 import courseImg5 from "../../assets/images/courses/courses-05.jpg";
-import courseImg6 from "../../assets/images/courses/courses-05.jpg";
-import courseImg7 from "../../assets/images/courses/courses-05.jpg";
-import courseImg8 from "../../assets/images/courses/courses-05.jpg";
-import courseImg9 from "../../assets/images/courses/courses-05.jpg";
-import courseImg10 from "../../assets/images/courses/courses-05.jpg";
-import courseImg11 from "../../assets/images/courses/courses-05.jpg";
-import courseImg12 from "../../assets/images/courses/courses-05.jpg";
-import courseImg13 from "../../assets/images/courses/courses-05.jpg";
-import courseImg14 from "../../assets/images/courses/courses-05.jpg";
-import courseImg15 from "../../assets/images/courses/courses-05.jpg";
+
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
 import author3 from "../../assets/images/author/author-03.jpg";

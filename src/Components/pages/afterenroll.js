@@ -28,7 +28,7 @@ return (
                 {/* <!-- Courses Video Player Start --> */}
                 <div class="courses-video-player">
                     {/* <!-- Courses Video Container Start --> */}
-                    <div class="vidcontainer">
+                    {/* <div class="vidcontainer">
                         <video id="myvid"></video>
                         <div class="video-play-bar">
                             <div class="topControl">
@@ -72,18 +72,15 @@ return (
                                 <span class="visually-hidden">Loading...</span>
                             </div>
                         </div>
-                    </div>
-                    {/* <!-- Courses Video Container End --> */}
-                    {/* <!-- Courses Enroll Content Start --> */}
-                    <div class="courses-enroll-content">
-                        {/* <!-- Courses Enroll Title Start --> */}
+                    </div> */}
+                 
+                     <div class="courses-enroll-content">
                         <div class="courses-enroll-title">
                             <h2 class="title">Finance & Investment Series: Learn to Budget and Calculate Your Net Worth.
                             </h2>
                             <p><i class="icofont-eye-alt"></i> <span>8,350</span> Students are watching</p>
                         </div>
-                        {/* <!-- Courses Enroll Title End --> */}
-                        {/* <!-- Courses Enroll Tab Start --> */}
+                    
                         <div class="courses-enroll-tab">
                             <div class="enroll-tab-menu">
                                 <ul class="nav">
@@ -98,12 +95,10 @@ return (
                                 <a href="#"><i class="icofont-share-alt"></i> Share</a>
                             </div>
                         </div>
-                        {/* <!-- Courses Enroll Tab End --> */}
-                        {/* <!-- Courses Enroll Tab Content Start --> */}
+                     
                         <div class="courses-enroll-tab-content">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab1">
-                                    {/* <!-- Overview Start --> */}
                                     <div class="overview">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -161,10 +156,9 @@ return (
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <!-- Overview End --> */}
+                                
                                 </div>
                                 <div class="tab-pane fade" id="tab2">
-                                    {/* <!-- Description Start --> */}
                                     <div class="description">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -198,10 +192,8 @@ return (
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <!-- Description End --> */}
                                 </div>
                                 <div class="tab-pane fade" id="tab3">
-                                    {/* <!-- Certificates Start --> */}
                                     <div class="certificates">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -223,10 +215,8 @@ return (
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <!-- Certificates End --> */}
                                 </div>
                                 <div class="tab-pane fade" id="tab4">
-                                    {/* <!-- Instructor Start --> */}
                                     <div class="instructor">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -236,7 +226,6 @@ return (
                                             </div>
                                             <div class="col-lg-8">
                                                 <div class="enroll-tab-content">
-                                                    {/* <!-- Single Instructor Start --> */}
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
@@ -257,8 +246,7 @@ return (
                                                             printer took a galley of type scrambled it to make a type
                                                             specimen book.</p>
                                                     </div>
-                                                    {/* <!-- Single Instructor End --> */}
-                                                    {/* <!-- Single Instructor Start --> */}
+                                            
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
@@ -279,8 +267,7 @@ return (
                                                             printer took a galley of type scrambled it to make a type
                                                             specimen book.</p>
                                                     </div>
-                                                    {/* <!-- Single Instructor End --> */}
-                                                    {/* <!-- Single Instructor Start --> */}
+                                           
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
@@ -301,21 +288,17 @@ return (
                                                             printer took a galley of type scrambled it to make a type
                                                             specimen book.</p>
                                                     </div>
-                                                    {/* <!-- Single Instructor End --> */}
+                                                  
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <!-- Instructor End --> */}
+                                 
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- Courses Enroll Tab Content End --> */}
-                    </div>
-                    {/* <!-- Courses Enroll Content End --> */}
+                    </div> 
                 </div>
-                {/* <!-- Courses Video Player End --> */}
-                {/* <!-- Courses Video Playlist Start --> */}
                 <div class="courses-video-playlist">
                     <div class="playlist-title">
                         <h3 class="title">Course Content</h3>
@@ -377,11 +360,8 @@ return (
                     </div>
                     {/* <!-- Video Playlist End  --> */}
                 </div>
-                {/* <!-- Courses Video Playlist End --> */}
             </div>
-            {/* <!-- Courses Enroll Wrapper End --> */}
         </div>
-        {/* <!-- Courses Enroll End --> */}
 <div>
 <Advertise />
 </div>
