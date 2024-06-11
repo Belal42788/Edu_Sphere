@@ -41,6 +41,8 @@ function Navbar(props) {
                                             <li><a href="404-error">404 Error</a></li>
                                             <li><a href="Afterenroll">After Enroll</a></li>
                                             <li><a href="CoursesAdmin">Instructor Dashboard (Course List)</a></li>
+                                            <li><a href="createcourse">Create Course</a></li>
+                                            <li><a href="createLesson">Create lesson</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact">Contact</a></li>

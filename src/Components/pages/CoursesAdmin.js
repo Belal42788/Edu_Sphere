@@ -67,7 +67,7 @@ function CoursesAdmin() {
                             <h3 class="title">Courses</h3>
                             <div class="courses-tab-wrapper">
                                 <div class="tab-btn">
-                                    <a href="#" class="btn btn-primary btn-hover-dark">New Course</a>
+                                    <a href="CreateCourse" class="btn btn-primary btn-hover-dark">New Course</a>
                                 </div>
                             </div>
                         </div>

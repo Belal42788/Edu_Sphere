@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import image from '../../assets/images/shape/shape-26.png';
 import image2 from '../../assets/imaheboy.jpg';
 import Advertise from "../advertise";
+import AdminHeader from '../AdminHeader';
 
 function Createcourse() {
   const [courseName, setCourseName] = useState("");
@@ -42,7 +43,7 @@ function Createcourse() {
 
   return (
     <div>
-      <div><Navbar name='create course' name2='form' name3='create course' /></div>
+      <div><AdminHeader /></div>
       <div className="section section-padding">
         <div className="container">
           <div className="register-login-wrapper">
@@ -60,7 +61,7 @@ function Createcourse() {
               <div className="col-lg-6">
                 <div className="register-login-form">
                   <h3 className="title" style={{ textTransform: 'capitalize' }}>
-                    create course <span>Now</span>
+                    create course 
                   </h3>
                   <div className="form-wrapper">
                     <form onSubmit={handleSubmit}>
@@ -95,7 +96,6 @@ function Createcourse() {
           </div>
         </div>
       </div>
-      <div><Advertise /></div>
       <div><Footer /></div>
     </div>
   );
