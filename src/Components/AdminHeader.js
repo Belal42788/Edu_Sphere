@@ -52,7 +52,7 @@ function AdminHeader() {
                   </a>
                 </li>
                 <li>
-                  <a className="" href="#">
+                  <a className="" href="login">
                     <i className="icofont-logout"></i> Sign Out
                   </a>
                 </li>
