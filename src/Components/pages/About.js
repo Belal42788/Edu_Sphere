@@ -265,7 +265,7 @@ function About() {
           <div className="team-wrapper ">
           <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
             {teamMembers.map((item, index) => (
-              <div className="col-2" key={index}>
+              <div className="col-1" key={index}>
                 <div className="single-team">
                   <div className="team-thumb">
                     <img src={item.imgSrc} alt={item.altText} />
