@@ -54,6 +54,94 @@ import Shape16 from "../../assets/images/shape/shape-16.png"
 import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
 function Home() {
+    const coursesinf = [
+        { 
+            id: 1, 
+            title: 'Data Science and Machine Learning with Python - Hands On!', 
+            instructor: 'Jason Williams', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses: courseImg1, 
+            ImageUlrinstr: author1,
+            tag: 'Science',
+            lectures: '29 Lectures',
+            salePrice: '$385.00',
+            oldPrice: '$440.00',
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        { 
+            id: 2, 
+            title: 'Create Amazing Color Schemes for Your UX Design Projects', 
+            instructor: 'Pamela Foster', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses: courseImg2, 
+            ImageUlrinstr: author2,
+            tag: 'Science',
+            lectures: '29 Lectures',
+            salePrice: '$420.00',
+            oldPrice: null,
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        { 
+            id: 3, 
+            title: 'Culture & Leadership: Strategies for a Successful Business', 
+            instructor: 'Rose Simmons', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses:  courseImg5, 
+            ImageUlrinstr: author3,
+            tag: 'Science',
+            lectures: '29 Lectures',
+            salePrice: '$295.00',
+            oldPrice: '$340.00',
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        { 
+            id: 4, 
+            title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', 
+            instructor: 'Jason Williams', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses: courseImg1, 
+            ImageUlrinstr: author4,
+            tag: 'Finance',
+            lectures: '29 Lectures',
+            salePrice: 'Free',
+            oldPrice: null,
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        { 
+            id: 5, 
+            title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', 
+            instructor: 'Jason Williams', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses: courseImg5, 
+            ImageUlrinstr: author5,
+            tag: 'Marketing',
+            lectures: '29 Lectures',
+            salePrice: '$136.00',
+            oldPrice: null,
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        { 
+            id: 6, 
+            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes', 
+            instructor: 'Jason Williams', 
+            duration: '8 hr 15 mins', 
+            ImageUlrcourses: courseImg6, 
+            ImageUlrinstr: author6,
+            tag: 'Design',
+            lectures: '29 Lectures',
+            salePrice: '$237.00',
+            oldPrice: null,
+            ratingCount: '4.9',
+            ratingBar: '80%'
+        },
+        // Add similar objects for courses 7 to 15
+    ];
+    
     return (
         <>
             <div classNameName="header-section">
@@ -203,236 +291,48 @@ function Home() {
                         <div className="tab-pane fade show active" id="tabs1">
                             <div className="courses-wrapper">
                                 <div className="row">
+                                    {coursesinf.map((item)=>(
                                     <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg1} alt="Courses" /></a>
+                                    <div className="single-courses">
+                                        <div className="courses-images">
+                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                        </div>
+                                        <div className="courses-content">
+                                            <div className="courses-author">
+                                                <div className="author">
+                                                    <div className="author-thumb">
+                                                        <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
+                                                    </div>
+                                                    <div className="author-name">
+                                                        <a className="name" href="#">Jason Williams</a>
+                                                    </div>
+                                                </div>
+                                                <div className="tag">
+                                                    <a href="#">Science</a>
+                                                </div>
                                             </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author1} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Jason Williams</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Science</a>
-                                                    </div>
+                                            <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
+                                            <div className="courses-meta">
+                                                <span> <i className="icofont-clock-time"></i> {item.duration}</span>
+                                                <span> <i className="icofont-read-book"></i> {item.lectures}</span>
+                                            </div>
+                                            <div className="courses-price-review">
+                                                <div className="courses-price">
+                                                    <span className="sale-parice">{item.salePrice}</span>
+                                                    <span className="old-parice">{item.oldPrice}</span>
                                                 </div>
-                                                <h4 className="title"><a href="Coursedetails">Data Science and Machine Learning with Python - Hands On!</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">$385.00</span>
-                                                        <span className="old-parice">$440.00</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
+                                                <div className="courses-review">
+                                                    <span className="rating-count">{item.ratingBar}</span>
+                                                    <span className="rating-star">
+                                                        <span className="rating-bar" style={{ width: '80%' }}></span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg2} alt="Courses" /></a>
-                                            </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author2} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Pamela Foster</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Science</a>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title"><a href="Coursedetails">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">$420.00</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg3} alt="Courses" /></a>
-                                            </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author3} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Rose Simmons</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Science</a>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title"><a href="Coursedetails">Culture & Leadership: Strategies for a Successful Business</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">$295.00</span>
-                                                        <span className="old-parice">$340.00</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg4} alt="Courses" /></a>
-                                            </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author4} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Jason Williams</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Finance</a>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title"><a href="Coursedetails">Finance Series: Learn to Budget and Calculate your Net Worth.</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">Free</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg5} alt="Courses" /></a>
-                                            </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author5} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Jason Williams</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Marketing</a>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title"><a href="Coursedetails">Build Brand Into Marketing: Tackling the New Marketing Landscape</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">$136.00</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                        <div className="single-courses">
-                                            <div className="courses-images">
-                                                <a href="Coursedetails"><img src={courseImg6} alt="Courses" /></a>
-                                            </div>
-                                            <div className="courses-content">
-                                                <div className="courses-author">
-                                                    <div className="author">
-                                                        <div className="author-thumb">
-                                                            <a href="#"><img src={author6} alt="Author" /></a>
-                                                        </div>
-                                                        <div className="author-name">
-                                                            <a className="name" href="#">Jason Williams</a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tag">
-                                                        <a href="#">Design</a>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title"><a href="Coursedetails">Graphic Design: Illustrating Badges and Icons with Geometric Shapes</a></h4>
-                                                <div className="courses-meta">
-                                                    <span> <i className="icofont-clock-time"></i> 08 hr 15 mins</span>
-                                                    <span> <i className="icofont-read-book"></i> 29 Lectures </span>
-                                                </div>
-                                                <div className="courses-price-review">
-                                                    <div className="courses-price">
-                                                        <span className="sale-parice">$237.00</span>
-                                                    </div>
-                                                    <div className="courses-review">
-                                                        <span className="rating-count">4.9</span>
-                                                        <span className="rating-star">
-                                                            <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))};
+                                   
                                 </div>
                             </div>
                         </div>
