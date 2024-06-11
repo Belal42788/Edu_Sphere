@@ -16,14 +16,6 @@ import shape13 from "../../assets/images/shape/shape-13.png";
 import shape14 from "../../assets/images/shape/shape-14.png";
 import shape19 from "../../assets/images/shape/shape-19.png";
 import shape20 from "../../assets/images/shape/shape-20.png";
-import brand1 from "../../assets/images/brand/brand-01.png";
-import brand2 from "../../assets/images/brand/brand-02.png";
-import brand3 from "../../assets/images/brand/brand-03.png";
-import brand4 from "../../assets/images/brand/brand-04.png";
-import brand5 from "../../assets/images/brand/brand-05.png";
-import brand6 from "../../assets/images/brand/brand-06.png";
-import google from "../../assets/images/google-play.png";
-import appstore from "../../assets/images/app-store.png";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import "../../Styles/plugins/icofont.min.css";
@@ -35,21 +27,95 @@ import "../../Styles/plugins/apexcharts.css";
 import "../../Styles/plugins/jqvmap.min.css";
 import "../../Styles/Contact.css";
 import Advertise from "../advertise";
+
 function About() {
+  const teamMembers = [
+    {
+      imgSrc: author1,
+      altText: "Author",
+      rating: 4.9,
+      name: "Margarita James",
+      designation: "MSC, Instructor"
+    },
+    {
+      imgSrc: author2,
+      altText: "Author",
+      rating: 4.9,
+      name: "Mitchell Colon",
+      designation: "BBA, Instructor"
+    },
+    {
+      imgSrc: author3,
+      altText: "Author",
+      rating: 4.9,
+      name: "Sonya Gordon",
+      designation: "MBA, Instructor"
+    },
+    {
+      imgSrc: author4,
+      altText: "Author",
+      rating: 4.9,
+      name: "Archie Neal",
+      designation: "BBS, Instructor"
+    },
+    {
+      imgSrc: author5,
+      altText: "Author",
+      rating: 4.9,
+      name: "Randal Ramsey",
+      designation: "MBBS, Instructor"
+    },
+    {
+      imgSrc: author6,
+      altText: "Author",
+      rating: 4.9,
+      name: "Rochelle Thomas",
+      designation: "MSC, Instructor"
+    },
+    {
+      imgSrc: author7,
+      altText: "Author",
+      rating: 4.9,
+      name: "Della Salazar",
+      designation: "BBA, Instructor"
+    },
+    {
+      imgSrc: author8,
+      altText: "Author",
+      rating: 4.9,
+      name: "Ricardo Patrick",
+      designation: "MBA, Instructor"
+    },
+    {
+      imgSrc: author9,
+      altText: "Author",
+      rating: 4.9,
+      name: "Kurt Stewart",
+      designation: "BBS, Instructor"
+    },
+    {
+      imgSrc: author10,
+      altText: "Author",
+      rating: 4.9,
+      name: "Rodney Terry",
+      designation: "MBBS, Instructor"
+    }
+  ];
+
   return (
     <>
-      <Navbar name='About' name2='US' name3='About' />
-      <div class="section">
-        <div class="section-padding-02 mt-n10">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="about-images">
-                  <div class="images">
+      <Navbar name="About" name2="US" name3="About" />
+      <div className="section">
+        <div className="section-padding-02 mt-n10">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="about-images">
+                  <div className="images">
                     <img src={about1} alt="About" />
                   </div>
-                  <div class="about-years">
-                    <div class="years-icon">
+                  <div className="about-years">
+                    <div className="years-icon">
                       <img src={about2} alt="About" />
                     </div>
                     <p>
@@ -58,19 +124,20 @@ function About() {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="about-content">
-                  <h5 class="sub-title">Welcome to EduSp.</h5>
-                  <h2 class="main-title">
+              <div className="col-lg-6">
+                <div className="about-content">
+                  <h5 className="sub-title">Welcome to EduSp.</h5>
+                  <h2 className="main-title">
                     You can join with Edusphere and upgrade your skill for your{" "}
                     <span>bright future.</span>
                   </h2>
                   <p>
-                    Lorem Ipsum has been the industr’s standard dummy text ever
-                    since unknown printer took galley type and scmbled make type
-                    specimen book. It has survived not only five centuries.
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since an unknown printer took a galley of type and scrambled it
+                    to make a type specimen book. It has survived not only five
+                    centuries.
                   </p>
-                  <a href="#" class="btn btn-primary btn-hover-dark">
+                  <a href="#" className="btn btn-primary btn-hover-dark">
                     Start A Course
                   </a>
                 </div>
@@ -78,70 +145,73 @@ function About() {
             </div>
           </div>
         </div>
-        <div class="section-padding-02 mt-n6">
-          <div class="container">
-            <div class="about-items-wrapper">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="about-item">
-                    <div class="item-icon-title">
-                      <div class="item-icon">
-                        <i class="flaticon-tutor"></i>
+        <div className="section-padding-02 mt-n6">
+          <div className="container">
+            <div className="about-items-wrapper">
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="about-item">
+                    <div className="item-icon-title">
+                      <div className="item-icon">
+                        <i className="flaticon-tutor"></i>
                       </div>
-                      <div class="item-title">
-                        <h3 class="title">Top Instructors</h3>
+                      <div className="item-title">
+                        <h3 className="title">Top Instructors</h3>
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled to make type specimen
-                      book has survived.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since the when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book.
                     </p>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled make.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since then when an unknown printer took a galley of type and
+                      scrambled it.
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="about-item">
-                    <div class="item-icon-title">
-                      <div class="item-icon">
-                        <i class="flaticon-coding"></i>
+                <div className="col-lg-4">
+                  <div className="about-item">
+                    <div className="item-icon-title">
+                      <div className="item-icon">
+                        <i className="flaticon-coding"></i>
                       </div>
-                      <div class="item-title">
-                        <h3 class="title">Portable Program</h3>
+                      <div className="item-title">
+                        <h3 className="title">Portable Program</h3>
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled to make type specimen
-                      book has survived.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since the when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book.
                     </p>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled make.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since then when an unknown printer took a galley of type and
+                      scrambled it.
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="about-item">
-                    <div class="item-icon-title">
-                      <div class="item-icon">
-                        <i class="flaticon-increase"></i>
+                <div className="col-lg-4">
+                  <div className="about-item">
+                    <div className="item-icon-title">
+                      <div className="item-icon">
+                        <i className="flaticon-increase"></i>
                       </div>
-                      <div class="item-title">
-                        <h3 class="title">Improve Quickly</h3>
+                      <div className="item-title">
+                        <h3 className="title">Improve Quickly</h3>
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled to make type specimen
-                      book has survived.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since the when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book.
                     </p>
                     <p>
-                      Lorem Ipsum has been the industry's standard dumy text
-                      since the when took and scrambled make.
+                      Lorem Ipsum has been the industry's standard dummy text
+                      since then when an unknown printer took a galley of type and
+                      scrambled it.
                     </p>
                   </div>
                 </div>
@@ -150,32 +220,32 @@ function About() {
           </div>
         </div>
       </div>
-      <div class="section section-padding-02">
-        <div class="container">
-          <div class="call-to-action-wrapper">
+      <div className="section section-padding-02">
+        <div className="container">
+          <div className="call-to-action-wrapper">
             <img
-              class="cat-shape-01 animation-round"
+              className="cat-shape-01 animation-round"
               src={shape12}
               alt="Shape"
             />
-            <img class="cat-shape-02" src={shape13} alt="Shape" />
+            <img className="cat-shape-02" src={shape13} alt="Shape" />
             <img
-              class="cat-shape-03 animation-round"
+              className="cat-shape-03 animation-round"
               src={shape12}
               alt="Shape"
             />
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="section-title shape-02">
-                  <h5 class="sub-title">Become A Instructor</h5>
-                  <h2 class="main-title">
-                    You can join with Edusphere as <span>a instructor?</span>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <div className="section-title shape-02">
+                  <h5 className="sub-title">Become An Instructor</h5>
+                  <h2 className="main-title">
+                    You can join with Edusphere as <span>an instructor?</span>
                   </h2>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="call-to-action-btn">
-                  <a class="btn btn-primary btn-hover-dark" href="#">
+              <div className="col-md-6">
+                <div className="call-to-action-btn">
+                  <a className="btn btn-primary btn-hover-dark" href="#">
                     Drop Information
                   </a>
                 </div>
@@ -184,266 +254,125 @@ function About() {
           </div>
         </div>
       </div>
-      <div class="section section-padding mt-n1">
-        <div class="container">
-          <div class="section-title shape-03 text-center">
-            <h5 class="sub-title">Team Member’s</h5>
-            <h2 class="main-title">
-              Edusphere Skilled <span> Instructor</span>
+      <div className="section section-padding mt-n1">
+        <div className="container">
+          <div className="section-title shape-03 text-center">
+            <h5 className="sub-title">Team Member’s</h5>
+            <h2 className="main-title">
+              Edusphere Skilled <span>Instructor</span>
             </h2>
           </div>
-          <div class="team-wrapper">
-            <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author1} alt="Author" />
+          <div className="team-wrapper ">
+          <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
+            {teamMembers.map((item, index) => (
+              <div className="col-2" key={index}>
+                <div className="single-team">
+                  <div className="team-thumb">
+                    <img src={item.imgSrc} alt={item.altText} />
                   </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
+                  <div className="team-content">
+                    <div className="rating">
+                      <span className="count">{item.rating}</span>
+                      <i className="icofont-star"></i>
+                      <span className="text">(rating)</span>
                     </div>
-                    <h4 class="name">Margarita James</h4>
-                    <span class="designation">MSC, Instructor</span>
+                    <h4 className="name">{item.name}</h4>
+                    <span className="designation">{item.designation}</span>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author2} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Mitchell Colon</h4>
-                    <span class="designation">BBA, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author3} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Sonya Gordon</h4>
-                    <span class="designation">MBA, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author4} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Archie Neal</h4>
-                    <span class="designation">BBS, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author5} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Randal Ramsey</h4>
-                    <span class="designation">MBBS, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author6} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Rochelle Thomas</h4>
-                    <span class="designation">MSC, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author7} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Della Salazar</h4>
-                    <span class="designation">BBA, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author8} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Ricardo Patrick</h4>
-                    <span class="designation">MBA, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author9} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Kurt Stewart</h4>
-                    <span class="designation">BBS, Instructor</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="single-team">
-                  <div class="team-thumb">
-                    <img src={author10} alt="Author" />
-                  </div>
-                  <div class="team-content">
-                    <div class="rating">
-                      <span class="count">4.9</span>
-                      <i class="icofont-star"></i>
-                      <span class="text">(rating)</span>
-                    </div>
-                    <h4 class="name">Rodney Terry</h4>
-                    <span class="designation">MBBS, Instructor</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+        </div>
       </div>
-      <div class="section section-padding-02 mt-n1">
-        <div class="container">
-          <div class="section-title shape-03 text-center">
-            <h5 class="sub-title">Student Testimonial</h5>
-            <h2 class="main-title">
-              Feedback From <span> Student</span>
+      <div className="section section-padding-02 mt-n1">
+        <div className="container">
+          <div className="section-title shape-03 text-center">
+            <h5 className="sub-title">Student Testimonial</h5>
+            <h2 className="main-title">
+              Feedback From <span>Student</span>
             </h2>
           </div>
-          <div class="testimonial-wrapper testimonial-active">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="single-testimonial col-md-4 col-lg-6">
-                  <div class="testimonial-author">
-                    <div class="author-thumb">
+          <div className="testimonial-wrapper testimonial-active">
+            <div className="swiper-container">
+              <div className="swiper-wrapper">
+                <div className="single-testimonial col-md-4 col-lg-6">
+                  <div className="testimonial-author">
+                    <div className="author-thumb">
                       <img src={author6} alt="Author" />
-                      <i class="icofont-quote-left"></i>
+                      <i className="icofont-quote-left"></i>
                     </div>
-                    <span class="rating-star">
-                      <span class="rating-bar"></span>
+                    <span className="rating-star">
+                      <span className="rating-bar"></span>
                     </span>
                   </div>
-                  <div class="testimonial-content">
+                  <div className="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make type specimen book has
-                      survived not five centuries but also the leap into
+                      type and scrambled it to make a type specimen book. It has
+                      survived not only five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 class="name">Sara Alexander</h4>
-                    <span class="designation">Product Designer, USA</span>
+                    <h4 className="name">Sara Alexander</h4>
+                    <span className="designation">Product Designer, USA</span>
                   </div>
                 </div>
-                <div class="single-testimonial col-md-4 col-lg-6">
-                  <div class="testimonial-author">
-                    <div class="author-thumb">
+                <div className="single-testimonial col-md-4 col-lg-6">
+                  <div className="testimonial-author">
+                    <div className="author-thumb">
                       <img src={author7} alt="Author" />
-                      <i class="icofont-quote-left"></i>
+                      <i className="icofont-quote-left"></i>
                     </div>
-                    <span class="rating-star">
-                      <span class="rating-bar"></span>
+                    <span className="rating-star">
+                      <span className="rating-bar"></span>
                     </span>
                   </div>
-                  <div class="testimonial-content">
+                  <div className="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make type specimen book has
-                      survived not five centuries but also the leap into
+                      type and scrambled it to make a type specimen book. It has
+                      survived not only five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 class="name">Melissa Roberts</h4>
-                    <span class="designation">Product Designer, USA</span>
+                    <h4 className="name">Melissa Roberts</h4>
+                    <span className="designation">Product Designer, USA</span>
                   </div>
                 </div>
-                <div class="single-testimonial col-md-4 col-xl-6">
-                  <div class="testimonial-author">
-                    <div class="author-thumb">
+                <div className="single-testimonial col-md-4 col-xl-6">
+                  <div className="testimonial-author">
+                    <div className="author-thumb">
                       <img src={author3} alt="Author" />
-                      <i class="icofont-quote-left"></i>
+                      <i className="icofont-quote-left"></i>
                     </div>
-                    <span class="rating-star">
-                      <span class="rating-bar"></span>
+                    <span className="rating-star">
+                      <span className="rating-bar"></span>
                     </span>
                   </div>
-                  <div class="testimonial-content">
+                  <div className="testimonial-content">
                     <p>
                       Lorem Ipsum has been the industry's standard dummy text
                       since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make type specimen book has
-                      survived not five centuries but also the leap into
+                      type and scrambled it to make a type specimen book. It has
+                      survived not only five centuries but also the leap into
                       electronic.
                     </p>
-                    <h4 class="name">Sara Alexander</h4>
-                    <span class="designation">Product Designer, USA</span>
+                    <h4 className="name">Sara Alexander</h4>
+                    <span className="designation">Product Designer, USA</span>
                   </div>
                 </div>
               </div>
-              {/* <div class="swiper-pagination"></div> */}
+              {/* <div className="swiper-pagination"></div> */}
             </div>
           </div>
         </div>
       </div>
-      <div > <Advertise /></div>
+      <Advertise />
       <Footer />
     </>
   );
 }
+
 export default About;
