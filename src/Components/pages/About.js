@@ -101,7 +101,27 @@ function About() {
       designation: "MBBS, Instructor"
     }
   ];
+const feedback = [
+  {
+    imagefeed:author7 , 
+    Namefeed:'Cristiano Ronaldo',
+    Nationfeed:'POR',
+    comment:'cr7 is best cr7 coat'
+  },
+{
+  imagefeed:author6 , 
+  Namefeed:'Sara Alexander',
+  Nationfeed:'USA',
+  comment:'cr7 is best cr7 coat'
+},
+{
+  imagefeed:author7 , 
+  Namefeed:'Melissa Roberts',
+  Nationfeed:'USA',
+  comment:'cr7 is best cr7 coat'
+},
 
+]
   return (
     <>
       <Navbar name="About" name2="US" name3="About" />
@@ -264,8 +284,8 @@ function About() {
           </div>
           <div className="team-wrapper ">
           <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
-            {teamMembers.map((item, index) => (
-              <div className="col-1" key={index}>
+            {teamMembers.map((item) => (
+              <div className="col-1" >
                 <div className="single-team">
                   <div className="team-thumb">
                     <img src={item.imgSrc} alt={item.altText} />
@@ -297,10 +317,13 @@ function About() {
           <div className="testimonial-wrapper testimonial-active">
             <div className="swiper-container">
               <div className="swiper-wrapper">
-                <div className="single-testimonial col-md-4 col-lg-6">
+              {feedback.map((item) => (
+                <div className="single-testimonial  col-lg-5">
+               
                   <div className="testimonial-author">
+                
                     <div className="author-thumb">
-                      <img src={author6} alt="Author" />
+                      <img src={item.imagefeed} alt="Author" />
                       <i className="icofont-quote-left"></i>
                     </div>
                     <span className="rating-star">
@@ -309,62 +332,15 @@ function About() {
                   </div>
                   <div className="testimonial-content">
                     <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has
-                      survived not only five centuries but also the leap into
-                      electronic.
+                    {item.comment}
                     </p>
-                    <h4 className="name">Sara Alexander</h4>
-                    <span className="designation">Product Designer, USA</span>
+                    <h4 className="name"> {item.Namefeed}</h4>
+                    <span className="designation">Product Designer,  {item.Nationfeed}</span>
                   </div>
                 </div>
-                <div className="single-testimonial col-md-4 col-lg-6">
-                  <div className="testimonial-author">
-                    <div className="author-thumb">
-                      <img src={author7} alt="Author" />
-                      <i className="icofont-quote-left"></i>
-                    </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
-                    </span>
-                  </div>
-                  <div className="testimonial-content">
-                    <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has
-                      survived not only five centuries but also the leap into
-                      electronic.
-                    </p>
-                    <h4 className="name">Melissa Roberts</h4>
-                    <span className="designation">Product Designer, USA</span>
-                  </div>
-                </div>
-                <div className="single-testimonial col-md-4 col-xl-6">
-                  <div className="testimonial-author">
-                    <div className="author-thumb">
-                      <img src={author3} alt="Author" />
-                      <i className="icofont-quote-left"></i>
-                    </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
-                    </span>
-                  </div>
-                  <div className="testimonial-content">
-                    <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has
-                      survived not only five centuries but also the leap into
-                      electronic.
-                    </p>
-                    <h4 className="name">Sara Alexander</h4>
-                    <span className="designation">Product Designer, USA</span>
-                  </div>
-                </div>
+                ))};
               </div>
-              {/* <div className="swiper-pagination"></div> */}
+
             </div>
           </div>
         </div>
