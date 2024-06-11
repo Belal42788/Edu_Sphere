@@ -15010,9 +15010,54 @@ img {
   padding-top: 0;
 }
 
+
+/*--
+/*  3.1 -sidebar CSS
 /*----------------------------------------*/
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #212832;
+  padding-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar h4 {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+.sidebar ul li {
+  padding: 8px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+}
+
+.sidebar ul li a:hover {
+  color: #20c997;
+  
+}
+
+.img1 {
+  width: '150px';
+  height: '150px';
+  border-radius: 50%;
+  margin-left: 60px;
+}
+  /*----------------------------------------*/
 /*  03. Header CSS
 /*----------------------------------------*/
+
 .header-section {
   position: absolute;
   top: 0;
@@ -15020,10 +15065,11 @@ img {
   width: 100%;
   z-index: 999;
 }
-
 /*--
 /*  3.1 - Header Top CSS
 /*----------------------------------------*/
+
+
 .header-top {
   background-color: #212832;
 }

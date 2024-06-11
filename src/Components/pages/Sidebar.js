@@ -2,12 +2,13 @@
 import React from 'react';
 import './Sidebar.css';
 import studentImage from '../../assets/images/author/author-04.jpg';
-
+import "../../Styles/Contact.css";
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <h2>Admin Student</h2>
-<div> <img className="img1" src={studentImage} alt="Student" /></div>
+    <div className="sidebar" >
+<div style={{marginTop:'10px'}}> <img className="img1" src={studentImage} alt="Student" /></div>
+     <h4  >Cristiano Ronaldo</h4 >
+
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="courses">Courses</a></li>
