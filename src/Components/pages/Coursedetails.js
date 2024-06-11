@@ -27,6 +27,37 @@ function FreeCourse() {
     {
       id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428' ,Language:'English',
       Certificate:'Yes'}]
+
+      const teamInfo = [
+        {
+            id: 1,
+            name: 'Margarita James',
+            designation: 'MSC, Instructor',
+            rating: 4.9,
+            ImageUrl: author1
+        },
+        {
+            id: 2,
+            name: 'Mitchell Colon',
+            designation: 'BBA, Instructor',
+            rating: 4.9,
+            ImageUrl: author2
+        },
+        {
+            id: 3,
+            name: 'Sonya Gordon',
+            designation: 'MBA, Instructor',
+            rating: 4.9,
+            ImageUrl: author3
+        },
+        {
+            id: 4,
+            name: 'Archie Neal',
+            designation: 'BBS, Instructor',
+            rating: 4.9,
+            ImageUrl: author4
+        }
+    ];
   return (
     <>
       <Navbar name='Courses' name2='Details' name3='Courses' />
@@ -162,78 +193,27 @@ function FreeCourse() {
                         <div class="tab-instructors">
                           <h3 class="tab-title">Course Instructor:</h3>
                           <div class="row">
+                            {teamInfo.map((item)=>(
                             <div class="col-md-3 col-6">
                               <div class="single-team">
                                 <div class="team-thumb">
-                                  <img src={author1} alt="Author" />
+                                  <img src={item.ImageUrl} alt="Author" />
                                 </div>
                                 <div class="team-content">
                                   <div class="rating">
-                                    <span class="count">4.9</span>
+                                    <span class="count">{item.rating}</span>
                                     <i class="icofont-star"></i>
                                     <span class="text">(rating)</span>
                                   </div>
-                                  <h4 class="name">Margarita James</h4>
+                                  <h4 class="name">{item.name}</h4>
                                   <span class="designation">
-                                    MSC, Instructor
+                                    {item.designation}, Instructor
                                   </span>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-3 col-6">
-                              <div class="single-team">
-                                <div class="team-thumb">
-                                  <img src={author2} alt="Author" />
-                                </div>
-                                <div class="team-content">
-                                  <div class="rating">
-                                    <span class="count">4.9</span>
-                                    <i class="icofont-star"></i>
-                                    <span class="text">(rating)</span>
-                                  </div>
-                                  <h4 class="name">Mitchell Colon</h4>
-                                  <span class="designation">
-                                    BBA, Instructor
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                              <div class="single-team">
-                                <div class="team-thumb">
-                                  <img src={author3} alt="Author" />
-                                </div>
-                                <div class="team-content">
-                                  <div class="rating">
-                                    <span class="count">4.9</span>
-                                    <i class="icofont-star"></i>
-                                    <span class="text">(rating)</span>
-                                  </div>
-                                  <h4 class="name">Sonya Gordon</h4>
-                                  <span class="designation">
-                                    MBA, Instructor
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                              <div class="single-team">
-                                <div class="team-thumb">
-                                  <img src={author4} alt="Author" />
-                                </div>
-                                <div class="team-content">
-                                  <div class="rating">
-                                    <span class="count">4.9</span>
-                                    <i class="icofont-star"></i>
-                                    <span class="text">(rating)</span>
-                                  </div>
-                                  <h4 class="name">Archie Neal</h4>
-                                  <span class="designation">
-                                    BBS, Instructor
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
+                            ))}
+                       
                           </div>
                           <div class="row gx-10">
                             <div class="col-lg-6">
