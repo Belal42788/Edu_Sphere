@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebarprofile" >
 <div style={{marginTop:'10px'}}> <img className="img1" src={studentImage} alt="Student" /></div>
-     <h4  >Cristiano Ronaldo</h4 >
+     <h4  >Youssef Rafat</h4 >
 
       <ul>
         <li><a href="/">Home</a></li>
