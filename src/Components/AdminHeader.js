@@ -36,7 +36,7 @@ function AdminHeader() {
           </div>
           <div className="login-header-action ml-auto">
             
-            <a className="action author" href="#">
+            <a className="action author" href="profile">
               <img src={author7} alt="Author" />
             </a>
             <div className="dropdown">
@@ -47,7 +47,7 @@ function AdminHeader() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="" href="#">
+                  <a className="" href="profile">
                     <i className="icofont-user"></i> Profile
                   </a>
                 </li>

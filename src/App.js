@@ -14,12 +14,14 @@ import Home from "./Components/pages/Home";
 import Createcourse from "./Components/pages/createcourse";
 import CoursesAdmin from "./Components/pages/CoursesAdmin";
 import MyCourses from "./Components/pages/MyCourses";
-import CreateLesson from "./Components/pages/CreateLesson";
+import CreateLesson from "./Components/pages/CreateLesson"
+import Profile from "./Components/pages/Profile";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
         <Route path="/MyCourses" element={<MyCourses />} />
         <Route path="/CoursesAdmin" element={<CoursesAdmin />} />
