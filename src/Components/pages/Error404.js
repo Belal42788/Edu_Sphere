@@ -16,21 +16,21 @@ function Error404() {
   return (
     <>
       <Navbar name='Page Not' name2='Found' name3='Error404' />
-      <div className="section section-padding mt-n10">
-        <div className="container">
-          <div className="error-wrapper">
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <div className="error-images">
+      <div class="section section-padding mt-n10">
+        <div class="container">
+          <div class="error-wrapper">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="error-images">
                   <img className="shape-3" src={Image} alt="Error" />
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="error-content">
-                  <h5 className="sub-title">This Page is Not Found.</h5>
-                  <h2 className="main-title">We are very sorry for error. We <span> can’t find this</span> page.</h2>
+              <div class="col-lg-6">
+                <div class="error-content">
+                  <h5 class="sub-title">This Page is Not Found.</h5>
+                  <h2 class="main-title">We are very sorry for error. We <span> can’t find this</span> page.</h2>
                   <p>It has survived not only five centuries but also the leap into electronic typesetting.</p>
-                  <a href="/" className="btn btn-primary btn-hover-dark">Back To Home</a>
+                  <a href="/" class="btn btn-primary btn-hover-dark">Back To Home</a>
                 </div>
               </div>
             </div>

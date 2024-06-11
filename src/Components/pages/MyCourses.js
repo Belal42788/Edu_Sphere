@@ -52,41 +52,41 @@ function MyCourses() {
     return (
         <>
             <Navbar name='My' name2='courses' name3="MyCourses" />
-            <div className="section section-padding">
-                <div className="container">
-                    <div className="courses-wrapper-02">
-                        <div className="row">
+            <div class="section section-padding">
+                <div class="container">
+                    <div class="courses-wrapper-02">
+                        <div class="row">
                             {coursesinf.map((item) => (
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="single-courses">
-                                        <div className="courses-images">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-courses">
+                                        <div class="courses-images">
                                             <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
-                                            <div className="courses-option dropdown">
-                                                <button className="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="courses-option dropdown">
+                                                <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
                                                     <span></span>
                                                     <span></span>
                                                 </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a href="#"><i className="icofont-share-alt"></i> Share</a></li>
-                                                    <li><a href="#"><i className="icofont-plus"></i> Create Collection</a></li>
-                                                    <li><a href="#"><i className="icofont-star"></i> Favorite</a></li>
-                                                    <li><a href="#"><i className="icofont-archive"></i> Archive</a></li>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                                    <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                                    <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                                    <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="courses-content">
-                                            <div className="courses-author">
-                                                <div className="author">
-                                                    <div className="author-thumb">
+                                        <div class="courses-content">
+                                            <div class="courses-author">
+                                                <div class="author">
+                                                    <div class="author-thumb">
                                                         <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
                                                     </div>
-                                                    <div className="author-name">
-                                                        <a className="name" href="#">{item.instructor}</a>
+                                                    <div class="author-name">
+                                                        <a class="name" href="#">{item.instructor}</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
+                                            <h4 class="title"><a href="Coursedetails">{item.title}</a></h4>
                                         </div>
                                     </div>
                                 </div>
