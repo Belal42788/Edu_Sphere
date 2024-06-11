@@ -68,9 +68,9 @@ function Courses() {
                     <div class="courses-wrapper-02">
                         <div class="row">
                             {coursesinf.map((item) => (
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses">
-                                        <div class="courses-images">
+                                <div className="col-lg-4 col-md-6" >
+                                    <div className="single-courses" style={{height:'400px'}}>
+                                        <div className="courses-images">
                                             <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -86,10 +86,10 @@ function Courses() {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="courses-content">
-                                            <div class="courses-author">
-                                                <div class="author">
-                                                    <div class="author-thumb">
+                                        <div className="courses-content" style={{marginBottom:'20px'}}>
+                                            <div className="courses-author">
+                                                <div className="author">
+                                                    <div className="author-thumb">
                                                         <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
                                                     </div>
                                                     <div class="author-name">
@@ -97,7 +97,7 @@ function Courses() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 class="title"><a href="Coursedetails">{item.title}</a></h4>
+                                            <h4 className="title" ><a href="Coursedetails">{item.title}</a></h4>
                                         </div>
                                     </div>
                                 </div>
