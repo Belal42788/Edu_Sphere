@@ -58,6 +58,22 @@ function FreeCourse() {
             ImageUrl: author4
         }
     ];
+    const feedback = [
+      {
+        imagefeed:author7 , 
+        Namefeed:'Cristiano Ronaldo',
+        Nationfeed:'POR',
+        comment:'cr7 is best cr7 coat'
+      },
+    {
+      imagefeed:author6 , 
+      Namefeed:'Sara Alexander',
+      Nationfeed:'USA',
+      comment:'cr7 is best cr7 coat'
+    },
+   
+    
+    ]
   return (
     <>
       <Navbar name='Courses' name2='Details' name3='Courses' />
@@ -296,84 +312,31 @@ function FreeCourse() {
                           <h3 class="tab-title">Student Reviews:</h3>
                           <div class="reviews-wrapper reviews-active">
                             <div class="swiper-container">
-                              <div class="swiper-wrapper">
-                                <div class="single-review swiper-slide">
-                                  <div class="review-author">
-                                    <div class="author-thumb">
-                                      <img src={author6} alt="Author" />
-                                      <i class="icofont-quote-left"></i>
-                                    </div>
-                                    <div class="author-content">
-                                      <h4 class="name">Sara Alexander</h4>
-                                      <span class="designation">
-                                        Product Designer, USA
-                                      </span>
-                                      <span class="rating-star">
-                                        <span class="rating-bar"></span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <p>
-                                    Lorem Ipsum has been the industry's standard
-                                    dummy text since the 1500 when unknown
-                                    printer took a galley of type and scrambled
-                                    to make type specimen book has survived not
-                                    five centuries but also the leap into
-                                    electronic type and book.
-                                  </p>
-                                </div>
-                                <div class="single-review swiper-slide">
-                                  <div class="review-author">
-                                    <div class="author-thumb">
-                                      <img src={author7} alt="Author" />
-                                      <i class="icofont-quote-left"></i>
-                                    </div>
-                                    <div class="author-content">
-                                      <h4 class="name">Karol Bachman</h4>
-                                      <span class="designation">
-                                        Product Designer, USA
-                                      </span>
-                                      <span class="rating-star">
-                                        <span class="rating-bar"></span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <p>
-                                    Lorem Ipsum has been the industry's standard
-                                    dummy text since the 1500 when unknown
-                                    printer took a galley of type and scrambled
-                                    to make type specimen book has survived not
-                                    five centuries but also the leap into
-                                    electronic type and book.
-                                  </p>
-                                </div>
-                                <div class="single-review swiper-slide">
-                                  <div class="review-author">
-                                    <div class="author-thumb">
-                                      <img src={author3} alt="Author" />
-                                      <i class="icofont-quote-left"></i>
-                                    </div>
-                                    <div class="author-content">
-                                      <h4 class="name">Gertude Culbertson</h4>
-                                      <span class="designation">
-                                        Product Designer, USA
-                                      </span>
-                                      <span class="rating-star">
-                                        <span class="rating-bar"></span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <p>
-                                    Lorem Ipsum has been the industry's standard
-                                    dummy text since the 1500 when unknown
-                                    printer took a galley of type and scrambled
-                                    to make type specimen book has survived not
-                                    five centuries but also the leap into
-                                    electronic type and book.
-                                  </p>
-                                </div>
-                              </div>
-                              =<div class="swiper-pagination"></div>
+                            <div className="swiper-wrapper">
+              {feedback.map((item) => (
+                <div className="single-testimonial  col-lg-5">
+               
+                  <div className="testimonial-author">
+                
+                    <div className="author-thumb">
+                      <img src={item.imagefeed} alt="Author" />
+                      <i className="icofont-quote-left"></i>
+                    </div>
+                    <span className="rating-star">
+                      <span className="rating-bar"></span>
+                    </span>
+                  </div>
+                  <div className="testimonial-content">
+                    <p>
+                    {item.comment}
+                    </p>
+                    <h4 className="name"> {item.Namefeed}</h4>
+                    <span className="designation">Product Designer,  {item.Nationfeed}</span>
+                  </div>
+                </div>
+                ))};
+              </div>
+                              <div class="swiper-pagination"></div>
                             </div>
                           </div>
                           <div class="reviews-btn">
