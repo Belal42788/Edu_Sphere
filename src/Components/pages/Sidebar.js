@@ -1,8 +1,7 @@
 // src/Sidebar.js
 import React from 'react';
-import './Sidebar.css';
 import studentImage from '../../assets/images/author/author-04.jpg';
-
+import "../../Styles/Contact.css";
 const Sidebar = () => {
   return (
     <div className="sidebar-1">

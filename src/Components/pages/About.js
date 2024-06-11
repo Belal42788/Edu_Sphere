@@ -108,12 +108,7 @@ const feedback = [
     Nationfeed:'POR',
     comment:'cr7 is best cr7 coat'
   },
-{
-  imagefeed:author6 , 
-  Namefeed:'Sara Alexander',
-  Nationfeed:'USA',
-  comment:'cr7 is best cr7 coat'
-},
+
 {
   imagefeed:author7 , 
   Namefeed:'Melissa Roberts',
@@ -318,7 +313,7 @@ const feedback = [
             <div className="swiper-container">
               <div className="swiper-wrapper">
               {feedback.map((item) => (
-                <div className="single-testimonial  col-lg-5">
+                <div className="single-testimonial  col-lg-6">
                
                   <div className="testimonial-author">
                 
