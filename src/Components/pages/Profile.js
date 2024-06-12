@@ -55,16 +55,14 @@ const Profile = () => {
 };
 
 const styles = {
-  Footer:{
-    margin:'15px'
-  },
+ 
   container: {
     fontFamily: "Arial, sans-serif",
     display: "flex",
     height: "100vh",
   },
   content: {
-    // marginLeft: "250px", // Space for the sidebar
+    marginLeft: "5px", // Space for the sidebar
     // padding: "20px",
     flex: 1,
     backgroundColor: "#f9f9f9",
