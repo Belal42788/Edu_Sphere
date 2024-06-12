@@ -4,6 +4,8 @@ import Sidebar from "./Sidebar";
 import Advertise from "../advertise";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import zIndex from "@mui/material/styles/zIndex";
+import { Margin } from "@mui/icons-material";
 // import studentImage from "../../assets/images/author/author-04.jpg"; // Import the student image
 
 const Profile = () => {
@@ -23,8 +25,11 @@ const Profile = () => {
 
   return (
     <div className="profile-container" style={styles.container}>
- 
-      <Sidebar />
+     <div className="col-2">
+      <Sidebar/>
+      </div>
+      <div className="col-10">
+
       <div className="content" style={styles.content}>
         <h1 style={styles.header}>Your Profile</h1>
        
@@ -37,25 +42,35 @@ const Profile = () => {
         <div className="mt-10">
           <Advertise />
         </div>
-        <Footer />
+        <div style={styles.Footer}>
+
+        <Footer  />
+        </div>
+
       </div>
     </div>
+    </div>
+
   );
 };
 
 const styles = {
+  Footer:{
+    margin:'15px'
+  },
   container: {
     fontFamily: "Arial, sans-serif",
     display: "flex",
     height: "100vh",
   },
   content: {
-    marginLeft: "250px", // Space for the sidebar
-    padding: "20px",
+    // marginLeft: "250px", // Space for the sidebar
+    // padding: "20px",
     flex: 1,
     backgroundColor: "#f9f9f9",
     border: "1px solid #ddd",
     borderRadius: "4px",
+   
   },
   header: {
     textAlign: "center",
