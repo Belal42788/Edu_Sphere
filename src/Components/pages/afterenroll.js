@@ -198,7 +198,7 @@ return (
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="enroll-tab-title">
-                                                    <h3 class="title">EduLe Certificates</h3>
+                                                    <h3 class="title">EduSphere Certificates</h3>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8">
