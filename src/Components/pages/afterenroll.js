@@ -127,52 +127,11 @@ function Afterenroll() {
 
                 Your browser does not support the video tag.
               </video>                     
-              {/* <div className="video-play-bar">
-                <div className="topControl">
-                  <div className="progress">
-                    <span className="bufferBar"></span>
-                    <span className="timeBar"></span>
-                  </div>
-                  <div className="time">
-                    <span className="current"></span> /
-                    <span className="duration"></span>
-                  </div>
-                </div>
-                <div className="controllers">
-                  <div className="controllers-left">
-                    <button className="prevvid disabled" title="Previous video"><i className="icofont-ui-previous"></i></button>
-                    <button className="btnPlay" title="Play/Pause video"></button>
-                    <button className="nextvid" title="Next video"><i className="icofont-ui-next"></i></button>
-                    <button className="sound sound2" title="Mute/Unmute sound"></button>
-                    <div className="volume" title="Set volume">
-                      <span className="volumeBar"></span>
-                    </div>
-                  </div>
-                  <div className="controllers-right">
-                    <button className="btnspeed" title="Video speed"><i className="fa fa-gear"></i></button>
-                    <ul className="speedcnt">
-                      <li className="spdx50">1.5</li>
-                      <li className="spdx25">1.25</li>
-                      <li className="spdx1 selected">Normal</li>
-                      <li className="spdx050">0.5</li>
-                    </ul>
-                    <button className="btnFS" title="full screen"></button>
-                  </div>
-                </div>
-              </div>
-              <div className="bigplay" title="play the video">
-                <i className="fa fa-play"></i>
-              </div>
-              <div className="loading">
-                <div className="spinner-border spinner">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
-              </div> */}
+         
             </div>
             <div className="courses-enroll-content">
               <div className="courses-enroll-title">
                 <h2 className="title">Finance & Investment Series: Learn to Budget and Calculate Your Net Worth.</h2>
-                <p><i className="icofont-eye-alt"></i> <span>8,350</span> Students are watching</p>
               </div>
               <div className="courses-enroll-tab">
                 <div className="enroll-tab-menu">
@@ -359,7 +318,7 @@ function Afterenroll() {
                 <div class="courses-video-playlist">
                     <div class="playlist-title">
                         <h3 class="title">Course Content</h3>
-                        <span>80 Lessons (8h 15m)</span>
+                        <span>{}</span>
                     </div>
                     {/* <!-- Video Playlist Start  --> */}
                     <div class="video-playlist">
