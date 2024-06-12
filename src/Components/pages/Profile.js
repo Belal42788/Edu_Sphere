@@ -62,7 +62,7 @@ const styles = {
     height: "100vh",
   },
   content: {
-    marginLeft: "5px", // Space for the sidebar
+    marginLeft: "4px", // Space for the sidebar
     // padding: "20px",
     flex: 1,
     backgroundColor: "#f9f9f9",
