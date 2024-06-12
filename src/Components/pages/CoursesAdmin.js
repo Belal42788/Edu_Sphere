@@ -54,12 +54,72 @@ import "../../Styles/Contact.css";
 import Footer from "../Footer";
 import AdminHeader from "../AdminHeader";
 function CoursesAdmin() {
+    const courses = [
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["Live", "Free", "Public"],
+            title: "Build An eCommerce Site With WooCommerce and WooLentor",
+            earned: "$5,68.00",
+            enrollments: "1,852",
+            rating: 4.5,
+            ratingBarWidth: "80%"
+        },
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["Live", "Paid", "Private"],
+            title: "Learn React for Beginners",
+            earned: "$3,200.00",
+            enrollments: "2,135",
+            rating: 4.7,
+            ratingBarWidth: "94%"
+        },
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["On-Demand", "Free", "Public"],
+            title: "Mastering Python Programming",
+            earned: "$7,450.00",
+            enrollments: "5,728",
+            rating: 4.9,
+            ratingBarWidth: "98%"
+        },
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["Live", "Paid", "Public"],
+            title: "Advanced JavaScript Techniques",
+            earned: "$2,870.00",
+            enrollments: "1,420",
+            rating: 4.6,
+            ratingBarWidth: "92%"
+        },
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["Live", "Free", "Private"],
+            title: "Design Principles for Beginners",
+            earned: "$4,500.00",
+            enrollments: "3,980",
+            rating: 4.8,
+            ratingBarWidth: "96%"
+        },
+        {
+            itemThumb: course1,
+            alt: "Courses",
+            meta: ["On-Demand", "Paid", "Public"],
+            title: "Introduction to Machine Learning",
+            earned: "$6,200.00",
+            enrollments: "4,120",
+            rating: 4.7,
+            ratingBarWidth: "94%"
+        }
+    ];
     return (
         <>
             <div><AdminHeader /></div>
-            {/* <!-- Courses Admin Start -->*/}
             <div class="section overflow-hidden position-relative" id="wrapper">
-                {/* <!-- Page Content Wrapper Start -->*/}
                 <div class="page-content-wrapper">
                     <div class="container-fluid custom-container">
                         {/* <!-- Admin Courses Tab Start -->*/}
@@ -71,242 +131,227 @@ function CoursesAdmin() {
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- Admin Courses Tab End -->*/}
-                        {/* <!-- Admin Courses Tab Content Start -->*/}
                         <div class="admin-courses-tab-content">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab1">
-                                    {/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Public</a>
-        </div>
-        <h3 class="title"><a href="#">Build An eCommerce Site With WooCommerce and WooLentor.</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$5,68.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">1,852</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.5
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '80%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
+                                    {courses.map((item)=>(
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={item.itemThumb} alt={item.alt} />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">{item.meta[0]}</a>
+                                                <a href="#" class="action">{item.meta[1]}</a>
+                                                <a href="#" class="action">{item.meta[2]}</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">{item.title}.</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">{item.earned}</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">{item.enrollments}</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                {item.rating}
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '80%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ))  };
+                                    {/* <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={course1} alt="Courses" />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">Live</a>
+                                                <a href="#" class="action">Paid</a>
+                                                <a href="#" class="action">Private</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">Learn React for Beginners</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">$3,200.00</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">2,135</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                    4.7
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '94%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-{/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Private</a>
-        </div>
-        <h3 class="title"><a href="#">Learn React for Beginners</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$3,200.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">2,135</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.7
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '94%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={course1} alt="Courses" />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">On-Demand</a>
+                                                <a href="#" class="action">Free</a>
+                                                <a href="#" class="action">Public</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">Mastering Python Programming</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">$7,450.00</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">5,728</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                    4.9
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '98%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-{/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">On-Demand</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Public</a>
-        </div>
-        <h3 class="title"><a href="#">Mastering Python Programming</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$7,450.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">5,728</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.9
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '98%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={course1} alt="Courses" />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">Live</a>
+                                                <a href="#" class="action">Paid</a>
+                                                <a href="#" class="action">Public</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">Advanced JavaScript Techniques</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">$2,870.00</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">1,420</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                    4.6
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '92%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-{/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Public</a>
-        </div>
-        <h3 class="title"><a href="#">Advanced JavaScript Techniques</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$2,870.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">1,420</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.6
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '92%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={course1} alt="Courses" />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">Live</a>
+                                                <a href="#" class="action">Free</a>
+                                                <a href="#" class="action">Private</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">Design Principles for Beginners</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">$4,500.00</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">3,980</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                    4.8
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '96%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-{/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">Live</a>
-            <a href="#" class="action">Free</a>
-            <a href="#" class="action">Private</a>
-        </div>
-        <h3 class="title"><a href="#">Design Principles for Beginners</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$4,500.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">3,980</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.8
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '96%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
-
-{/* <!-- Courses Item Start --> */}
-<div class="courses-item">
-    <div class="item-thumb">
-        <a href="#">
-            <img src={course1} alt="Courses" />
-        </a>
-    </div>
-    <div class="content-title">
-        <div class="meta">
-            <a href="#" class="action">On-Demand</a>
-            <a href="#" class="action">Paid</a>
-            <a href="#" class="action">Public</a>
-        </div>
-        <h3 class="title"><a href="#">Introduction to Machine Learning</a></h3>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-box">
-            <p>Earned</p>
-            <span class="count">$6,200.00</span>
-        </div>
-        <div class="content-box">
-            <p>Enrollment’s</p>
-            <span class="count">4,120</span>
-        </div>
-        <div class="content-box">
-            <p>Course Rating</p>
-            <span class="count">
-                4.7
-                <span class="rating-star">
-                    <span class="rating-bar" style={{width: '94%'}}></span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
-{/* <!-- Courses Item End --> */}
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                <img src={course1} alt="Courses" />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <div class="meta">
+                                                <a href="#" class="action">On-Demand</a>
+                                                <a href="#" class="action">Paid</a>
+                                                <a href="#" class="action">Public</a>
+                                            </div>
+                                            <h3 class="title"><a href="#">Introduction to Machine Learning</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">$6,200.00</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count">4,120</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                    4.7
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '94%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div> */}
 
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- Admin Courses Tab Content End -->*/}
                     </div>
                 </div>
-                {/* <!-- Page Content Wrapper End -->*/}
             </div>
-            {/* <!-- Courses Admin End -->*/}
+      
             <div><Footer /></div>
         </>
     );
