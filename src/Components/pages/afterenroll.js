@@ -229,11 +229,11 @@ return (
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
-                                                                <img src="assets/images/author/author-06.jpg"
+                                                                <img src={author7}
                                                                     alt="Author"/>
                                                             </div>
                                                             <div class="author-content">
-                                                                <h4 class="name">Sara Alexander</h4>
+                                                                <h4 class="name">Karol Alexander</h4>
                                                                 <span class="designation">Product Designer, USA</span>
                                                                 <span class="rating-star">
                                                                     <span class="rating-bar" style={{width: '80%'}}></span>
@@ -250,7 +250,7 @@ return (
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
-                                                                <img src="assets/images/author/author-07.jpg"
+                                                                <img src={author7}
                                                                     alt="Author"/>
                                                             </div>
                                                             <div class="author-content">
@@ -271,7 +271,7 @@ return (
                                                     <div class="single-instructor">
                                                         <div class="review-author">
                                                             <div class="author-thumb">
-                                                                <img src="assets/images/author/author-03.jpg"
+                                                                <img src={author7}
                                                                     alt="Author"/>
                                                             </div>
                                                             <div class="author-content">
