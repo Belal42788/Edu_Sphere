@@ -7,7 +7,7 @@ import Footer from "../Footer";
 import Navbar from "../Navbar";
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
-
+import { useState } from "react";
 import Advertise from "../advertise";
 import "../../Styles/plugins/icofont.min.css";
 import "../../Styles/plugins/animate.min.css";
@@ -18,155 +18,174 @@ import "../../Styles/plugins/apexcharts.css";
 import "../../Styles/plugins/jqvmap.min.css";
 import "../../Styles/Contact.css";
 import AdminHeader from "../AdminHeader";
+
 function Afterenroll() {
-    const videoLinks = [
-        {
-          title: "01. The Complete Medicine Masterclass",
-          url: "https://player.vimeo.com/external/215175080.hd.mp4?s=5b17787857fd95646e67ad0f666ea69388cb703c&profile_id=119",
-          duration: "08 minutes"
-        },
-        {
-          title: "02. Standard dummy text ever since the",
-          url: "https://player.vimeo.com/external/207590826.hd.mp4?s=6a918d074abf8f3add7858018855524d384f6934&profile_id=119",
-          duration: "08 minutes"
-        },
-        {
-          title: "03. Printer took a galley of type and scrambled",
-          url: "https://player.vimeo.com/external/207590786.hd.mp4?s=bcd80c5d2f6bf1bbad3b1a670ef93861e72f9683&profile_id=119",
-          duration: "08 minutes"
-        },
-        {
-          title: "04. It to make a type specimen book & break",
-          url: "https://player.vimeo.com/external/207590615.hd.mp4?s=c4bce1872859889c86b688c26c60ed2b5734de28&profile_id=119",
-          duration: "08 minutes"
-        },
-        {
-          title: "05. Survived not only five centuries also the leap",
-          url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test5_voice_mp4_480x360.mp4",
-          duration: "08 minutes"
-        },
-        {
-          title: "06. Into typesettingremaining essentially",
-          url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test7_voiceclip_mp4_480x360.mp4",
-          duration: "08 minutes"
-        },
-        {
-          title: "07. Unchanged. It was popularised in the 1960s",
-          url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test8_voiceclip_mp4_480x320.mp4",
-          duration: "08 minutes"
-        },
-        {
-          title: "08. The release of Letraset sheets containing",
-          url: "http://download.wavetlan.com/SVV/Media/HTTP/MP4/ConvertedFiles/Media-Convert/Unsupported/dw11222.mp4",
-          duration: "08 minutes"
-        }
-      ];
-      const coursesinf = [
-        {
-          id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428' ,Language:'English',
-          Certificate:'Yes'}]
-          const teamInfo = [
-            {
-                id: 1,
-                name: 'Margarita James',
-                designation: 'MSC, Instructor',
-                rating: 4.9,
-                ImageUrl: author1
-            },
-            {
-                id: 2,
-                name: 'Mitchell Colon',
-                designation: 'BBA, Instructor',
-                rating: 4.9,
-                ImageUrl: author2
-            },
-            {
-                id: 3,
-                name: 'Sonya Gordon',
-                designation: 'MBA, Instructor',
-                rating: 4.9,
-                ImageUrl: author3
-            },
-         
-        ];   
-return (
-<>
-<div>
-<AdminHeader />
-</div>
-{/* <!-- Courses Enroll Start --> */}
-        <div class="section">
-            {/* <!-- Courses Enroll Wrapper Start --> */}
-            <div class="courses-enroll-wrapper">
-                {/* <!-- Courses Video Player Start --> */}
-                <div class="courses-video-player">
-                    {/* <!-- Courses Video Container Start --> */}
-                    {/* <div class="vidcontainer">
-                        <video id="myvid"></video>
-                        <div class="video-play-bar">
-                            <div class="topControl">
-                                <div class="progress">
-                                    <span class="bufferBar"></span>
-                                    <span class="timeBar"></span>
-                                </div>
-                                <div class="time">
-                                    <span class="current"></span> /
-                                    <span class="duration"></span>
-                                </div>
-                            </div>
-                            <div class="controllers">
-                                <div class="controllers-left">
-                                    <button class="prevvid disabled" title="Previous video"><i
-                                            class="icofont-ui-previous"></i></button>
-                                    <button class="btnPlay" title="Play/Pause video"></button>
-                                    <button class="nextvid" title="Next video"><i class="icofont-ui-next"></i></button>
-                                    <button class="sound sound2" title="Mute/Unmute sound"></button>
-                                    <div class="volume" title="Set volume">
-                                        <span class="volumeBar"></span>
-                                    </div>
-                                </div>
-                                <div class="controllers-right">
-                                    <button class="btnspeed" title="Video speed"><i class="fa fa-gear"></i></button>
-                                    <ul class="speedcnt">
-                                        <li class="spdx50">1.5</li>
-                                        <li class="spdx25">1.25</li>
-                                        <li class="spdx1 selected">Normal</li>
-                                        <li class="spdx050">0.5</li>
-                                    </ul>
-                                    <button class="btnFS" title="full screen"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bigplay" title="play the video">
-                            <i class="fa fa-play"></i>
-                        </div>
-                        <div class="loading">
-                            <div class="spinner-border spinner">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div> */}
-                 
-                     <div class="courses-enroll-content">
-                        <div class="courses-enroll-title">
-                            <h2 class="title">Finance & Investment Series: Learn to Budget and Calculate Your Net Worth.
-                            </h2>
-                            <p><i class="icofont-eye-alt"></i> <span>8,350</span> Students are watching</p>
-                        </div>
-                    
-                        <div class="courses-enroll-tab">
-                            <div class="enroll-tab-menu">
-                                <ul class="nav">
-                                    <li><button class="active" data-bs-toggle="tab"
-                                            data-bs-target="#tab1">Overview</button></li>
-                                    <li><button data-bs-toggle="tab" data-bs-target="#tab2">Description</button></li>
-                                    <li><button data-bs-toggle="tab" data-bs-target="#tab3">Certificates</button></li>
-                                    <li><button data-bs-toggle="tab" data-bs-target="#tab4">Instructor</button></li>
-                                </ul>
-                            </div>
-                            <div class="enroll-share">
-                                <a href="#"><i class="icofont-share-alt"></i> Share</a>
-                            </div>
+  const videoLinks = [
+    {
+      title: "01. The Complete Medicine Masterclass",
+      url: "https://player.vimeo.com/external/215175080.hd.mp4?s=5b17787857fd95646e67ad0f666ea69388cb703c&profile_id=119",
+      duration: "08 minutes"
+    },
+    {
+      title: "02. Standard dummy text ever since the",
+      url: "https://player.vimeo.com/external/207590826.hd.mp4?s=6a918d074abf8f3add7858018855524d384f6934&profile_id=119",
+      duration: "08 minutes"
+    },
+    {
+      title: "03. Printer took a galley of type and scrambled",
+      url: "https://player.vimeo.com/external/207590786.hd.mp4?s=bcd80c5d2f6bf1bbad3b1a670ef93861e72f9683&profile_id=119",
+      duration: "08 minutes"
+    },
+    {
+      title: "04. It to make a type specimen book & break",
+      url: "https://player.vimeo.com/external/207590615.hd.mp4?s=c4bce1872859889c86b688c26c60ed2b5734de28&profile_id=119",
+      duration: "08 minutes"
+    },
+    {
+      title: "05. Survived not only five centuries also the leap",
+      url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test5_voice_mp4_480x360.mp4",
+      duration: "08 minutes"
+    },
+    {
+      title: "06. Into typesettingremaining essentially",
+      url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test7_voiceclip_mp4_480x360.mp4",
+      duration: "08 minutes"
+    },
+    {
+      title: "07. Unchanged. It was popularised in the 1960s",
+      url: "http://download.wavetlan.com/SVV/Media/HTTP/H264/Other_Media/H264_test8_voiceclip_mp4_480x320.mp4",
+      duration: "08 minutes"
+    },
+    {
+      title: "08. The release of Letraset sheets containing",
+      url: "http://download.wavetlan.com/SVV/Media/HTTP/MP4/ConvertedFiles/Media-Convert/Unsupported/dw11222.mp4",
+      duration: "08 minutes"
+    }
+  ];
+  
+  const coursesinf = [
+    {
+      id: 1, 
+      title: 'Data Science and Machine Learning with Python - Hands On!', 
+      instructor: 'John Doe', 
+      lecture: '29', 
+      price: '428',
+      Language: 'English',
+      Certificate: 'Yes'
+    }
+  ];
+
+  const teamInfo = [
+    {
+      id: 1,
+      name: 'Margarita James',
+      designation: 'MSC, Instructor',
+      rating: 4.9,
+      ImageUrl: author1
+    },
+    {
+      id: 2,
+      name: 'Mitchell Colon',
+      designation: 'BBA, Instructor',
+      rating: 4.9,
+      ImageUrl: author2
+    },
+    {
+      id: 3,
+      name: 'Sonya Gordon',
+      designation: 'MBA, Instructor',
+      rating: 4.9,
+      ImageUrl: author3
+    },
+  ];  
+
+  const [currentVideo, setCurrentVideo] = useState(videoLinks[0].url);
+
+  const handleVideoChange = (url) => {
+    setCurrentVideo(url);
+    const videoElement = document.getElementById('myvid');
+    videoElement.load();
+    videoElement.play();
+  };
+
+  return (
+    <>
+      <div>
+        <AdminHeader />
+      </div>
+      {/* Courses Enroll Start */}
+      <div className="section">
+        {/* Courses Enroll Wrapper Start */}
+        <div className="courses-enroll-wrapper">
+          {/* Courses Video Player Start */}
+          <div className="courses-video-player">
+            {/* Courses Video Container Start */}
+            <div className="vidcontainer">
+              <video id="myvid" controls autoPlay>
+                <source src={currentVideo} type="video/mp4" />
+                <source src={currentVideo} type="video/ogg" />
+
+                Your browser does not support the video tag.
+              </video>                     
+              {/* <div className="video-play-bar">
+                <div className="topControl">
+                  <div className="progress">
+                    <span className="bufferBar"></span>
+                    <span className="timeBar"></span>
+                  </div>
+                  <div className="time">
+                    <span className="current"></span> /
+                    <span className="duration"></span>
+                  </div>
+                </div>
+                <div className="controllers">
+                  <div className="controllers-left">
+                    <button className="prevvid disabled" title="Previous video"><i className="icofont-ui-previous"></i></button>
+                    <button className="btnPlay" title="Play/Pause video"></button>
+                    <button className="nextvid" title="Next video"><i className="icofont-ui-next"></i></button>
+                    <button className="sound sound2" title="Mute/Unmute sound"></button>
+                    <div className="volume" title="Set volume">
+                      <span className="volumeBar"></span>
+                    </div>
+                  </div>
+                  <div className="controllers-right">
+                    <button className="btnspeed" title="Video speed"><i className="fa fa-gear"></i></button>
+                    <ul className="speedcnt">
+                      <li className="spdx50">1.5</li>
+                      <li className="spdx25">1.25</li>
+                      <li className="spdx1 selected">Normal</li>
+                      <li className="spdx050">0.5</li>
+                    </ul>
+                    <button className="btnFS" title="full screen"></button>
+                  </div>
+                </div>
+              </div>
+              <div className="bigplay" title="play the video">
+                <i className="fa fa-play"></i>
+              </div>
+              <div className="loading">
+                <div className="spinner-border spinner">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div> */}
+            </div>
+            <div className="courses-enroll-content">
+              <div className="courses-enroll-title">
+                <h2 className="title">Finance & Investment Series: Learn to Budget and Calculate Your Net Worth.</h2>
+                <p><i className="icofont-eye-alt"></i> <span>8,350</span> Students are watching</p>
+              </div>
+              <div className="courses-enroll-tab">
+                <div className="enroll-tab-menu">
+                  <ul className="nav">
+                    <li><button className="active" data-bs-toggle="tab" data-bs-target="#tab1">Overview</button></li>
+                    <li><button data-bs-toggle="tab" data-bs-target="#tab2">Description</button></li>
+                    <li><button data-bs-toggle="tab" data-bs-target="#tab3">Certificates</button></li>
+                    <li><button data-bs-toggle="tab" data-bs-target="#tab4">Instructor</button></li>
+                  </ul>
+                </div>
+                <div className="enroll-share">
+                  <a href="#"><i className="icofont-share-alt"></i> Share</a>
+                </div>
                         </div>
                      
                         <div class="courses-enroll-tab-content">
@@ -352,7 +371,9 @@ return (
                                     <nav class="vids">
                                         {videoLinks.map((item)=>(
                                         <a class="link active"
-                                            href={item.url}>
+                                            href="#"
+                                            onClick={() => handleVideoChange(item.url)}
+                                            >
                                             <p>{item.title}</p>
                                             <span class="total-duration"> {item.duration}</span>
                                         </a>
@@ -361,10 +382,9 @@ return (
                                     </nav>
                                 </div>
                             </div>
-                            {/* <!-- Accordion Items End  --> */}
+                          
                         </div>
                     </div>
-                    {/* <!-- Video Playlist End  --> */}
                 </div>
             </div>
         </div>
