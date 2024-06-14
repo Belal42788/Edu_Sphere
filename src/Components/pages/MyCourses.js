@@ -26,7 +26,7 @@ import author9 from "../../assets/images/author/author-01.jpg";
 import author10 from "../../assets/images/author/author-01.jpg";
 import author11 from "../../assets/images/author/author-11.jpg";
 import author12 from "../../assets/images/author/author-01.jpg";
-import author13 from "../../assets/images/author/author-13.jpg";
+import author13 from "../../assets/images/author/author-24.jpg";
 import author14 from "../../assets/images/author/author-02.jpg";
 import author15 from "../../assets/images/author/author-04.jpg";
 import "../../Styles/Contact.css"

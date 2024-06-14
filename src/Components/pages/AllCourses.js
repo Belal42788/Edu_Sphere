@@ -25,7 +25,7 @@ import author8 from "../../assets/images/author/author-19.jpg";
 import author9 from "../../assets/images/author/author-20.jpg";
 import author10 from "../../assets/images/author/author-01.jpg";
 import author11 from "../../assets/images/author/author-11.jpg";
-import author12 from "../../assets/images/author/author-12.jpg";
+import author12 from "../../assets/images/author/author-24.jpg";
 import author13 from "../../assets/images/author/author-21.jpg";
 import author14 from "../../assets/images/author/author-22.jpg";
 import author15 from "../../assets/images/author/author-23.jpg";
