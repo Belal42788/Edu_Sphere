@@ -17,7 +17,7 @@ import Image3 from "../../assets/images/shape/shape-23.png"
 import Image4 from "../../assets/images/shape/shape-5.png"
 import Image5 from "../../assets/images/shape/shape-6.png"
 import Image6 from "../../assets/images/shape/shape-24.png"
-import Image7 from "../../assets/images/author/author-11.jpg"
+import Image7 from "../../assets/images/author/author-06.jpg"
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
 import author3 from "../../assets/images/author/author-17.jpg";
@@ -25,7 +25,7 @@ import author4 from "../../assets/images/author/author-04.jpg";
 import author5 from "../../assets/images/author/author-20.jpg";
 import author6 from "../../assets/images/author/author-19.jpg";
 import author7 from "../../assets/images/author/author-07.jpg";
-import author8 from "../../assets/images/author/author-11.jpg";
+import author8 from "../../assets/images/author/author-06.jpg";
 import author9 from "../../assets/images/author/author-01.jpg";
 import author10 from "../../assets/images/author/author-01.jpg";
 import courseImg9 from "../../assets/images/courses/courses-09.jpg";

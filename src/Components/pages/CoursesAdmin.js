@@ -6,7 +6,7 @@ import author4 from "../../assets/images/author/author-04.jpg";
 import author5 from "../../assets/images/author/author-04.jpg";
 import author6 from "../../assets/images/author/author-06.jpg";
 import author7 from "../../assets/images/author/author-07.jpg";
-import author8 from "../../assets/images/author/author-11.jpg";
+import author8 from "../../assets/images/author/author-06.jpg";
 import author9 from "../../assets/images/author/author-01.jpg";
 import author10 from "../../assets/images/author/author-01.jpg";
 

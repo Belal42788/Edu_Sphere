@@ -1,6 +1,6 @@
 import React from "react";
 import Image1 from "../../assets/images/logo-icon.png";
-import author3 from "../../assets/images/author/author-11.jpg";
+import author3 from "../../assets/images/author/author-06.jpg";
 import author6 from "../../assets/images/author/author-06.jpg";
 import author7 from "../../assets/images/author/author-07.jpg";
 import Footer from "../Footer";
