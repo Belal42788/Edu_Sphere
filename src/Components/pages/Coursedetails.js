@@ -5,7 +5,7 @@ import courseImg03 from "../../assets/seo.png";
 import courseImg04 from "../../assets/ui-ux.png";
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
-import author3 from "../../assets/images/author/author-03.jpg";
+import author3 from "../../assets/images/author/author-17.jpg";
 import author4 from "../../assets/images/author/author-04.jpg";
 import author6 from "../../assets/images/author/author-06.jpg";
 import author7 from "../../assets/images/author/author-07.jpg";
