@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  background-color: #cdffd6;
+  background-color: #478b61;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -50,12 +50,12 @@ body {
 }
 
 .label {
-  color: #113d25; /* Lighter shade of the border color */
+  color: white; /* Lighter shade of the border color */
   font-weight: bold;
   margin-right: 10px;
 }
 
 .value {
-  color: #333333;
+  color: #2f0000;
   font-weight: normal;
 }
