@@ -1,109 +1,36 @@
-// src/Profile.js
-import React, { useState } from "react";
-import Sidebar from "./Sidebar";
-import Advertise from "../advertise";
-import Footer from "../Footer";
+import "../../Styles/Profile.css";
 import Navbar from "../Navbar";
-import zIndex from "@mui/material/styles/zIndex";
-import { Margin } from "@mui/icons-material";
-// import studentImage from "../../assets/images/author/author-04.jpg"; // Import the student image
+import Footer from "../Footer";
+import Advertise from "../advertise";
+import React from "react";
+import profilePicture from "../../assets/images/author/author-07.jpg"; // Updated profile picture path
 
-const Profile = () => {
-  const student = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-   
-  };
-
-  const [selectedCourse, setSelectedCourse] = useState("");
-
-  const handleCourseChange = (event) => {
-    setSelectedCourse(event.target.value);
-  };
-
-  const checkMyCourses = () => {};
-
+export default function Profile() {
   return (
-    <div className="profile-container" style={styles.container}>
-     <div className="col-2">
-      <Sidebar/>
-      </div>
-      <div className="col-10">
-
-      <div className="content" style={styles.content}>
-        <h1 style={styles.header}>Your Profile</h1>
-       
-        <p style={styles.p}><strong style={styles.text}>Your Name:</strong> {student.name}</p>
-       
-        <p style={styles.p}><strong style={styles.text}>Your Email:</strong> {student.email}</p>
-        <button onClick={checkMyCourses} style={styles.button}>
-          <a href="mycourses" style={styles.link}>Check My Courses</a>
-        </button>
-        <div className="mt-10">
-          <Advertise />
+    <div>
+      <Navbar name="Profile" />
+      <div className="section section-padding">
+        <div className="container">
+          <div className="profile-wrapper">
+            <div className="profile-header">
+              <div className="profile-picture">
+                <img src={profilePicture} alt="User Profile" />
+              </div>
+              <div className="profile-details">
+                <p className="username">
+                  <span className="label">Username:</span>
+                  <span className="value">the user name</span>
+                </p>
+                <p className="email">
+                  <span className="label">Email:</span>
+                  <span className="value">user@example.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style={styles.Footer}>
-
-        <Footer  />
-        </div>
-
       </div>
+      <Footer />
     </div>
-    </div>
-
   );
-};
-
-const styles = {
- 
-  container: {
-    fontFamily: "Arial, sans-serif",
-    display: "flex",
-    height: "100vh",
-  },
-  content: {
-    marginLeft: "4px", // Space for the sidebar
-    // padding: "20px",
-    flex: 1,
-    backgroundColor: "#f9f9f9",
-    border: "1px solid #ddd",
-    borderRadius: "4px",
-   
-  },
-  header: {
-    textAlign: "center",
-    color: "#309255",
-  },
- 
- 
-  p: {
-    fontSize: "20px",
-    color: "#000",
-    margin: '10px 0',
-  },
-  text: {
-    // display: 'inline-block',
-    backgroundColor: "#309255",
-        color: "#fff"   ,   
-        width: '100px',
-        fontWeight: 'bold',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',  // Adding box shadow to "Your Name" and "Your Email" text
-        padding: '5px',
-        borderRadius: '4px',  // Adding slight rounded corners to the box shadow elements
-  },
-  button: {
-    padding: "10px 20px",
-    fontSize: "16px",
-    backgroundColor: "#309255",
-    color: "white",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-  },
-//   link: {
-//     textDecoration: "none",
-//     color: "white",
-//   },
-};
-
-export default Profile;
+}
