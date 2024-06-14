@@ -142,11 +142,6 @@ function CoursesAdmin() {
                                             </a>
                                         </div>
                                         <div class="content-title">
-                                            <div class="meta">
-                                                <a href="#" class="action">{item.meta[0]}</a>
-                                                <a href="#" class="action">{item.meta[1]}</a>
-                                                <a href="#" class="action">{item.meta[2]}</a>
-                                            </div>
                                             <h3 class="title"><a href="#">{item.title}.</a></h3>
                                         </div>
                                         <div class="content-wrapper">
