@@ -312,7 +312,7 @@ function Home() {
                                 <div className="row">
                                     {coursesinf.map((item) => (
                                         <div className="col-lg-4 col-md-6">
-                                            <div className="single-courses">
+                                            <div className="single-courses" style={{height:'500px'}}>
                                                 <div className="courses-images">
                                                     <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                                 </div>

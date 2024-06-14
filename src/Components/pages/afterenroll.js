@@ -110,10 +110,11 @@ function Afterenroll() {
 
   return (
     <>
-      <div>
+      <div className="container-fluid">
         <AdminHeader />
       </div>
       {/* Courses Enroll Start */}
+      
       <div className="section">
         {/* Courses Enroll Wrapper Start */}
         <div className="courses-enroll-wrapper">
@@ -121,7 +122,7 @@ function Afterenroll() {
           <div className="courses-video-player">
             {/* Courses Video Container Start */}
             <div className="vidcontainer">
-              <video id="myvid" controls autoPlay>
+              <video id="myvid" controls >
                 <source src={currentVideo} type="video/mp4" />
                 <source src={currentVideo} type="video/ogg" />
 
