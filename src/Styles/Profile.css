@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8f4;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #cdffd6;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.profile-header {
+  text-align: center; /* Border around the entire profile information */
+  border-radius: 10px;
+  width: 60%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.profile-picture {
+  margin: 0 auto 20px;
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  text-align: center;
+}
+
+.profile-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.label {
+  color: #113d25; /* Lighter shade of the border color */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.value {
+  color: #333333;
+  font-weight: normal;
+}
