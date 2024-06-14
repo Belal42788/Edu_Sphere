@@ -41,7 +41,7 @@ export default function TeacherRegistration() {
 
     return (
         <div>
-            <Navbar name='Became a ' name2='Teacher' name3='TeacherRegisteration' />
+            <Navbar name='Became a ' name2='instructor' name3='TeacherRegisteration' />
             <div className="section section-padding">
                 <div className="container">
                     <div className="register-login-wrapper">
@@ -58,7 +58,7 @@ export default function TeacherRegistration() {
                             </div>
                             <div className="col-lg-6">
                                 <div className="register-login-form">
-                                    <h3 className="title">Became a <span>Teacher</span></h3>
+                                    <h3 className="title">Became a <span>Instructor</span></h3>
                                     <p>If you want to join our teaching team, please upload your CV. We will review your application and notify you via email about the acceptance or rejection of your application.</p>
                                     <div className="form-wrapper">
                                         <form onSubmit={handleSubmit}>

@@ -10,7 +10,7 @@ const Sidebar = () => {
         {" "}
         <img className="img1" src={studentImage} alt="Student" />
       </div>
-      <h4>Cristiano Ronaldo</h4>
+      <h4>Messi Roberts</h4>
 
       <ul>
         <li>

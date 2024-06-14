@@ -25,55 +25,56 @@ import '../../Styles/plugins/jqvmap.min.css'
 function FreeCourse() {
   const coursesinf = [
     {
-      id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428' ,Language:'English',
-      Certificate:'Yes'}]
+      id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428', Language: 'English',
+      Certificate: 'Yes'
+    }]
 
-      const teamInfo = [
-        {
-            id: 1,
-            name: 'Margarita James',
-            designation: 'MSC, Instructor',
-            rating: 4.9,
-            ImageUrl: author1
-        },
-        {
-            id: 2,
-            name: 'Mitchell Colon',
-            designation: 'BBA, Instructor',
-            rating: 4.9,
-            ImageUrl: author2
-        },
-        {
-            id: 3,
-            name: 'Sonya Gordon',
-            designation: 'MBA, Instructor',
-            rating: 4.9,
-            ImageUrl: author3
-        },
-        {
-            id: 4,
-            name: 'Archie Neal',
-            designation: 'BBS, Instructor',
-            rating: 4.9,
-            ImageUrl: author4
-        }
-    ];
-    const feedback = [
-      {
-        imagefeed:author7 , 
-        Namefeed:'Cristiano Ronaldo',
-        Nationfeed:'POR',
-        comment:'cr7 is best cr7 coat'
-      },
+  const teamInfo = [
     {
-      imagefeed:author6 , 
-      Namefeed:'Sara Alexander',
-      Nationfeed:'USA',
-      comment:'cr7 is best cr7 coat'
+      id: 1,
+      name: 'bill James',
+      designation: 'MSC, Instructor',
+      rating: 4.9,
+      ImageUrl: author1
     },
-   
-    
-    ]
+    {
+      id: 2,
+      name: 'mario Colon',
+      designation: 'BBA, Instructor',
+      rating: 4.9,
+      ImageUrl: author2
+    },
+    {
+      id: 3,
+      name: 'Son Gordon',
+      designation: 'MBA, Instructor',
+      rating: 4.9,
+      ImageUrl: author3
+    },
+    {
+      id: 4,
+      name: 'Archie Neal',
+      designation: 'BBS, Instructor',
+      rating: 4.9,
+      ImageUrl: author4
+    }
+  ];
+  const feedback = [
+    {
+      imagefeed: author7,
+      Namefeed: 'Mohammed Ali',
+      Nationfeed: 'POR',
+      comment: 'This course has been a game-changer for me. Before enrolling, I struggled to manage my finances and felt overwhelmed by my debt. The lessons on budgeting and saving strategies have given me the tools I need to take control of my financial future. The instructors are knowledgeable and make complex topics easy to understand. I highly recommend this course to anyone looking to improve their financial literacy.'
+    },
+    {
+      imagefeed: author6,
+      Namefeed: 'Messi Roberts',
+      Nationfeed: 'USA',
+      comment: 'I was always intimidated by the idea of investing, but this course broke it down in a way that was accessible and practical. The step-by-step guidance on creating a budget and setting financial goals has been invaluable. I ve already started implementing what I ve learned and can see a positive impact on my finances. The real-world examples and practical exercises made a huge difference.'
+    },
+
+
+  ]
   return (
     <>
       <Navbar name='Courses' name2='Details' name3='Courses' />
@@ -132,14 +133,6 @@ function FreeCourse() {
                         </button>
                       </li>
                       <li>
-                        <button
-                          data-bs-toggle="tab"
-                          data-bs-target="#instructors"
-                        >
-                          Instructors
-                        </button>
-                      </li>
-                      <li>
                         <button data-bs-toggle="tab" data-bs-target="#reviews">
                           Reviews
                         </button>
@@ -153,24 +146,7 @@ function FreeCourse() {
                           <div class="description-wrapper">
                             <h3 class="tab-title">Description:</h3>
                             <p>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry. Lorem Ipsum has been the
-                              industry's standard dummy text ever since the
-                              1500s when an unknown printer took a galley of
-                              type and scrambled it to make a type specimen
-                              book.
-                            </p>
-                            <p>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry. Lorem Ipsum has been the
-                              industry's standard dummy text ever since the
-                              1500s when an unknown printer took a galley of
-                              type and scrambled it to make a type specimen
-                              book. It has survived not only five centuries, but
-                              also the leap into electronic typesetting,
-                              remaining essentially unchanged. It was popularsed
-                              in the 1960 with release containing Lorem Ipsum
-                              passages desktop publishing software.
+                            This comprehensive course is designed to help you master the essentials of budgeting and net worth calculation. You will learn practical strategies for managing your finances, setting financial goals, and making informed investment decisions. Our expert instructors provide clear, step-by-step guidance to ensure you understand and apply key concepts effectively. By the end of the course, you will have the tools and knowledge needed to take control of your financial future.
                             </p>
                           </div>
                           {/* <div class="description-wrapper">
@@ -205,137 +181,35 @@ function FreeCourse() {
                           </div> */}
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="instructors">
-                        <div class="tab-instructors">
-                          <h3 class="tab-title">Course Instructor:</h3>
-                          <div class="row">
-                            {teamInfo.map((item)=>(
-                            <div class="col-md-3 col-6">
-                              <div class="single-team">
-                                <div class="team-thumb">
-                                  <img src={item.ImageUrl} alt="Author" />
-                                </div>
-                                <div class="team-content">
-                                  <div class="rating">
-                                    <span class="count">{item.rating}</span>
-                                    <i class="icofont-star"></i>
-                                    <span class="text">(rating)</span>
-                                  </div>
-                                  <h4 class="name">{item.name}</h4>
-                                  <span class="designation">
-                                    {item.designation}, Instructor
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            ))}
-                       
-                          </div>
-                          <div class="row gx-10">
-                            <div class="col-lg-6">
-                              <div class="tab-rating-content">
-                                <h3 class="tab-title">Rating:</h3>
-                                <p>
-                                  Lorem Ipsum is simply dummy text of printing
-                                  and typesetting industry. Lorem Ipsum has been
-                                  the i dustry's standard dummy text ever since
-                                  the 1500 unknown printer took a galley of
-                                  type.
-                                </p>
-                                <p>
-                                  Lorem Ipsum is simply dummy text of printing
-                                  and typesetting industry text ever since
-                                </p>
-                                <p>
-                                  Lorem Ipsum is simply dummy text of printing
-                                  and dustry's standard dummy text ever since
-                                  the 1500 unknown printer took a galley of
-                                  type.
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="tab-rating-box">
-                                <span class="count">
-                                  4.8 <i class="icofont-star"></i>
-                                </span>
-                                <p>Rating (86K+)</p>
-                                <div class="rating-box-wrapper">
-                                  <div class="single-rating">
-                                    <span class="rating-star">
-                                      <span class="rating-bar"></span>
-                                    </span>
-                                    <div class="rating-progress-bar">
-                                      <div class="rating-line"></div>
-                                    </div>
-                                  </div>
-                                  <div class="single-rating">
-                                    <span class="rating-star">
-                                      <span class="rating-bar"></span>
-                                    </span>
-                                    <div class="rating-progress-bar">
-                                      <div class="rating-line"></div>
-                                    </div>
-                                  </div>
-                                  <div class="single-rating">
-                                    <span class="rating-star">
-                                      <span class="rating-bar"></span>
-                                    </span>
-                                    <div class="rating-progress-bar">
-                                      <div class="rating-line"></div>
-                                    </div>
-                                  </div>
-                                  <div class="single-rating">
-                                    <span class="rating-star">
-                                      <span class="rating-bar"></span>
-                                    </span>
-                                    <div class="rating-progress-bar">
-                                      <div class="rating-line"></div>
-                                    </div>
-                                  </div>
-                                  <div class="single-rating">
-                                    <span class="rating-star">
-                                      <span class="rating-bar"></span>
-                                    </span>
-                                    <div class="rating-progress-bar">
-                                      <div class="rating-line"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div class="tab-pane fade" id="reviews">
                         <div class="tab-reviews">
                           <h3 class="tab-title">Student Reviews:</h3>
                           <div class="reviews-wrapper reviews-active">
                             <div class="swiper-container">
-                            <div className="swiper-wrapper">
-              {feedback.map((item) => (
-                <div className="single-testimonial  col-lg-5">
-               
-                  <div className="testimonial-author">
-                
-                    <div className="author-thumb">
-                      <img src={item.imagefeed} alt="Author" />
-                      <i className="icofont-quote-left"></i>
-                    </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
-                    </span>
-                  </div>
-                  <div className="testimonial-content">
-                    <p>
-                    {item.comment}
-                    </p>
-                    <h4 className="name"> {item.Namefeed}</h4>
-                    <span className="designation">Product Designer,  {item.Nationfeed}</span>
-                  </div>
-                </div>
-                ))};
-              </div>
+                              <div className="swiper-wrapper">
+                                {feedback.map((item) => (
+                                  <div className="single-testimonial  col-lg-5">
+
+                                    <div className="testimonial-author">
+
+                                      <div className="author-thumb">
+                                        <img src={item.imagefeed} alt="Author" />
+                                        <i className="icofont-quote-left"></i>
+                                      </div>
+                                      <span className="rating-star">
+                                        <span className="rating-bar"></span>
+                                      </span>
+                                    </div>
+                                    <div className="testimonial-content">
+                                      <p>
+                                        {item.comment}
+                                      </p>
+                                      <h4 className="name"> {item.Namefeed}</h4>
+                                      <span className="designation">Product Designer,  {item.Nationfeed}</span>
+                                    </div>
+                                  </div>
+                                ))};
+                              </div>
                               <div class="swiper-pagination"></div>
                             </div>
                           </div>
@@ -449,76 +323,76 @@ function FreeCourse() {
             </div>
             {coursesinf.map((item) => (
 
-            <div class="col-lg-4">
-              <div class="sidebar">
-                <div class="sidebar-widget widget-information">
-               
+              <div class="col-lg-4">
+                <div class="sidebar">
+                  <div class="sidebar-widget widget-information">
 
-                  <div class="info-price">
-                    <span class="price">${item.price}</span>
+
+                    <div class="info-price">
+                      <span class="price">${item.price}</span>
+                    </div>
+                    <div class="info-list">
+                      <ul>
+                        <li>
+                          <i class="icofont-man-in-glasses"></i>{" "}
+                          <strong>Instructor</strong> <span>{item.instructor}</span>
+                        </li>
+
+                        <li>
+                          <i class="icofont-ui-video-play"></i>{" "}
+                          <strong>Lectures</strong> <span>{item.lecture}</span>
+                        </li>
+
+                        <li>
+                          <i class="icofont-book-alt"></i>{" "}
+                          <strong>Language</strong> <span>{item.Language}</span>
+                        </li>
+                        <li>
+                          <i class="icofont-certificate-alt-1"></i>{" "}
+                          <strong>Certificate</strong> <span>{item.Certificate}</span>
+                        </li>
+                      </ul>
+                    </div>
+
+
+                    <div class="info-btn">
+                      <a href="#" class="btn btn-primary btn-hover-dark">
+                        Enroll Now
+                      </a>
+                    </div>
                   </div>
-                  <div class="info-list">
-                    <ul>
+                  <div class="sidebar-widget">
+                    <h4 class="widget-title">Share Course:</h4>
+                    <ul class="social">
                       <li>
-                        <i class="icofont-man-in-glasses"></i>{" "}
-                        <strong>Instructor</strong> <span>{item.instructor}</span>
-                      </li>
-                     
-                      <li>
-                        <i class="icofont-ui-video-play"></i>{" "}
-                        <strong>Lectures</strong> <span>{item.lecture}</span>
-                      </li>
-                    
-                      <li>
-                        <i class="icofont-book-alt"></i>{" "}
-                        <strong>Language</strong> <span>{item.Language}</span>
+                        <a href="#">
+                          <i class="flaticon-facebook"></i>
+                        </a>
                       </li>
                       <li>
-                        <i class="icofont-certificate-alt-1"></i>{" "}
-                        <strong>Certificate</strong> <span>{item.Certificate}</span>
+                        <a href="#">
+                          <i class="flaticon-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="flaticon-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="flaticon-skype"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="flaticon-instagram"></i>
+                        </a>
                       </li>
                     </ul>
                   </div>
-              
-
-                  <div class="info-btn">
-                    <a href="#" class="btn btn-primary btn-hover-dark">
-                      Enroll Now
-                    </a>
-                  </div>
-                </div>
-                <div class="sidebar-widget">
-                  <h4 class="widget-title">Share Course:</h4>
-                  <ul class="social">
-                    <li>
-                      <a href="#">
-                        <i class="flaticon-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="flaticon-linkedin"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="flaticon-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="flaticon-skype"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="flaticon-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
-            </div>
             ))}
           </div>
         </div>

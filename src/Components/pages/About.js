@@ -34,21 +34,21 @@ function About() {
       imgSrc: author1,
       altText: "Author",
       rating: 4.9,
-      name: "Margarita James",
+      name: "bill James",
       designation: "MSC, Instructor"
     },
     {
       imgSrc: author2,
       altText: "Author",
       rating: 4.9,
-      name: "Mitchell Colon",
+      name: "mario Colon",
       designation: "BBA, Instructor"
     },
     {
       imgSrc: author3,
       altText: "Author",
       rating: 4.9,
-      name: "Sonya Gordon",
+      name: "Son Gordon",
       designation: "MBA, Instructor"
     },
     {
@@ -76,7 +76,7 @@ function About() {
       imgSrc: author7,
       altText: "Author",
       rating: 4.9,
-      name: "Della Salazar",
+      name: "Dell Salazar",
       designation: "BBA, Instructor"
     },
     {
@@ -101,22 +101,23 @@ function About() {
       designation: "MBBS, Instructor"
     }
   ];
-const feedback = [
-  {
-    imagefeed:author7 , 
-    Namefeed:'Cristiano Ronaldo',
-    Nationfeed:'POR',
-    comment:'cr7 is best cr7 coat'
-  },
+  const feedback = [
+    {
+      imagefeed: author7,
+      Namefeed: 'Mohammed Ali',
 
-{
-  imagefeed:author7 , 
-  Namefeed:'Melissa Roberts',
-  Nationfeed:'USA',
-  comment:'cr7 is best cr7 coat'
-},
+      Nationfeed: 'POR',
+      comment: 'EduSpherehas been an incredible resource for my personal and professional growth. The variety of courses available is impressive, and the quality of instruction is top-notch. The platform is user-friendly and allows me to learn at my own pace, which is perfect for my busy schedule. I have gained valuable skills that have already made a difference in my career'
+    },
 
-]
+    {
+      imagefeed: author7,
+      Namefeed: 'Messi Roberts',
+      Nationfeed: 'USA',
+      comment: 'EduSphereoffers a seamless learning experience with its well-structured courses and intuitive interface. The ability to access course materials from anywhere makes it convenient for me to study on the go. The support team is also very responsive and helpful. I highly recommend EduSphereto anyone looking to invest in their education.'
+    },
+
+  ]
   return (
     <>
       <Navbar name="About" name2="US" name3="About" />
@@ -129,14 +130,6 @@ const feedback = [
                   <div className="images">
                     <img src={about1} alt="About" />
                   </div>
-                  <div className="about-years">
-                    <div className="years-icon">
-                      <img src={about2} alt="About" />
-                    </div>
-                    <p>
-                      <strong>28+</strong> Years Experience
-                    </p>
-                  </div>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -147,10 +140,9 @@ const feedback = [
                     <span>bright future.</span>
                   </h2>
                   <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since an unknown printer took a galley of type and scrambled it
-                    to make a type specimen book. It has survived not only five
-                    centuries.
+                    EduSphere offers a wide range of courses designed to enhance your knowledge and expertise in various fields. Our experienced instructors and comprehensive curriculum ensure that you receive the best education possible. Whether you want to advance in your current career or explore new opportunities, EduSphere is here to support your journey to success.
+
+
                   </p>
                   <a href="#" className="btn btn-primary btn-hover-dark">
                     Start A Course
@@ -175,14 +167,7 @@ const feedback = [
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the when an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book.
-                    </p>
-                    <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since then when an unknown printer took a galley of type and
-                      scrambled it.
+                      Our instructors are industry experts with years of experience and a passion for teaching. They bring real-world knowledge and insights to the classroom, ensuring that you gain practical skills and understanding. Each instructor is dedicated to helping you achieve your educational and career goals.
                     </p>
                   </div>
                 </div>
@@ -197,14 +182,8 @@ const feedback = [
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the when an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book.
-                    </p>
-                    <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since then when an unknown printer took a galley of type and
-                      scrambled it.
+                      Portable Program
+                      Our Portable Program is designed for flexibility and convenience, allowing you to learn anytime, anywhere. Whether you're at home, on the go, or traveling, you can access our courses and materials seamlessly. Stay connected and continue your education without any interruptions, ensuring that you make the most of your learning experience.
                     </p>
                   </div>
                 </div>
@@ -219,14 +198,7 @@ const feedback = [
                       </div>
                     </div>
                     <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since the when an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book.
-                    </p>
-                    <p>
-                      Lorem Ipsum has been the industry's standard dummy text
-                      since then when an unknown printer took a galley of type and
-                      scrambled it.
+                      Our targeted and efficient learning programs are designed to help you make rapid progress. With focused content, practical exercises, and expert guidance, you'll be able to enhance your skills and knowledge in a short amount of time. Achieve your goals faster and see real results with our proven approach.
                     </p>
                   </div>
                 </div>
@@ -260,7 +232,7 @@ const feedback = [
               </div>
               <div className="col-md-6">
                 <div className="call-to-action-btn">
-                  <a className="btn btn-primary btn-hover-dark" href="#">
+                  <a className="btn btn-primary btn-hover-dark" href="TeacherRegisteration">
                     Drop Information
                   </a>
                 </div>
@@ -278,27 +250,27 @@ const feedback = [
             </h2>
           </div>
           <div className="team-wrapper ">
-          <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
-            {teamMembers.map((item) => (
-              <div className="col-1" >
-                <div className="single-team">
-                  <div className="team-thumb">
-                    <img src={item.imgSrc} alt={item.altText} />
-                  </div>
-                  <div className="team-content">
-                    <div className="rating">
-                      <span className="count">{item.rating}</span>
-                      <i className="icofont-star"></i>
-                      <span className="text">(rating)</span>
+            <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2 ">
+              {teamMembers.map((item) => (
+                <div className="col-1" >
+                  <div className="single-team">
+                    <div className="team-thumb">
+                      <img src={item.imgSrc} alt={item.altText} />
                     </div>
-                    <h4 className="name">{item.name}</h4>
-                    <span className="designation">{item.designation}</span>
+                    <div className="team-content">
+                      <div className="rating">
+                        <span className="count">{item.rating}</span>
+                        <i className="icofont-star"></i>
+                        <span className="text">(rating)</span>
+                      </div>
+                      <h4 className="name">{item.name}</h4>
+                      <span className="designation">{item.designation}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div className="section section-padding-02 mt-n1">
@@ -312,27 +284,27 @@ const feedback = [
           <div className="testimonial-wrapper testimonial-active">
             <div className="swiper-container">
               <div className="swiper-wrapper">
-              {feedback.map((item) => (
-                <div className="single-testimonial  col-lg-6">
-               
-                  <div className="testimonial-author">
-                
-                    <div className="author-thumb">
-                      <img src={item.imagefeed} alt="Author" />
-                      <i className="icofont-quote-left"></i>
+                {feedback.map((item) => (
+                  <div className="single-testimonial  col-lg-6">
+
+                    <div className="testimonial-author">
+
+                      <div className="author-thumb">
+                        <img src={item.imagefeed} alt="Author" />
+                        <i className="icofont-quote-left"></i>
+                      </div>
+                      <span className="rating-star">
+                        <span className="rating-bar"></span>
+                      </span>
                     </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
-                    </span>
+                    <div className="testimonial-content">
+                      <p>
+                        {item.comment}
+                      </p>
+                      <h4 className="name"> {item.Namefeed}</h4>
+                      <span className="designation">Product Designer,  {item.Nationfeed}</span>
+                    </div>
                   </div>
-                  <div className="testimonial-content">
-                    <p>
-                    {item.comment}
-                    </p>
-                    <h4 className="name"> {item.Namefeed}</h4>
-                    <span className="designation">Product Designer,  {item.Nationfeed}</span>
-                  </div>
-                </div>
                 ))};
               </div>
 

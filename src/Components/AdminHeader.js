@@ -24,16 +24,8 @@ function AdminHeader() {
               <img src={Image1} alt="Logo" />
             </a>
           </div>
-          <div className="login-header-search dropdown">
-            <button className="search-toggle" data-bs-toggle="dropdown">
-              <i className="flaticon-loupe"></i>
-            </button>
-            <div className="search-input dropdown-menu">
-              <form action="#">
-                <input type="text" placeholder="Search here" />
-              </form>
-            </div>
-          </div>
+          <span style={{ display: 'block', width: '85%', margin: '2px 0', borderRadius: '50%' }}></span>
+            
           <div className="login-header-action ml-auto">
             
             <a className="action author" href="profile">

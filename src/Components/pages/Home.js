@@ -55,12 +55,12 @@ import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
 function Home() {
     const coursesinf = [
-        { 
-            id: 1, 
-            title: 'Data Science and Machine Learning with Python - Hands On!', 
-            instructor: 'Jason Williams', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses: courseImg1, 
+        {
+            id: 1,
+            title: 'Data Science and Machine Learning with Python - Hands On!',
+            instructor: 'Jason Williams',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg1,
             ImageUlrinstr: author1,
             tag: 'Science',
             lectures: '29 Lectures',
@@ -69,12 +69,12 @@ function Home() {
             ratingCount: '4.9',
             ratingBar: '80%'
         },
-        { 
-            id: 2, 
-            title: 'Create Amazing Color Schemes for Your UX Design Projects', 
-            instructor: 'Pamela Foster', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses: courseImg2, 
+        {
+            id: 2,
+            title: 'Create Amazing Color Schemes for Your UX Design Projects',
+            instructor: 'Pamela Foster',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg2,
             ImageUlrinstr: author2,
             tag: 'Science',
             lectures: '29 Lectures',
@@ -83,12 +83,12 @@ function Home() {
             ratingCount: '4.9',
             ratingBar: '80%'
         },
-        { 
-            id: 3, 
-            title: 'Culture & Leadership: Strategies for a Successful Business', 
-            instructor: 'Rose Simmons', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses:  courseImg5, 
+        {
+            id: 3,
+            title: 'Culture & Leadership: Strategies for a Successful Business',
+            instructor: 'Rose Simmons',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg5,
             ImageUlrinstr: author3,
             tag: 'Science',
             lectures: '29 Lectures',
@@ -97,12 +97,12 @@ function Home() {
             ratingCount: '4.9',
             ratingBar: '80%'
         },
-        { 
-            id: 4, 
-            title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', 
-            instructor: 'Jason Williams', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses: courseImg1, 
+        {
+            id: 4,
+            title: 'Finance Series: Learn to Budget and Calculate your Net Worth.',
+            instructor: 'Jason Williams',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg1,
             ImageUlrinstr: author4,
             tag: 'Finance',
             lectures: '29 Lectures',
@@ -111,12 +111,12 @@ function Home() {
             ratingCount: '4.9',
             ratingBar: '80%'
         },
-        { 
-            id: 5, 
-            title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', 
-            instructor: 'Jason Williams', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses: courseImg5, 
+        {
+            id: 5,
+            title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape',
+            instructor: 'Jason Williams',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg5,
             ImageUlrinstr: author5,
             tag: 'Marketing',
             lectures: '29 Lectures',
@@ -125,12 +125,12 @@ function Home() {
             ratingCount: '4.9',
             ratingBar: '80%'
         },
-        { 
-            id: 6, 
-            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes', 
-            instructor: 'Jason Williams', 
-            duration: '8 hr 15 mins', 
-            ImageUlrcourses: courseImg6, 
+        {
+            id: 6,
+            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes',
+            instructor: 'Jason Williams',
+            duration: '8 hr 15 mins',
+            ImageUlrcourses: courseImg6,
             ImageUlrinstr: author6,
             tag: 'Design',
             lectures: '29 Lectures',
@@ -143,20 +143,20 @@ function Home() {
     ];
     const feedback = [
         {
-          imagefeed:author7 , 
-          Namefeed:'Cristiano Ronaldo',
-          Nationfeed:'POR',
-          comment:'cr7 is best cr7 coat'
+            imagefeed: author7,
+            Namefeed: 'Mohammed Ali',
+            Nationfeed: 'POR',
+            comment: 'EduSpherehas been an incredible resource for my personal and professional growth. The variety of courses available is impressive, and the quality of instruction is top-notch. The platform is user-friendly and allows me to learn at my own pace, which is perfect for my busy schedule. I have gained valuable skills that have already made a difference in my career'
         },
-      {
-        imagefeed:author6 , 
-        Namefeed:'Sara Alexander',
-        Nationfeed:'USA',
-        comment:'cr7 is best cr7 coat'
-      },
-     
-      
-      ]
+        {
+            imagefeed: author6,
+            Namefeed: 'Messi Roberts',
+            Nationfeed: 'USA',
+            comment: 'EduSphereoffers a seamless learning experience with its well-structured courses and intuitive interface. The ability to access course materials from anywhere makes it convenient for me to study on the go. The support team is also very responsive and helpful. I highly recommend EduSphereto anyone looking to invest in their education.'
+        },
+
+
+    ]
     return (
         <>
             <div className="header-section">
@@ -171,7 +171,7 @@ function Home() {
                                 <ul className="nav-menu">
                                     <li><a href="/">Home</a></li>
                                     <li>
-                                        <a href="#">All Course</a>
+                                        <a href="#">Course</a>
                                         <ul className="sub-menu">
                                             <li><a href="courses">All Courses</a></li>
                                             <li><a href="MyCourses">My Courses</a></li>
@@ -230,9 +230,9 @@ function Home() {
                     <ul className="nav-menu">
                         <li><a href="/">Home</a></li>
                         <li>
-                            <a href="#">All Course</a>
+                            <a href="#">Course</a>
                             <ul className="sub-menu">
-                                <li><a href="courses">Courses</a></li>
+                                <li><a href="courses">All Courses</a></li>
                                 <li><a href="courses-details">Courses Details</a></li>
                             </ul>
                         </li>
@@ -308,51 +308,51 @@ function Home() {
                         <div className="tab-pane fade show active" id="tabs1">
                             <div className="courses-wrapper">
                                 <div className="row">
-                                    {coursesinf.map((item)=>(
-                                    <div className="col-lg-4 col-md-6">
-                                    <div className="single-courses">
-                                        <div className="courses-images">
-                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
-                                        </div>
-                                        <div className="courses-content">
-                                            <div className="courses-author">
-                                                <div className="author">
-                                                    <div className="author-thumb">
-                                                        <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
+                                    {coursesinf.map((item) => (
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="single-courses">
+                                                <div className="courses-images">
+                                                    <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                                </div>
+                                                <div className="courses-content">
+                                                    <div className="courses-author">
+                                                        <div className="author">
+                                                            <div className="author-thumb">
+                                                                <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
+                                                            </div>
+                                                            <div className="author-name">
+                                                                <a className="name" href="#">Jason Williams</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="tag">
+                                                            <a href="#">Science</a>
+                                                        </div>
                                                     </div>
-                                                    <div className="author-name">
-                                                        <a className="name" href="#">Jason Williams</a>
+                                                    <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
+                                                    <div className="courses-meta">
+                                                        <span> <i className="icofont-clock-time"></i> {item.duration}</span>
+                                                        <span> <i className="icofont-read-book"></i> {item.lectures}</span>
                                                     </div>
-                                                </div>
-                                                <div className="tag">
-                                                    <a href="#">Science</a>
-                                                </div>
-                                            </div>
-                                            <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
-                                            <div className="courses-meta">
-                                                <span> <i className="icofont-clock-time"></i> {item.duration}</span>
-                                                <span> <i className="icofont-read-book"></i> {item.lectures}</span>
-                                            </div>
-                                            <div className="courses-price-review">
-                                                <div className="courses-price">
-                                                    <span className="sale-parice">{item.salePrice}</span>
-                                                    <span className="old-parice">{item.oldPrice}</span>
-                                                </div>
-                                                <div className="courses-review">
-                                                    <span className="rating-count">{item.ratingBar}</span>
-                                                    <span className="rating-star">
-                                                        <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                    </span>
+                                                    <div className="courses-price-review">
+                                                        <div className="courses-price">
+                                                            <span className="sale-parice">{item.salePrice}</span>
+                                                            <span className="old-parice">{item.oldPrice}</span>
+                                                        </div>
+                                                        <div className="courses-review">
+                                                            <span className="rating-count">{item.ratingBar}</span>
+                                                            <span className="rating-star">
+                                                                <span className="rating-bar" style={{ width: '80%' }}></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    </div>
                                     ))};
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="courses-btn text-center">
                         <a href="courses" class="btn btn-secondary btn-hover-primary">Other Course</a>
@@ -374,7 +374,7 @@ function Home() {
                             </div>
                             <div class="col-md-6">
                                 <div class="call-to-action-btn">
-                                    <a class="btn btn-primary btn-hover-dark" href="contact">Drop Information</a>
+                                    <a class="btn btn-primary btn-hover-dark" href="TeacherRegisteration">Drop Information</a>
                                 </div>
                             </div>
                         </div>
@@ -435,30 +435,30 @@ function Home() {
                     </div>
                     <div class="testimonial-wrapper testimonial-active">
                         <div class="swiper-container">
-                        <div className="swiper-wrapper">
-              {feedback.map((item) => (
-                <div className="single-testimonial  col-lg-5">
-               
-                  <div className="testimonial-author">
-                
-                    <div className="author-thumb">
-                      <img src={item.imagefeed} alt="Author" />
-                      <i className="icofont-quote-left"></i>
-                    </div>
-                    <span className="rating-star">
-                      <span className="rating-bar"></span>
-                    </span>
-                  </div>
-                  <div className="testimonial-content">
-                    <p>
-                    {item.comment}
-                    </p>
-                    <h4 className="name"> {item.Namefeed}</h4>
-                    <span className="designation">Product Designer,  {item.Nationfeed}</span>
-                  </div>
-                </div>
-                ))};
-              </div>
+                            <div className="swiper-wrapper">
+                                {feedback.map((item) => (
+                                    <div className="single-testimonial  col-lg-5">
+
+                                        <div className="testimonial-author">
+
+                                            <div className="author-thumb">
+                                                <img src={item.imagefeed} alt="Author" />
+                                                <i className="icofont-quote-left"></i>
+                                            </div>
+                                            <span className="rating-star">
+                                                <span className="rating-bar"></span>
+                                            </span>
+                                        </div>
+                                        <div className="testimonial-content">
+                                            <p>
+                                                {item.comment}
+                                            </p>
+                                            <h4 className="name"> {item.Namefeed}</h4>
+                                            <span className="designation">Product Designer,  {item.Nationfeed}</span>
+                                        </div>
+                                    </div>
+                                ))};
+                            </div>
                         </div>
                     </div>
                 </div>
