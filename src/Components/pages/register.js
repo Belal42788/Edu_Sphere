@@ -4,7 +4,7 @@ import Footer from "../Footer";
 import image from "../../assets/images/shape/shape-26.png";
 import image2 from "../../assets/images/register-login.png";
 import React, { useRef, useState, useEffect } from 'react';
-import { faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Advertise from "../advertise";
 import axios from 'axios';
@@ -19,14 +19,14 @@ export default function Register() {
     const errRef = useRef();
 
 
-    const [FirstName, setFirstName] = useState("");    
+    const [FirstName, setFirstName] = useState("");
     const [validFirstName, setValidFirstName] = useState(false);
     const [firstNameFocus, setFirstNameFocus] = useState(false);
 
     const [LASTName, setLASTName] = useState("");
     const [validLastName, setValidLastName] = useState(false);
     const [lastNameFocus, setLastNameFocus] = useState(false);
-    
+
     const [emailregister, setemailregister] = useState("");
     const [validEmail, setValidEmail] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
@@ -42,7 +42,7 @@ export default function Register() {
     const [gender, setGender] = useState("");
     const [imageFile, setImageFile] = useState(null);
 
-    const [errMsg,setErrMsg] = useState("");
+    const [errMsg, setErrMsg] = useState("");
 
     useEffect(() => {
         userRef.current.focus();
@@ -73,7 +73,7 @@ export default function Register() {
 
     useEffect(() => {
         setErrMsg("");
-    }, [FirstName,LASTName,emailregister,passwordregister,confirmpasswordregister])
+    }, [FirstName, LASTName, emailregister, passwordregister, confirmpasswordregister])
 
     const handleChangeFirstName = (e) => {
         setFirstName(e.target.value);
@@ -173,94 +173,94 @@ export default function Register() {
                                     <div className="form-wrapper">
                                         <form onSubmit={handleSubmit}>
                                             <div className="single-form">
-                                                <input type="text" onChange={handleChangeFirstName} 
-                                                placeholder="First Name" 
-                                                ref={userRef} 
-                                                autoComplete="off" 
-                                                required
-                                                aria-invalid={validFirstName ? "false" : "true"}
-                                                aria-describedby="uidnote"
-                                                onFocus={() => setFirstNameFocus(true)}
-                                                onBlur={() => setFirstNameFocus(false)}/>
-                                                 <p id="uidnote" className={firstNameFocus && FirstName && !validFirstName ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            3 to 16 characters.<br />
-                            Must begin with a letter.<br />
-                        </p>
+                                                <input type="text" onChange={handleChangeFirstName}
+                                                    placeholder="First Name"
+                                                    ref={userRef}
+                                                    autoComplete="off"
+                                                    required
+                                                    aria-invalid={validFirstName ? "false" : "true"}
+                                                    aria-describedby="uidnote"
+                                                    onFocus={() => setFirstNameFocus(true)}
+                                                    onBlur={() => setFirstNameFocus(false)} />
+                                                <p id="uidnote" className={firstNameFocus && FirstName && !validFirstName ? "instructions" : "offscreen"}>
+                                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                                    3 to 16 characters.<br />
+                                                    Must begin with a letter.<br />
+                                                </p>
                                             </div>
 
                                             <div className="single-form">
-                                                <input type="text" onChange={handleChangeLASTName} placeholder="Last Name" 
-                                                ref={userRef} 
-                                                autoComplete="off" 
-                                                required
-                                                aria-invalid={validLastName ? "false" : "true"}
-                                                aria-describedby="uidnote"
-                                                onFocus={() => setLastNameFocus(true)}
-                                                onBlur={() => setLastNameFocus(false)}/>
+                                                <input type="text" onChange={handleChangeLASTName} placeholder="Last Name"
+                                                    ref={userRef}
+                                                    autoComplete="off"
+                                                    required
+                                                    aria-invalid={validLastName ? "false" : "true"}
+                                                    aria-describedby="uidnote"
+                                                    onFocus={() => setLastNameFocus(true)}
+                                                    onBlur={() => setLastNameFocus(false)} />
                                                 <p id="uidnote" className={lastNameFocus && LASTName && !validLastName ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            3 to 16 characters.<br />
-                            Must begin with a letter.<br />
-                            </p>
+                                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                                    3 to 16 characters.<br />
+                                                    Must begin with a letter.<br />
+                                                </p>
                                             </div>
                                             <div className='single-form d-flex' >
                                                 <label>Gender:</label>
-                                                <div style={{paddingLeft:'10px'}}> 
+                                                <div style={{ paddingLeft: '10px' }}>
                                                     <input type="radio" name="gender" value="Male" onChange={handleGenderChange} defaultChecked />
-                                                    <label style={{paddingRight:'15px'}}>Male</label>
-                                                    <input  type="radio" name="gender" value="Female" onChange={handleGenderChange} />
+                                                    <label style={{ paddingRight: '15px' }}>Male</label>
+                                                    <input type="radio" name="gender" value="Female" onChange={handleGenderChange} />
                                                     <label>Female</label>
                                                 </div>
                                             </div>
                                             <div className="single-form">
                                                 <input type="email" onChange={onChangeEmail} placeholder="Email"
-                                                ref={userRef} 
-                                                autoComplete="off" 
-                                                required
-                                                aria-invalid={validEmail ? "false" : "true"}
-                                                aria-describedby="uidnote"
-                                                onFocus={() => setEmailFocus(true)}
+                                                    ref={userRef}
+                                                    autoComplete="off"
+                                                    required
+                                                    aria-invalid={validEmail ? "false" : "true"}
+                                                    aria-describedby="uidnote"
+                                                    onFocus={() => setEmailFocus(true)}
                                                     onBlur={() => setEmailFocus(false)} />
                                                 <p id="uidnote" className={emailFocus && emailregister && !validEmail ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            Invalid Email.<br />
-                                                    </p>
+                                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                                    Invalid Email.<br />
+                                                </p>
                                             </div>
                                             <div className="single-form">
                                                 <input type="password" onChange={onChangePassword} placeholder="Password"
-                                                    ref={userRef} 
+                                                    ref={userRef}
                                                     required
                                                     aria-invalid={validPwd ? "false" : "true"}
-                            aria-describedby="pwdnote"
-                            onFocus={() => setPwdFocus(true)}
+                                                    aria-describedby="pwdnote"
+                                                    onFocus={() => setPwdFocus(true)}
                                                     onBlur={() => setPwdFocus(false)} />
                                                 <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            8 to 24 characters.<br />
-                            Must include uppercase and lowercase letters, a number and a special character.<br />
-                        </p>
+                                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                                    8 to 24 characters.<br />
+                                                    Must include uppercase and lowercase letters, a number and a special character.<br />
+                                                </p>
                                             </div>
                                             <div className="single-form">
                                                 <input type="password" onChange={onChangeconfirmPassword} placeholder="Confirm Password"
                                                     ref={userRef}
                                                     required
-                            aria-invalid={validConPwd ? "false" : "true"}
-                            aria-describedby="confirmnote"
-                            onFocus={() => setConPwdFocus(true)}
+                                                    aria-invalid={validConPwd ? "false" : "true"}
+                                                    aria-describedby="confirmnote"
+                                                    onFocus={() => setConPwdFocus(true)}
                                                     onBlur={() => setConPwdFocus(false)}
                                                 />
                                                 <p id="confirmnote" className={conPwdFocus && !validConPwd ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            Must match the password input field.
-                        </p>
+                                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                                    Must match the password input field.
+                                                </p>
                                             </div>
                                             <div className="single-form">
                                                 <input type="file" onChange={handleImageUpload} />
                                             </div>
                                             <div className="single-form">
                                                 <button className="btn btn-primary btn-hover-dark w-100" type="submit"
-                                                    disabled={!validFirstName|| !validLastName || !validPwd || !validEmail || !validConPwd ? true : false}
+                                                    disabled={!validFirstName || !validLastName || !validPwd || !validEmail || !validConPwd ? true : false}
                                                 >Create an account
                                                 </button>
                                                 <a className="btn btn-secondary btn-outline w-100" href="#">Sign up with Google</a>

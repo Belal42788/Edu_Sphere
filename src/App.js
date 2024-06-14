@@ -16,12 +16,14 @@ import CoursesAdmin from "./Components/pages/CoursesAdmin";
 import MyCourses from "./Components/pages/MyCourses";
 import CreateLesson from "./Components/pages/CreateLesson"
 import Profile from "./Components/pages/Profile";
+import TeacherRegisteration from "./Components/pages/TeacherRegisteration";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/TeacherRegisteration" element={<TeacherRegisteration />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
         <Route path="/MyCourses" element={<MyCourses />} />
         <Route path="/CoursesAdmin" element={<CoursesAdmin />} />

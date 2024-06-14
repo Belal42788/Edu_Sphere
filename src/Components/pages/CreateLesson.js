@@ -70,7 +70,6 @@ function CreateLesson() {
                                             <div className="single-form">
                                                 <button type="submit" className="btn btn-primary btn-hover-dark w-100">Create Lesson</button>
                                             </div>
-
                                         </form>
                                     </div>
                                 </div>

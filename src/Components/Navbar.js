@@ -43,6 +43,7 @@ function Navbar(props) {
                                             <li><a href="CoursesAdmin">Instructor Dashboard (Course List)</a></li>
                                             <li><a href="createcourse">Create Course</a></li>
                                             <li><a href="createLesson">Create lesson</a></li>
+                                            <li><a href="TeacherRegisteration">Became a teacher</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact">Contact</a></li>
