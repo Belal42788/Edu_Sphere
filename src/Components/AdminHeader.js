@@ -1,25 +1,15 @@
 import React from "react";
 import author7 from "../assets/images/author/author-07.jpg";
 import Image1 from "../assets/images/logo-icon.png";
-import Icon1 from "../assets/images/menu-icon/icon-1.png";
-import Icon2 from "../assets/images/menu-icon/icon-2.png";
-import Icon3 from "../assets/images/menu-icon/icon-3.png";
-import Icon4 from "../assets/images/menu-icon/icon-4.png";
-import Icon5 from "../assets/images/menu-icon/icon-5.png";
-import "../Styles/plugins/icofont.min.css";
-import "../Styles/plugins/animate.min.css";
-import "../Styles/plugins/swiper-bundle.min.css";
-import "../Styles/plugins/magnific-popup.css";
-import "../Styles/plugins/nice-select.css";
-import "../Styles/plugins/apexcharts.css";
-import "../Styles/plugins/jqvmap.min.css";
+
+
 import "../Styles/Contact.css";
 function AdminHeader(props) {
   return (
     <>
-            <div className="header-section" >
+    <div style={{marginBottom:'15px'}}>
                 <div className="header-main">
-                    <div className="container">
+                    <div className="container" >
                         <div className="header-main-wrapper">
                             <div class="header-logo" style={{ display: 'flex' }}>
                                 <a href="/" style={{ paddingLeft: '15px' }}><img src={Image1} width="50" height="50" alt="Logo" /></a>
@@ -107,7 +97,6 @@ function AdminHeader(props) {
                         </div>
                     </div>
                 </div>
-            </div>
             <div className="mobile-menu">
                 <a className="menu-close" href="javascript:void(0)">
                     <i className="icofont-close-line"></i>
@@ -155,6 +144,7 @@ function AdminHeader(props) {
                         <li><a href="#"><i className="flaticon-instagram"></i></a></li>
                     </ul>
                 </div>
+            </div>
             </div>
         </>
   );
