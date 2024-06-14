@@ -6,7 +6,7 @@ import Image3 from "../assets/images/shape/shape-23.png"
 import Image4 from "../assets/images/shape/shape-5.png"
 import Image5 from "../assets/images/shape/shape-6.png"
 import Image6 from "../assets/images/shape/shape-24.png"
-import Image7 from "../assets/images/author/author-11.jpg"
+import Image7 from "../assets/images/author/author-06.jpg"
 import "../Styles/Contact.css"
 import '../Styles/flaticon.css'
 function Navbar(props) {

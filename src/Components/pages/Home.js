@@ -17,23 +17,25 @@ import Image3 from "../../assets/images/shape/shape-23.png"
 import Image4 from "../../assets/images/shape/shape-5.png"
 import Image5 from "../../assets/images/shape/shape-6.png"
 import Image6 from "../../assets/images/shape/shape-24.png"
-import Image7 from "../../assets/images/author/author-11.jpg"
+import Image7 from "../../assets/images/author/author-06.jpg"
 import author1 from "../../assets/images/author/author-01.jpg";
-import author2 from "../../assets/images/author/author-01.jpg";
-import author3 from "../../assets/images/author/author-01.jpg";
-import author4 from "../../assets/images/author/author-01.jpg";
-import author5 from "../../assets/images/author/author-01.jpg";
-import author6 from "../../assets/images/author/author-01.jpg";
-import author7 from "../../assets/images/author/author-17.jpg";
-import author8 from "../../assets/images/author/author-08.jpg";
-import author9 from "../../assets/images/author/author-09.jpg";
-import author10 from "../../assets/images/author/author-10.jpg";
+import author2 from "../../assets/images/author/author-02.jpg";
+import author3 from "../../assets/images/author/author-17.jpg";
+import author4 from "../../assets/images/author/author-04.jpg";
+import author5 from "../../assets/images/author/author-20.jpg";
+import author6 from "../../assets/images/author/author-19.jpg";
+import author7 from "../../assets/images/author/author-07.jpg";
+import author8 from "../../assets/images/author/author-06.jpg";
+import author9 from "../../assets/images/author/author-01.jpg";
+import author10 from "../../assets/images/author/author-01.jpg";
+import courseImg9 from "../../assets/images/courses/courses-09.jpg";
 import courseImg1 from "../../assets/images/courses/courses-01.jpg";
 import courseImg2 from "../../assets/images/courses/courses-02.jpg";
 import courseImg3 from "../../assets/images/courses/courses-03.jpg";
 import courseImg4 from "../../assets/images/courses/courses-04.jpg";
-import courseImg5 from "../../assets/images/courses/courses-05.jpg";
+import courseImg5 from "../../assets/images/courses/courses-07.jpg";
 import courseImg6 from "../../assets/images/courses/courses-05.jpg";
+import courseImg8 from "../../assets/images/courses/courses-08.jpg";
 import slider1 from "../../assets/images/slider/slider-1.png";
 import shape1 from "../../assets/images/shape/shape-1.png"
 import Shape2 from "../../assets/images/shape/shape-2.png"
@@ -88,7 +90,7 @@ function Home() {
             title: 'Culture & Leadership: Strategies for a Successful Business',
             instructor: 'Rose Simmons',
             duration: '8 hr 15 mins',
-            ImageUlrcourses: courseImg5,
+            ImageUlrcourses: courseImg8,
             ImageUlrinstr: author3,
             tag: 'Science',
             lectures: '29 Lectures',
@@ -102,7 +104,7 @@ function Home() {
             title: 'Finance Series: Learn to Budget and Calculate your Net Worth.',
             instructor: 'Jason Williams',
             duration: '8 hr 15 mins',
-            ImageUlrcourses: courseImg1,
+            ImageUlrcourses: courseImg9,
             ImageUlrinstr: author4,
             tag: 'Finance',
             lectures: '29 Lectures',
@@ -310,7 +312,7 @@ function Home() {
                                 <div className="row">
                                     {coursesinf.map((item) => (
                                         <div className="col-lg-4 col-md-6">
-                                            <div className="single-courses">
+                                            <div className="single-courses" style={{height:'500px'}}>
                                                 <div className="courses-images">
                                                     <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                                 </div>
