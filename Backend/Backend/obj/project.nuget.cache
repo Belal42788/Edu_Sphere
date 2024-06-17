@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d9vXwsjpZd4O9G2PnAJbFwsHdbIYd3t2Oiv3aMDOqyJ5VvlBHHIwExbGaXxPrdaZpNIT9Bg8jEJuNuG+choi6w==",
+  "dgSpecHash": "BIyBNXhAkQZLR4FUdTzF1wDmfXfGPOi9A6/Dyj3KsPQqjZgv0jAV0LIi+ZG3E9rjTALTo86C+7134tpjtABXYg==",
   "success": true,
-  "projectFilePath": "E:\\.netproj\\Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TOP ONE\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TOP ONE\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

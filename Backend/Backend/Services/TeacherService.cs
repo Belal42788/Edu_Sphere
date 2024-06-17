@@ -37,7 +37,7 @@ namespace Backend.Services
                 UserID = user.Id,
             };
             await _cotext.TeacherApplications.AddAsync(TeacherApplication);
-            _cotext.SaveChangesAsync();
+            await _cotext.SaveChangesAsync();
 
             teacherModel = new TeacherModel
             {
@@ -50,18 +50,26 @@ namespace Backend.Services
         public async Task<IEnumerable<CourseModel>> GetMyCoursesAsync(string userId){
             var user =   _cotext.Users.Include(x => x.Teacher).FirstOrDefault(x => x.Id == userId);
             var teacher = await _cotext.Teachers.Include(x => x.Courses).FirstOrDefaultAsync(x=>x.Id==user.Teacher.Id);
-            var courseModel = teacher.Courses.Select(x => new CourseModel
-            {
-                Id = x.Id,
-                CourseName = x.CourseName,
-                CourseDescription = x.CourseDescription,
-                Cost = x.Cost,
-                Subject = x.Subject,
-                TeacherID = x.TeacherID,
-                Image = "https://localhost:7225" + x.ImgUrl
+            var courseModels = new List<CourseModel>();
 
-            }).ToList();
-            return courseModel;
+            foreach (var course in teacher.Courses)
+            {
+                var courseModel = new CourseModel
+                {
+                    Id = course.Id,
+                    CourseName = course.CourseName,
+                    CourseDescription = course.CourseDescription,
+                    Cost = course.Cost,
+                    Subject = course.Subject,
+                    TeacherID = course.TeacherID,
+                    Image = "https://localhost:7225" + course.ImgUrl,
+                    Language = course.Language,
+                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id)
+                };
+
+                courseModels.Add(courseModel);
+            }
+                return courseModels;
 
 
         }

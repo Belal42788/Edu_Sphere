@@ -6,5 +6,6 @@ namespace Backend.Interfaces
     public interface ILessonService
     {
         Task<LessonModel> CreateLessonAsync(CreateLesson Model);
+        Task<IEnumerable<LessonModel>> GetAllLessonAsync(CourseDto model);
     }
 }

@@ -2,6 +2,7 @@
 using Backend.Interfaces;
 using Backend.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Services
 {
@@ -29,15 +30,42 @@ namespace Backend.Services
 
             };
             await _cotext.Lessons.AddAsync(lesson);
-            _cotext.SaveChangesAsync();
+            await _cotext.SaveChangesAsync();
             var lessonModel = new LessonModel
             {
+                Id=lesson.Id,
                 Title = lesson.Title,
                 Topic = lesson.Topic,
                 Video = "https://localhost:7225" + lesson.Video,
                 LessonMaterial= "https://localhost:7225"+lesson.LessonMaterial
             };
             return lessonModel;
+        }
+        public async Task<IEnumerable<LessonModel>> GetAllLessonAsync(CourseDto model)
+    
+        {
+            var lessons = await _cotext.Courses.Include(x => x.Lessons).FirstOrDefaultAsync(x => x.Id == model.Id);
+            var lessonModels=new List<LessonModel>();
+            foreach (var x in lessons.Lessons)
+            {
+                var lessonModel = new LessonModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Topic = x.Topic,
+                    Video = "https://localhost:7225" + x.Video,
+                    LessonMaterial = "https://localhost:7225" + x.LessonMaterial,
+                };
+                lessonModels.Add(lessonModel);
+
+            }
+            if (lessonModels.Count==0)
+            {
+                lessonModels.Add(new LessonModel { Message = "not found lessons" });
+            }
+
+            return lessonModels;
+
         }
     }
 }

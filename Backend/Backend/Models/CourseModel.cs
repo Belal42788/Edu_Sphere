@@ -11,5 +11,6 @@
         public string Image { get; set; }
         public string Message { get; set; }
         public string Language { get; set; }
+        public int StudentCount { get; set; }
     }
 }

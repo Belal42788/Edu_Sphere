@@ -3,6 +3,7 @@ using Backend.Interfaces;
 using Backend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NuGet.DependencyResolver;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -46,7 +47,7 @@ namespace Backend.Services
                 ImgUrl = _imageService.SetImage(model.Image)
             };
             await _cotext.Courses.AddAsync(Course);
-            _cotext.SaveChanges();
+            await _cotext.SaveChangesAsync();
             courseModel = new CourseModel
             {
                 Id=Course.Id,
@@ -56,7 +57,8 @@ namespace Backend.Services
                 Subject = Course.Subject,
                 TeacherID = Course.TeacherID,
                 Language = model.Language,
-                Image = "https://localhost:7225" + Course.ImgUrl
+                Image = "https://localhost:7225" + Course.ImgUrl,
+                StudentCount=await _cotext.StudentCourses.CountAsync(m => m.CourseId == Course.Id)
             };
             return courseModel;
 
@@ -65,22 +67,30 @@ namespace Backend.Services
 
         public async Task<IEnumerable<CourseModel>> FindCourseAsync(string Name)
         {
-            var Course =await _cotext.Courses.Where(x=>x.CourseName==Name).ToListAsync();
+            var Courses =await _cotext.Courses.Where(x=>x.CourseName==Name).ToListAsync();
 
 
-            var courseModel = Course.Select(x => new CourseModel
+            var courseModels = new List<CourseModel>();
+
+            foreach (var course in Courses)
             {
-                Id = x.Id,
-                CourseName = x.CourseName,
-                CourseDescription = x.CourseDescription,
-                Cost = x.Cost,
-                Subject = x.Subject,
-                TeacherID = x.TeacherID,
-                Image = "https://localhost:7225" + x.ImgUrl
+                var courseModel = new CourseModel
+                {
+                    Id = course.Id,
+                    CourseName = course.CourseName,
+                    CourseDescription = course.CourseDescription,
+                    Cost = course.Cost,
+                    Subject = course.Subject,
+                    TeacherID = course.TeacherID,
+                    Image = "https://localhost:7225" + course.ImgUrl,
+                    Language = course.Language,
+                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id)
+                };
 
-            }).ToList();
-            return courseModel;
-           
+                courseModels.Add(courseModel);
+            }
+            return courseModels;
+
 
         }
     }
