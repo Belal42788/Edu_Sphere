@@ -1,36 +1,112 @@
 {
   "Files": [
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\0358cbea-e717-4e19-a217-33721423ff4d.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\0358cbea-e717-4e19-a217-33721423ff4d.jpg",
       "PackagePath": "staticwebassets\\images\\0358cbea-e717-4e19-a217-33721423ff4d.jpg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\48ba6d28-9df9-457c-a0f6-326a40b2b8fd.jpeg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\077d03dc-0606-47f0-80fd-54ccb8f915cb.pdf",
+      "PackagePath": "staticwebassets\\images\\077d03dc-0606-47f0-80fd-54ccb8f915cb.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\0a8771c1-d2e2-4144-80e5-5eef0b3f22e6.pdf",
+      "PackagePath": "staticwebassets\\images\\0a8771c1-d2e2-4144-80e5-5eef0b3f22e6.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\15f3953c-489c-4661-8f28-3ce34a5b2294.mp4",
+      "PackagePath": "staticwebassets\\images\\15f3953c-489c-4661-8f28-3ce34a5b2294.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\1c8bf88c-1dc4-4776-985a-904a926a8b37.pdf",
+      "PackagePath": "staticwebassets\\images\\1c8bf88c-1dc4-4776-985a-904a926a8b37.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\26172583-848e-4a5a-9895-b819366a14d9.pdf",
+      "PackagePath": "staticwebassets\\images\\26172583-848e-4a5a-9895-b819366a14d9.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\2c7be40e-d4b9-4a5f-b33a-79812c62e248.mp4",
+      "PackagePath": "staticwebassets\\images\\2c7be40e-d4b9-4a5f-b33a-79812c62e248.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\3d1c3cef-219f-427e-8d1b-e4783d734a23.mp4",
+      "PackagePath": "staticwebassets\\images\\3d1c3cef-219f-427e-8d1b-e4783d734a23.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\412539f4-f376-482a-8ece-40ed4d9c4f3e.mp4",
+      "PackagePath": "staticwebassets\\images\\412539f4-f376-482a-8ece-40ed4d9c4f3e.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\48ba6d28-9df9-457c-a0f6-326a40b2b8fd.jpeg",
       "PackagePath": "staticwebassets\\images\\48ba6d28-9df9-457c-a0f6-326a40b2b8fd.jpeg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\65810fd5-9e6b-4e75-b656-3152218746ea.png",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\56081d21-3e86-4419-a61a-2f5ec4ec3ade.mp4",
+      "PackagePath": "staticwebassets\\images\\56081d21-3e86-4419-a61a-2f5ec4ec3ade.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\6306b047-0467-4269-9190-57b08eedbed4.pdf",
+      "PackagePath": "staticwebassets\\images\\6306b047-0467-4269-9190-57b08eedbed4.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\65810fd5-9e6b-4e75-b656-3152218746ea.png",
       "PackagePath": "staticwebassets\\images\\65810fd5-9e6b-4e75-b656-3152218746ea.png"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\7716c882-7b20-4b3e-b94e-defe88ed7b34.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\7716c882-7b20-4b3e-b94e-defe88ed7b34.jpg",
       "PackagePath": "staticwebassets\\images\\7716c882-7b20-4b3e-b94e-defe88ed7b34.jpg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\7c404bed-6283-4851-b04b-d4b25fd13bea.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\7c404bed-6283-4851-b04b-d4b25fd13bea.jpg",
       "PackagePath": "staticwebassets\\images\\7c404bed-6283-4851-b04b-d4b25fd13bea.jpg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\94489ea3-79cb-45b2-8a5e-4666f5a37c9e.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\89f30b7f-7d51-44ed-8103-f1b72431b140.pdf",
+      "PackagePath": "staticwebassets\\images\\89f30b7f-7d51-44ed-8103-f1b72431b140.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\94489ea3-79cb-45b2-8a5e-4666f5a37c9e.jpg",
       "PackagePath": "staticwebassets\\images\\94489ea3-79cb-45b2-8a5e-4666f5a37c9e.jpg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\99c552ea-e680-43b8-b24d-db8ecf9da027.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\99c552ea-e680-43b8-b24d-db8ecf9da027.jpg",
       "PackagePath": "staticwebassets\\images\\99c552ea-e680-43b8-b24d-db8ecf9da027.jpg"
     },
     {
-      "Id": "E:\\.netproj\\Backend\\Backend\\wwwroot\\images\\b5004484-6790-4dc1-942e-74595c4dadd4.jpg",
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\a4f8f466-a3b1-41d8-9356-12b2fbac8362.jpeg",
+      "PackagePath": "staticwebassets\\images\\a4f8f466-a3b1-41d8-9356-12b2fbac8362.jpeg"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\ae3f7331-a19f-46b8-bab4-903d3a0e49b3.jpg",
+      "PackagePath": "staticwebassets\\images\\ae3f7331-a19f-46b8-bab4-903d3a0e49b3.jpg"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\b19033fa-ba60-4565-9c75-ec9f820b6657.pdf",
+      "PackagePath": "staticwebassets\\images\\b19033fa-ba60-4565-9c75-ec9f820b6657.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\b5004484-6790-4dc1-942e-74595c4dadd4.jpg",
       "PackagePath": "staticwebassets\\images\\b5004484-6790-4dc1-942e-74595c4dadd4.jpg"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\be15235f-6ff7-452d-958f-631c3c7884e1.pdf",
+      "PackagePath": "staticwebassets\\images\\be15235f-6ff7-452d-958f-631c3c7884e1.pdf"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\cd849a58-47d2-4e09-b4cd-f5e6cd8cd406.jpeg",
+      "PackagePath": "staticwebassets\\images\\cd849a58-47d2-4e09-b4cd-f5e6cd8cd406.jpeg"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\dfd5e4c2-d27c-4e74-b323-5e6c7637bd6e.mp4",
+      "PackagePath": "staticwebassets\\images\\dfd5e4c2-d27c-4e74-b323-5e6c7637bd6e.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\e55bfd8f-5834-405e-bf6b-a736b0a6892d.mp4",
+      "PackagePath": "staticwebassets\\images\\e55bfd8f-5834-405e-bf6b-a736b0a6892d.mp4"
+    },
+    {
+      "Id": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\wwwroot\\images\\f88182a4-d9e7-434d-8b74-992027250d07.mp4",
+      "PackagePath": "staticwebassets\\images\\f88182a4-d9e7-434d-8b74-992027250d07.mp4"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssets.props",

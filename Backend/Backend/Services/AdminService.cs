@@ -47,10 +47,10 @@ namespace Backend.Services
             var teachrApplication = await _cotext.TeacherApplications.Include(x => x.User).FirstOrDefaultAsync(x=>x.Id==Model.Id);
             var Teacher = new Teacher { UserID = teachrApplication.UserID};
             await _cotext.Teachers.AddAsync(Teacher);
-            _cotext.SaveChanges();
+            await _cotext.SaveChangesAsync();
             _emailSender.SendEmailAsync(teachrApplication.User.Email, "Teacher Applications", "Your application has been approved, now you have become a teacher in EduSphere");
              _cotext.TeacherApplications.Remove(teachrApplication);
-            _cotext.SaveChanges();
+            await _cotext.SaveChangesAsync();
             return "Accept Application";
 
 
@@ -60,7 +60,7 @@ namespace Backend.Services
             var teachrApplication = await _cotext.TeacherApplications.Include(x => x.User).FirstOrDefaultAsync(x => x.Id == Model.Id);
             _emailSender.SendEmailAsync(teachrApplication.User.Email, "Teacher Applications", "Your application has been rejected,sorry");
             _cotext.TeacherApplications.Remove(teachrApplication);
-            _cotext.SaveChanges();
+            await _cotext.SaveChangesAsync();
             return "Rejection Application";
 
 

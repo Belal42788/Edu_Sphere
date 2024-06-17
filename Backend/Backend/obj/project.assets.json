@@ -10915,11 +10915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\.netproj\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "E:\\.netproj\\Backend\\Backend\\Backend.csproj",
+      "projectPath": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\TOP ONE\\.nuget\\packages\\",
-      "outputPath": "E:\\.netproj\\Backend\\Backend\\obj\\",
+      "outputPath": "E:\\cs490\\Edu_Sphere\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TOP ONE\\AppData\\Roaming\\NuGet\\NuGet.Config",

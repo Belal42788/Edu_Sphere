@@ -26,6 +26,17 @@ namespace Backend.Controllers
             var result = await _LessonService.CreateLessonAsync(model);
             return Ok(result);
         }
+        [Authorize]
+        [HttpGet("GetAllLessonAsync")]
+        public async Task<IActionResult> GetAllLessonAsync(CourseDto model)
+        {
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _LessonService.GetAllLessonAsync(model);
+            return Ok(result);
+
+        }
 
 
         }

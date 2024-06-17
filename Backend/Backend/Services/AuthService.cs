@@ -61,8 +61,12 @@ namespace Backend.Services
                 IsAuthenticated = true,
                 Roles = new List<string> { "User" },
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Image= "https://localhost:7225" + user.ImageUrl,
+                Gender=user.Gender,
 
-            };
+        };
         }
         public async Task<AuthModel> GetTokenAsync(TokenRequestModel model)
         {

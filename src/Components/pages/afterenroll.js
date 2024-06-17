@@ -110,7 +110,7 @@ function Afterenroll() {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid" style={{padding:'0px'}}>
         <AdminHeader />
       </div>
       {/* Courses Enroll Start */}
