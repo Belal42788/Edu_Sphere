@@ -55,7 +55,7 @@ import Shape15 from "../../assets/images/shape/shape-15.png"
 import Shape16 from "../../assets/images/shape/shape-16.png"
 import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
-import Chatbot from "./chatbot";
+import FloatingChatbot from './floatingChatbot';
 function Home() {
     const coursesinf = [
         {
@@ -466,11 +466,9 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="section">
-                <Chatbot /> 
-            </div>
             <div><Advertise /></div>
             <div><Footer /></div>
+            <FloatingChatbot />
         </>
     )
 }
