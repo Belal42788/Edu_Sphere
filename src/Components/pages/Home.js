@@ -55,6 +55,7 @@ import Shape15 from "../../assets/images/shape/shape-15.png"
 import Shape16 from "../../assets/images/shape/shape-16.png"
 import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
+import Chatbot from "./chatbot";
 function Home() {
     const coursesinf = [
         {
@@ -129,7 +130,7 @@ function Home() {
         },
         {
             id: 6,
-            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes',
+            title: 'Digital Marketing 101: From Basics to Advanced',
             instructor: 'Jason Williams',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg6,
@@ -464,6 +465,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="section">
+                <Chatbot /> 
             </div>
             <div><Advertise /></div>
             <div><Footer /></div>
