@@ -168,7 +168,7 @@ function Home() {
                         <div className="header-main-wrapper">
                             <div class="header-logo" style={{ display: 'flex' }}>
                                 <a href="/" style={{ paddingLeft: '15px' }}><img src={Image1} width="50" height="50" alt="Logo" /></a>
-                                <h2 style={{ paddingLeft: '10px', textTransform: 'capitalize' }}>edu<span style={{ color: 'green' }}>sphere</span></h2>
+                               <a href='/'> <h2 style={{ paddingLeft: '10px', textTransform: 'capitalize' }}>edu<span style={{ color: 'green' }}>sphere</span></h2></a>
                             </div>
                             <div className="header-menu d-none d-lg-block">
                                 <ul className="nav-menu">
