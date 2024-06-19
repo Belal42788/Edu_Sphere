@@ -56,6 +56,7 @@ import Shape16 from "../../assets/images/shape/shape-16.png"
 import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
 import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
 function Home() {
     const coursesinf = [
         {
@@ -469,6 +470,7 @@ function Home() {
             <div><Advertise /></div>
             <div><Footer /></div>
             <FloatingChatbot />
+            <TidioChat />
         </>
     )
 }
