@@ -137,11 +137,7 @@ function FreeCourse() {
                           Reviews
                         </button>
                       </li>
-                      <li>
-                        <button data-bs-toggle="tab" data-bs-target="#">
-                          Lessons
-                        </button>
-                      </li>
+                   
                     </ul>
                   </div>
                   <div class="details-tab-content">
@@ -396,10 +392,17 @@ function FreeCourse() {
                       </li>
                     </ul>
                   </div>
+                  
                 </div>
               </div>
+
             ))}
           </div>
+                 <div class="lesson-btn">
+                      <a href="lessons" class="btn btn-primary btn-hover-dark">
+                       Lessons
+                      </a>
+                    </div>
         </div>
       </div>
       <div><Advertise /></div>

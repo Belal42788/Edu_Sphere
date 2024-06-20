@@ -23727,6 +23727,10 @@ img {
   text-align: center;
   margin-top: 40px;
 }
+.lesson-btn {
+  /* text-align: center; */
+  margin-top: 30px;
+}
 
 .widget-search {
   position: relative;
