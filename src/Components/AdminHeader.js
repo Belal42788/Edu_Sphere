@@ -12,7 +12,8 @@ function AdminHeader(props) {
     localStorage.removeItem('UserToken');
     localStorage.removeItem('Email');
     localStorage.removeItem('UserName');
-    localStorage.removeItem('Image');
+        localStorage.removeItem('Image');
+        setSign(true);
    }
 
   useEffect(() => {

@@ -74,8 +74,9 @@ export default function Login() {
         if (emaillogin === 'abdelrahmanezzateid@gmail.com') {
           navigate("/Admin");
           alert('Wellcome admin');
+          return;
         }
-        alert('Registration successful');
+        alert('Login successful');
         navigate("/");
       } catch (error) {
         setErrMsg(true);
