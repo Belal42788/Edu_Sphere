@@ -77,7 +77,8 @@ function Home() {
     const token = localStorage.getItem('UserToken');
       
       if (!token) {
-        console.error('No authentication token found');
+          console.error('No authentication token found');
+          setSign(true);
         // You might want to redirect to the login page or handle this case accordingly
         return;
       }
