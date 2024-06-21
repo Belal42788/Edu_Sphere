@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import "../../Styles/Contact.css"
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -57,7 +57,31 @@ import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
+
 function Home() {
+
+    const hundelSignOut = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('UserToken');
+    localStorage.removeItem('Email');
+    localStorage.removeItem('UserName');
+    localStorage.removeItem('Image');
+   }
+
+    const [sign, setSign] = useState(false);
+
+
+  useEffect(() => {
+    const token = localStorage.getItem('UserToken');
+      
+      if (!token) {
+          console.error('No authentication token found');
+          setSign(true);
+        // You might want to redirect to the login page or handle this case accordingly
+        return;
+      }
+  }, []);
+
     const coursesinf = [
         {
             id: 1,
@@ -131,7 +155,7 @@ function Home() {
         },
         {
             id: 6,
-            title: 'Digital Marketing 101: From Basics to Advanced',
+            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes',
             instructor: 'Jason Williams',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg6,
@@ -169,7 +193,7 @@ function Home() {
                         <div className="header-main-wrapper">
                             <div class="header-logo" style={{ display: 'flex' }}>
                                 <a href="/" style={{ paddingLeft: '15px' }}><img src={Image1} width="50" height="50" alt="Logo" /></a>
-                               <a href='/'> <h2 style={{ paddingLeft: '10px', textTransform: 'capitalize' }}>edu<span style={{ color: 'green' }}>sphere</span></h2></a>
+                                <h2 style={{ paddingLeft: '10px', textTransform: 'capitalize' }}>edu<span style={{ color: 'green' }}>sphere</span></h2>
                             </div>
                             <div className="header-menu d-none d-lg-block">
                                 <ul className="nav-menu">
@@ -184,26 +208,43 @@ function Home() {
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        <ul className="sub-menu">
-                                            <li><a href="about">About</a></li>
-                                            <li><a href="register">Register</a></li>
-                                            <li><a href="login">Login</a></li>
-                                            <li><a href="faq">FAQ</a></li>
-                                            <li><a href="404-error">404 Error</a></li>
-                                            <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="CoursesAdmin">Instructor Dashboard (Course List)</a></li>
-                                            <li><a href="createcourse">Create Course</a></li>
-                                            <li><a href="createLesson">Create lesson</a></li>
-                                        </ul>
+                                        {!sign? (<ul className="sub-menu">
+                      <li><a href="about">About</a></li>
+                      <li><a href="faq">FAQ</a></li>
+                      <li><a href="404-error">404 Error</a></li>
+                      <li><a href="Afterenroll">After Enroll</a></li>
+                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
+                      <li><a href="createcourse">Create Course</a></li>
+                      <li><a href="createLesson">Create lesson</a></li>
+                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                    </ul>) :(
+                    <ul className="sub-menu">
+                      <li><a href="about">About</a></li>
+                      <li><a href="register">Register</a></li>
+                      <li><a href="login">Login</a></li>
+                      <li><a href="faq">FAQ</a></li>
+                      <li><a href="404-error">404 Error</a></li>
+                      <li><a href="Afterenroll">After Enroll</a></li>
+                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
+                      <li><a href="createcourse">Create Course</a></li>
+                      <li><a href="createLesson">Create lesson</a></li>
+                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                      </ul>
+                        )}
                                     </li>
                                     <li><a href="contact">Contact</a></li>
                                 </ul>
                             </div>
                             <div className="header-sign-in-up d-none d-lg-block">
-                                <ul>
+                                {!sign ? (<ul><li>
+                        <a className="sign-up" href="login" onClick={hundelSignOut}>
+                          <i className="icofont-logout"></i> Sign Out
+                        </a>
+                      </li></ul>):(<ul>
                                     <li><a className="sign-in" href="login">Sign In</a></li>
                                     <li><a className="sign-up" href="register">Sign Up</a></li>
-                                </ul>
+                                </ul>) }
+                                
                             </div>
                             <div className="header-toggle d-lg-none">
                                 <a className="menu-toggle" href="javascript:void(0)">

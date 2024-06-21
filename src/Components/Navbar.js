@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Image1 from "../assets/images/logo-icon.png"
 import Image2 from "../assets/images/shape/shape-8.png"
@@ -10,6 +10,28 @@ import Image7 from "../assets/images/author/author-06.jpg"
 import "../Styles/Contact.css"
 import '../Styles/flaticon.css'
 function Navbar(props) {
+const [photo, setPhoto] = useState(Image7);
+  const [sign, setSign] = useState(true);
+
+
+  useEffect(() => {
+    const token = localStorage.getItem('UserToken');
+      
+      if (!token) {
+          console.error('No authentication token found');
+          setSign(false);
+        // You might want to redirect to the login page or handle this case accordingly
+        return;
+      }
+      const image = localStorage.getItem('Image');
+    if (!image) {
+      setPhoto(Image7);
+      setSign(true);
+    } else { 
+      setPhoto(image);
+      setSign(false);
+    }
+  }, []);
     return (
         <>
             <div className="header-section">
@@ -33,7 +55,16 @@ function Navbar(props) {
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        <ul className="sub-menu">
+                                        {!sign ? (<ul className="sub-menu">
+                                            <li><a href="about">About</a></li>
+                                            <li><a href="faq">FAQ</a></li>
+                                            <li><a href="404-error">404 Error</a></li>
+                                            <li><a href="Afterenroll">After Enroll</a></li>
+                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
+                                            <li><a href="createcourse">Create Course</a></li>
+                                            <li><a href="createLesson">Create lesson</a></li>
+                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                        </ul>) : (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="register">Register</a></li>
                                             <li><a href="login">Login</a></li>
@@ -44,7 +75,8 @@ function Navbar(props) {
                                             <li><a href="createcourse">Create Course</a></li>
                                             <li><a href="createLesson">Create lesson</a></li>
                                             <li><a href="TeacherRegisteration">Become A Instructor</a></li>
-                                        </ul>
+                                        </ul>) }
+                                        
                                     </li>
                                     <li><a href="contact">Contact</a></li>
                                 </ul>
@@ -52,7 +84,7 @@ function Navbar(props) {
                             {!props.isUserSignedIn ? (
                                 <div className="login-header-action ml-auto">
                                     <a className="action author" href="profile">
-                                        <img src={Image7} alt="Author" />
+                                        <img src={photo} alt="Author" />
                                     </a>
                                     <div className="dropdown">
                                         <button className="action more" data-bs-toggle="dropdown">

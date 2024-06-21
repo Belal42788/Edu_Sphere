@@ -8,8 +8,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import { faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import AdminHeader from "../AdminHeader";
 
 export default function Login() {
+  const navigate = useNavigate();
     const userRef = useRef();
 
   const [emaillogin, setemaillogin] = useState("");
@@ -60,7 +63,20 @@ export default function Login() {
             'Content-Type': 'application/json'
           }
         });
-        console.log('Login successful', response.data.token);
+        const token = response.data.token;
+        const userName = response.data.firstName + " " + response.data.lastName;
+        localStorage.setItem('UserToken', token);
+        localStorage.setItem('Email', response.data.email);
+        localStorage.setItem('UserName',userName);
+        localStorage.setItem('Image', response.data.image);
+        console.log(userName);
+        console.log('Login successful', response.data);
+        if (emaillogin === 'abdelrahmanezzateid@gmail.com') {
+          navigate("/Admin");
+          alert('Wellcome admin');
+        }
+        alert('Registration successful');
+        navigate("/");
       } catch (error) {
         setErrMsg(true);
         console.error('Error logging in', error);

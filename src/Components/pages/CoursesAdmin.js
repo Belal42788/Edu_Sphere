@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
 import author3 from "../../assets/images/author/author-23.jpg";
@@ -54,6 +55,8 @@ import "../../Styles/Contact.css";
 import Footer from "../Footer";
 import AdminHeader from "../AdminHeader";
 function CoursesAdmin() {
+
+
     const courses = [
         {
             itemThumb: course1,
@@ -164,7 +167,7 @@ function CoursesAdmin() {
                                             </div>
                                         </div>
                                     </div>
-                                    ))  };
+                                    ))  }
                                     {/* <div class="courses-item">
                                         <div class="item-thumb">
                                             <a href="#">

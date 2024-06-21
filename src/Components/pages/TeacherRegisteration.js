@@ -8,8 +8,10 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Advertise from "../advertise";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function TeacherRegistration() {
+    const navigate = useNavigate();
     const userRef = useRef();
     const errRef = useRef();
 
@@ -25,16 +27,28 @@ export default function TeacherRegistration() {
         e.preventDefault();
 
         const formData = new FormData();
-        formData.append("Image", imageFile);
+        formData.append("Degree","3");
+        formData.append("DegreeImage", imageFile);
 
+        const token = localStorage.getItem('UserToken');
+
+    
+        if (!token) {
+            console.error('No authentication token found');
+            navigate('/Login');
+            return;
+        }
         try {
-            const response = await axios.post('https://localhost:7225/api/User/register', formData, {
+            const response = await axios.post('https://localhost:7225/api/Teacher/TeacherApplication', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization': `Bearer ${token}` // Add the token here
                 }
             });
+            alert('Registration successful');
             console.log('Registration successful', response.data);
         } catch (error) {
+            alert('Something wrong!');
             console.error('Error during registration', error);
         }
     };

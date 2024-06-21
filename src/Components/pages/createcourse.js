@@ -6,39 +6,74 @@ import image from '../../assets/images/shape/shape-26.png';
 import image2 from '../../assets/imaheboy.jpg';
 import Advertise from "../advertise";
 import AdminHeader from '../AdminHeader';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Createcourse() {
+  const navigate = useNavigate();
+
   const [courseName, setCourseName] = useState("");
   const [subject, setSubject] = useState("");
-  const [videoUrl, setVideoUrl] = useState("");
+  const [language, setlanguage] = useState("");
   const [courseCost, setCourseCost] = useState("");
   const [courseImage, setCourseImage] = useState(null);
   const [description, setDescription] = useState("");
 
   const handleCourseNameChange = (e) => setCourseName(e.target.value);
   const handleSubjectChange = (e) => setSubject(e.target.value);
-  const handleVideoUrlChange = (e) => setVideoUrl(e.target.value);
+  const handleVideoUrlChange = (e) => setlanguage(e.target.value);
   const handleCourseCostChange = (e) => setCourseCost(e.target.value);
   const handleCourseImageChange = (e) => setCourseImage(e.target.files[0]);
   const handleDescriptionChange = (e) => setDescription(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Prepare form data
     const formData = new FormData();
-    formData.append("courseName", courseName);
-    formData.append("subject", subject);
-    formData.append("videoUrl", videoUrl);
-    formData.append("courseCost", courseCost);
-    formData.append("courseImage", courseImage);
-    formData.append("description", description);
-
+    formData.append("CourseName", courseName);
+    formData.append("CourseDescription", description);
+    formData.append("Subject", subject);
+    // formData.append("videoUrl", videoUrl);
+    // formData.append("TeacherID", ",mndsfkj");
+    formData.append("Cost", courseCost);
+    formData.append("Language", language);
+    formData.append("Image", courseImage);
+    
+    console.log("FormData entries:");
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
     // Log form data to console (for demonstration purposes)
     // Replace this with actual form submission logic (e.g., API call)
-    for (let [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
+        const token = localStorage.getItem('UserToken');
+
+    if (!token) {
+      console.error('No authentication token found');
+      navigate('/Login');
+        return;
     }
+      try {
+        const response = await axios.post('https://localhost:7225/api/Course/CreateCourse', formData, {
+          headers: {
+                'Content-Type': 'multipart/form-data',
+                'Authorization': `Bearer ${token}` // Add the token here
+            }
+        });
+        console.log('CreateCourse successful', response.data);
+        alert('Course created successfully!');
+        // Handle successful registration, e.g., redirect to login or home page
+      } catch (error) {
+        if (error.response && error.response.status === 403) {
+                alert('You are not Teacher Until Admin give you access');
+        console.error('Access forbidden: you do not have the necessary permissions');
+        // Optionally handle insufficient permissions, e.g., show a message or redirect
+            } else {
+                alert('Something wrong please try again');
+        console.error('Error during Getting data', error);
+      }
+        // Handle registration error
+      }
   };
 
   return (
@@ -72,7 +107,7 @@ function Createcourse() {
                         <input type="text" placeholder="Subject" value={subject} onChange={handleSubjectChange} />
                       </div>
                       <div className="single-form">
-                        <input type="text" placeholder="Url of video" value={videoUrl} onChange={handleVideoUrlChange} />
+                        <input type="text" placeholder="language" value={language} onChange={handleVideoUrlChange} />
                       </div>
                       <div className="single-form">
                         <input type="text" placeholder="Cost of course" value={courseCost} onChange={handleCourseCostChange} />

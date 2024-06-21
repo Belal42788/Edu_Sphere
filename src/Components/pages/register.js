@@ -8,13 +8,15 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Advertise from "../advertise";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const usernameRegex = /^[a-zA-Z][a-zA-Z0-9-_]{3,16}$/;
+const usernameRegex = /^[a-zA-Z][a-zA-Z0-9-_]{2,16}$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$!%*?&]).{8,24}$/;
 
 
 export default function Register() {
+    const navigate = useNavigate();
     const userRef = useRef();
     const errRef = useRef();
 
@@ -39,7 +41,7 @@ export default function Register() {
     const [validConPwd, setValidConPwd] = useState(false);
     const [conPwdFocus, setConPwdFocus] = useState(false);
 
-    const [gender, setGender] = useState("");
+    const [gender, setGender] = useState("Male");
     const [imageFile, setImageFile] = useState(null);
 
     const [errMsg, setErrMsg] = useState("");
@@ -65,8 +67,6 @@ export default function Register() {
 
     useEffect(() => {
         const result = passwordRegex.test(passwordregister);
-        console.log(result);
-        setValidPwd(result);
         const match = passwordregister === confirmpasswordregister;
         setValidConPwd(match);
     }, [passwordregister, confirmpasswordregister])
@@ -130,11 +130,13 @@ export default function Register() {
         formData.append("LastName", LASTName);
         formData.append("Email", emailregister);
         formData.append("Password", passwordregister);
-        formData.append("confirmPassword", confirmpasswordregister);
         formData.append("Gender", gender);
         formData.append("Image", imageFile);
 
-
+        console.log("FormData entries:");
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
 
         try {
             const response = await axios.post('https://localhost:7225/api/User/register', formData, {
@@ -142,10 +144,20 @@ export default function Register() {
                     'Content-Type': 'multipart/form-data'
                 }
             });
+            const token = response.data.token;
+            localStorage.setItem('UserToken', token);
+            const userName = FirstName + " " + LASTName;
+            localStorage.setItem('UserToken', token);
+            localStorage.setItem('Email', emailregister);
+            localStorage.setItem('UserName',userName);
+            localStorage.setItem('Image', imageFile);
             console.log('Registration successful', response.data);
+            alert('Registration successful');
+            navigate("/");
             // Handle successful registration, e.g., redirect to login or home page
         } catch (error) {
             console.error('Error during registration', error);
+            alert("Something wrong please try again");
             // Handle registration error
         }
     };
@@ -207,7 +219,7 @@ export default function Register() {
                                             <div className='single-form d-flex' >
                                                 <label>Gender:</label>
                                                 <div style={{ paddingLeft: '10px' }}>
-                                                    <input type="radio" name="gender" value="Male" onChange={handleGenderChange} defaultChecked />
+                                                    <input type="radio" name="gender" value="Male" defaultChecked onChange={handleGenderChange}  />
                                                     <label style={{ paddingRight: '15px' }}>Male</label>
                                                     <input type="radio" name="gender" value="Female" onChange={handleGenderChange} />
                                                     <label>Female</label>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import courseImg1 from "../../assets/images/courses/courses-01.jpg";
 import courseImg2 from "../../assets/images/courses/courses-02.jpg";
 import courseImg3 from "../../assets/images/courses/courses-03.jpg";
@@ -41,7 +42,57 @@ import '../../Styles/plugins/magnific-popup.css'
 import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
+import { useNavigate } from 'react-router-dom';
+
 function MyCourses() {
+
+        const navigate = useNavigate();
+    const [sign, setSign] = useState(false);
+    const [applications, setApplications] = useState([]);
+    const [instructorImage, setInstructorImage] = useState("");
+    const [instructorName, setInstructorName] = useState("");
+
+    const fetchApplications = async () => {
+        try {
+            const token = localStorage.getItem('UserToken');
+            const instructorImg = localStorage.getItem('Image');
+            const instructorNm = localStorage.getItem('UserName');
+            console.log(instructorImg);
+            if (!token) {
+                console.error('No authentication token found');
+                // You might want to redirect to the login page or handle this case accordingly
+                return;
+            }
+      
+            const response = await axios.get('https://localhost:7225/api/Teacher/GetMyCourses', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+      
+            console.log('Getdata successful', response.data);
+            setSign(true);
+            setApplications(response.data);
+            setInstructorImage(instructorImg);
+            setInstructorName(instructorNm);
+            
+            
+        } catch (error) {
+            console.error('Error during getting data', error);
+            if (error.response) {
+                console.error('Response data:', error.response.data);
+                console.error('Response status:', error.response.status);
+                console.error('Response headers:', error.response.headers);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
+
+
     const coursesinf = [
         { id: 8, title: 'Effective Communication Skills for Managers', instructor: 'Laura Garcia', duration: '7 weeks', ImageUlrcourses: courseImg8, ImageUlrinstr: author8 },
         { id: 12, title: 'Advanced Excel Techniques for Data Analysis', instructor: 'Patricia Martinez', duration: '6 weeks', ImageUlrcourses: courseImg12, ImageUlrinstr: author12 },
@@ -56,11 +107,12 @@ function MyCourses() {
                 <div class="container">
                     <div class="courses-wrapper-02">
                         <div class="row">
-                            {coursesinf.map((item) => (
+                            {!sign ? 
+                            coursesinf.map((item) => (
                                 <div class="col-lg-4 col-md-6">
                                     <div class="single-courses">
                                         <div class="courses-images">
-                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                            <a href="Coursedetails"><img src={item.image} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
@@ -87,6 +139,40 @@ function MyCourses() {
                                                 </div>
                                             </div>
                                             <h4 class="title"><a href="Coursedetails">{item.title}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            )): applications.map((item) => (
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-courses">
+                                        <div class="courses-images">
+                                            <a href="Coursedetails"><img style={{width:'40%'}} src={item.image} alt="Courses" /></a>
+                                            <div class="courses-option dropdown">
+                                                <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                                    <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                                    <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                                    <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="courses-content">
+                                            <div class="courses-author">
+                                                <div class="author">
+                                                    <div class="author-thumb">
+                                                        <a href="#"><img src={instructorImage} alt="Author" /></a>
+                                                    </div>
+                                                    <div class="author-name">
+                                                        <a class="name" href="#">{instructorName}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="Coursedetails">{item.courseName}</a></h4>
                                         </div>
                                     </div>
                                 </div>
