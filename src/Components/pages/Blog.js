@@ -95,17 +95,7 @@ function Blog() {
           likes: "2,568+",
           link: "blog-details-left-sidebar.html",
         },
-        {
-          id: 7,
-          imageSrc: blog8,
-          authorImage: author8,
-          authorName: "Ricardo Patrick",
-          category: "UX Design",
-          title: "Create Amazing Color Schemes for Your UX Design Projects",
-          date: "21 March, 2021",
-          likes: "2,568+",
-          link: "blog-details-left-sidebar.html",
-        }
+       
       ];
   return (
     <div>
