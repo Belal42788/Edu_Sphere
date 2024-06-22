@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Advertise from "../advertise";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const usernameRegex = /^[a-zA-Z][a-zA-Z0-9-_]{2,16}$/;
@@ -287,6 +290,8 @@ export default function Register() {
             </div>
             <Advertise />
             <Footer />
+            <FloatingChatbot />
+            <TidioChat />
         </div>
     );
 }

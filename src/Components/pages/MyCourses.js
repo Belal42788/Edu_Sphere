@@ -45,6 +45,9 @@ import '../../Styles/plugins/jqvmap.min.css'
 import { FaEllipsisH, FaStar } from 'react-icons/fa';
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import { useNavigate } from 'react-router-dom';
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 function MyCourses() {
 
@@ -341,6 +344,8 @@ function MyCourses() {
             <div><Advertise /></div>
             <div>
                 <Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
         </>
     );
 };

@@ -6,6 +6,9 @@ import React, { useState, useEffect } from "react";
 import profilePicture from "../../assets/images/author/author-07.jpg"; // Updated profile picture path
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 export default function Admin() {
     const handleAccept = async (applicationId) => {
@@ -141,6 +144,8 @@ export default function Admin() {
                 </div>
             ))}
             <Footer />
+            <FloatingChatbot />
+            <TidioChat />
         </div>
     );
 }

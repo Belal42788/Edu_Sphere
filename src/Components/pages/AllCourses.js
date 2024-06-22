@@ -41,22 +41,25 @@ import '../../Styles/plugins/magnific-popup.css'
 import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 function Courses() {
     const coursesinf = [
         { id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', duration: '4 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author1 },
-        { id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jane Smith', duration: '6 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author2 },
+        { id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', duration: '6 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author2 },
         { id: 3, title: 'Culture & Leadership: Strategies for a Successful Business', instructor: 'Alex Johnson', duration: '5 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author3 },
-        { id: 4, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'Emily Brown', duration: '8 weeks', ImageUlrcourses: courseImg6, ImageUlrinstr: author4 },
+        { id: 4, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', duration: '8 weeks', ImageUlrcourses: courseImg6, ImageUlrinstr: author4 },
         { id: 5, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', duration: '6 weeks', ImageUlrcourses: courseImg11, ImageUlrinstr: author5 },
-        { id: 6, title: 'Introduction to Cybersecurity', instructor: 'Sarah Williams', duration: '3 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author6 },
+        { id: 6, title: 'Introduction to Cybersecurity', instructor: 'Sam Williams', duration: '3 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author6 },
         { id: 7, title: 'Mastering Adobe Photoshop for Beginners', instructor: 'David Miller', duration: '4 weeks', ImageUlrcourses: courseImg8, ImageUlrinstr: author7 },
-        { id: 8, title: 'Effective Communication Skills for Managers', instructor: 'Laura Garcia', duration: '7 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author8 },
+        { id: 8, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', duration: '7 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author8 },
         { id: 9, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', duration: '10 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author9 },
-        { id: 10, title: 'Practical Project Management: Strategies and Tools', instructor: 'Jessica Lee', duration: '5 weeks', ImageUlrcourses: courseImg9, ImageUlrinstr: author10 },
+        { id: 10, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', duration: '5 weeks', ImageUlrcourses: courseImg9, ImageUlrinstr: author10 },
         { id: 11, title: 'The Art of Public Speaking', instructor: 'Daniel Harris', duration: '4 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author11 },
-        { id: 12, title: 'Advanced Excel Techniques for Data Analysis', instructor: 'Patricia Martinez', duration: '6 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author12 },
+        { id: 12, title: 'Advanced Excel Techniques for Data Analysis', instructor: 'Patric Martinez', duration: '6 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author12 },
         { id: 13, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author13 },
-        { id: 14, title: 'SEO Mastery: Boost Your Website’s Google Ranking', instructor: 'Karen Robinson', duration: '8 weeks', ImageUlrcourses: courseImg12, ImageUlrinstr: author14 },
+        { id: 14, title: 'SEO Mastery: Boost Your Website’s Google Ranking', instructor: 'Michael Robinson', duration: '8 weeks', ImageUlrcourses: courseImg12, ImageUlrinstr: author14 },
         { id: 15, title: 'Creative Writing: Unlocking the Writer Within', instructor: 'Brian Lopez', duration: '7 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author15 },
     ];
     
@@ -109,6 +112,8 @@ function Courses() {
             <div><Advertise /></div>
             <div>
                 <Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
         </>
     );
 };

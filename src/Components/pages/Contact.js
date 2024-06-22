@@ -16,6 +16,9 @@ import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
 import '../../Styles/plugins/icofont.min.css'
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 function Contact() {
   return (
     <>
@@ -130,6 +133,8 @@ function Contact() {
       <div>
         <Footer />
       </div>
+            <FloatingChatbot />
+            <TidioChat />
     </>
   );
 }

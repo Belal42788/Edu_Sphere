@@ -7,10 +7,11 @@ import Image4 from "../assets/images/shape/shape-5.png"
 import Image5 from "../assets/images/shape/shape-6.png"
 import Image6 from "../assets/images/shape/shape-24.png"
 import Image7 from "../assets/images/author/author-06.jpg"
+import Belal from "../assets/images/author/Belal.jpg"
 import "../Styles/Contact.css"
 import '../Styles/flaticon.css'
 function Navbar(props) {
-const [photo, setPhoto] = useState(Image7);
+const [photo, setPhoto] = useState(Belal);
   const [sign, setSign] = useState(true);
 
 
@@ -55,7 +56,7 @@ const [photo, setPhoto] = useState(Image7);
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        {!sign ? (<ul className="sub-menu">
+                                        {sign ? (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="404-error">404 Error</a></li>

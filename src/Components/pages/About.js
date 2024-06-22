@@ -27,6 +27,9 @@ import "../../Styles/plugins/apexcharts.css";
 import "../../Styles/plugins/jqvmap.min.css";
 import "../../Styles/Contact.css";
 import Advertise from "../advertise";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 function About() {
   const teamMembers = [
@@ -314,6 +317,8 @@ function About() {
       </div>
       <Advertise />
       <Footer />
+            <FloatingChatbot />
+            <TidioChat />
     </>
   );
 }

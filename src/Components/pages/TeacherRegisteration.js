@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Advertise from "../advertise";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 export default function TeacherRegistration() {
     const navigate = useNavigate();
@@ -95,6 +98,8 @@ export default function TeacherRegistration() {
             </div>
             <Advertise />
             <Footer />
+            <FloatingChatbot />
+            <TidioChat />
         </div>
     );
 }
