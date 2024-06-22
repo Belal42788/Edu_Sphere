@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import author7 from "../assets/images/author/author-07.jpg";
+import Belal from "../assets/images/author/Belal.jpg";
 import Image1 from "../assets/images/logo-icon.png";
 import "../Styles/Contact.css";
 
 function AdminHeader(props) {
-  const [photo, setPhoto] = useState(author7);
+  const [photo, setPhoto] = useState(Belal);
   const [sign, setSign] = useState(true);
 
   const hundelSignOut = (e) => {
@@ -26,7 +26,7 @@ function AdminHeader(props) {
       }
    const image = localStorage.getItem('Image');
     if (!image) {
-      setPhoto(author7);
+      setPhoto(Belal);
       setSign(true);
     } else { 
       setPhoto(image);
