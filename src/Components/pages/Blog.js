@@ -28,6 +28,85 @@ import Footer from '../Footer';
 import Advertise from "../advertise"
 
 function Blog() {
+    const blogData = [
+        {
+          id: 1,
+          imageSrc: blog2,
+          authorImage: author2,
+          authorName: "Pamela Foster",
+          category: "UX Design",
+          title: "Create Amazing Color Schemes for Your UX Design Projects",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 2,
+          imageSrc: blog3,
+          authorImage: author3,
+          authorName: "Patricia Collins",
+          category: "Business",
+          title: "Culture & Leadership: Strategies for a Successful Business",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 3,
+          imageSrc: blog4,
+          authorImage: author4,
+          authorName: "Archie Neal",
+          category: "Science",
+          title: "Data Science and Machine Learning with Python - Hands On!",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 4,
+          imageSrc: blog5,
+          authorImage: author5,
+          authorName: "Randal Ramsey",
+          category: "UX Design",
+          title: "Create Amazing Color Schemes for Your UX Design Projects",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 5,
+          imageSrc: blog6,
+          authorImage: author6,
+          authorName: "Rochelle Thomas",
+          category: "Business",
+          title: "Culture & Leadership: Strategies for a Successful Business",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 6,
+          imageSrc: blog7,
+          authorImage: author7,
+          authorName: "Della Salazar",
+          category: "Science",
+          title: "Data Science and Machine Learning with Python - Hands On!",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        },
+        {
+          id: 7,
+          imageSrc: blog8,
+          authorImage: author8,
+          authorName: "Ricardo Patrick",
+          category: "UX Design",
+          title: "Create Amazing Color Schemes for Your UX Design Projects",
+          date: "21 March, 2021",
+          likes: "2,568+",
+          link: "blog-details-left-sidebar.html",
+        }
+      ];
   return (
     <div>
 
@@ -39,335 +118,44 @@ function Blog() {
                 
                 <div class="blog-wrapper">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
+                    {blogData.map(blog => (
+        <div key={blog.id} className="col-lg-4 col-md-6">
+          <div className="single-blog">
+            <div className="blog-image">
+              <a href={blog.link}><img src={blog.imageSrc} alt="Blog" /></a>
+            </div>
+            <div className="blog-content">
+              <div className="blog-author">
+                <div className="author">
+                  <div className="author-thumb">
+                    <a href="#"><img src={blog.authorImage} alt="Author" /></a>
+                  </div>
+                  <div className="author-name">
+                    <a className="name" href="#">{blog.authorName}</a>
+                  </div>
+                </div>
+                <div className="tag">
+                  <a href="#">{blog.category}</a>
+                </div>
+              </div>
 
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog1} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author1} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Jason Williams</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Science</a>
-                                        </div>
-                                    </div>
+              <h4 className="title"><a href={blog.link}>{blog.title}</a></h4>
 
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Data Science and Machine Learning with Python - Hands On!</a></h4>
+              <div className="blog-meta">
+                <span> <i className="icofont-calendar"></i> {blog.date}</span>
+                <span> <i className="icofont-heart"></i> {blog.likes} </span>
+              </div>
 
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog2} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author2} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Pamela Foster</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">UX Design</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog3} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author3} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Patricia Collins</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Business</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Culture & Leadership: Strategies for a Successful Business</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog4} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author4}  alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Archie Neal</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Science</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Data Science and Machine Learning with Python - Hands On!</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog5} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author5} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Randal Ramsey</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">UX Design</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog6} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author6} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Rochelle Thomas</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Business</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Culture & Leadership: Strategies for a Successful Business</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog7} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author7} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Della Salazar</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Science</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Data Science and Machine Learning with Python - Hands On!</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog8} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author8} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Ricardo Patrick</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">UX Design</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            
-                            <div class="single-blog">
-                                <div class="blog-image">
-                                    <a href="blog-details-left-sidebar.html"><img src={blog9} alt="Blog"/></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-author">
-                                        <div class="author">
-                                            <div class="author-thumb">
-                                                <a href="#"><img src={author9} alt="Author"/></a>
-                                            </div>
-                                            <div class="author-name">
-                                                <a class="name" href="#">Kurt Stewart</a>
-                                            </div>
-                                        </div>
-                                        <div class="tag">
-                                            <a href="#">Business</a>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="title"><a href="blog-details-left-sidebar.html">Culture & Leadership: Strategies for a Successful Business</a></h4>
-
-                                    <div class="blog-meta">
-                                        <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
-                                        <span> <i class="icofont-heart"></i> 2,568+ </span>
-                                    </div>
-
-                                    <a href="blogdetails" class="btn btn-secondary btn-hover-primary">Read More</a>
-                                </div>
-                            </div>
-                           
-
-                        </div>
+              <a href="blogdetails" className="btn btn-secondary btn-hover-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      ))}
                     </div>
                 </div>
                
                
-                <div class="page-pagination">
-                    <ul class="pagination justify-content-center">
-                        <li><a href="#"><i class="icofont-rounded-left"></i></a></li>
-                        <li><a class="active" href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
-                    </ul>
-                </div>
-               
+             
 
             </div>
         </div>
