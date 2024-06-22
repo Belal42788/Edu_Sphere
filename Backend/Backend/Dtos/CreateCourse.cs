@@ -11,5 +11,6 @@ namespace Backend.Dtos
         public string Language { get; set; }
 
         public IFormFile Image { get; set; }
+        public string Link { get; set; }    
     }
 }

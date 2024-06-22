@@ -57,6 +57,7 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<ITeacherService, TeacherService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.Configure<Sender>(builder.Configuration.GetSection("Sender"));
 
 builder.Services.AddEndpointsApiExplorer();

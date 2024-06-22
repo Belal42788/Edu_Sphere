@@ -50,6 +50,9 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StudentCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Subject")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -57,11 +60,15 @@ namespace Backend.Migrations
                     b.Property<int>("TeacherID")
                         .HasColumnType("int");
 
+                    b.Property<string>("link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("TeacherID");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Lesson", b =>
@@ -95,7 +102,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("CourseID");
 
-                    b.ToTable("Lessons");
+                    b.ToTable("Lessons", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Student", b =>
@@ -115,7 +122,7 @@ namespace Backend.Migrations
                     b.HasIndex("UserID")
                         .IsUnique();
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.StudentCourse", b =>
@@ -130,7 +137,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("StudentCourses");
+                    b.ToTable("StudentCourses", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Task", b =>
@@ -156,7 +163,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Tasks");
+                    b.ToTable("Tasks", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Teacher", b =>
@@ -176,7 +183,7 @@ namespace Backend.Migrations
                     b.HasIndex("UserID")
                         .IsUnique();
 
-                    b.ToTable("Teachers");
+                    b.ToTable("Teachers", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.TeacherApplication", b =>
@@ -204,7 +211,7 @@ namespace Backend.Migrations
                     b.HasIndex("UserID")
                         .IsUnique();
 
-                    b.ToTable("TeacherApplications");
+                    b.ToTable("TeacherApplications", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -425,7 +432,6 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")

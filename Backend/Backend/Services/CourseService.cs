@@ -35,16 +35,19 @@ namespace Backend.Services
             else
             
               Teacher = await _cotext.Teachers.SingleOrDefaultAsync(x => x.UserID == userUid);
-            
 
-            var Course = new Course{
+
+            var Course = new Course {
                 CourseName = model.CourseName,
                 CourseDescription = model.CourseDescription,
                 Cost = model.Cost,
                 Subject = model.Subject,
                 TeacherID = Teacher.Id,
                 Language = model.Language,
-                ImgUrl = _imageService.SetImage(model.Image)
+                ImgUrl = _imageService.SetImage(model.Image),
+                StudentCount = 0,
+                link=model.Link
+
             };
             await _cotext.Courses.AddAsync(Course);
             await _cotext.SaveChangesAsync();
@@ -58,7 +61,8 @@ namespace Backend.Services
                 TeacherID = Course.TeacherID,
                 Language = model.Language,
                 Image = "https://localhost:7225" + Course.ImgUrl,
-                StudentCount=await _cotext.StudentCourses.CountAsync(m => m.CourseId == Course.Id)
+                StudentCount=await _cotext.StudentCourses.CountAsync(m => m.CourseId == Course.Id),
+                link=model.Link
             };
             return courseModel;
 
@@ -84,13 +88,42 @@ namespace Backend.Services
                     TeacherID = course.TeacherID,
                     Image = "https://localhost:7225" + course.ImgUrl,
                     Language = course.Language,
-                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id)
+                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
+                    link=course.link
+
                 };
 
                 courseModels.Add(courseModel);
             }
             return courseModels;
 
+
+        }
+        public async Task<IEnumerable<CourseModel>> AllCoursesAsync()
+        {
+            var Courses = await _cotext.Courses.OrderBy(x => x.StudentCount).ToListAsync();
+            var courseModels = new List<CourseModel>();
+
+            foreach (var course in Courses)
+            {
+                var courseModel = new CourseModel
+                {
+                    Id = course.Id,
+                    CourseName = course.CourseName,
+                    CourseDescription = course.CourseDescription,
+                    Cost = course.Cost,
+                    Subject = course.Subject,
+                    TeacherID = course.TeacherID,
+                    Image = "https://localhost:7225" + course.ImgUrl,
+                    Language = course.Language,
+                    StudentCount = course.StudentCount,
+                    link = course.link
+
+                };
+
+                courseModels.Add(courseModel);
+            }
+            return courseModels;
 
         }
     }

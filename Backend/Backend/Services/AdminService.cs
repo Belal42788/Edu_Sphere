@@ -45,6 +45,8 @@ namespace Backend.Services
         public async Task<string> AcceptApplication(TeacherApplicationDto Model)
         {
             var teachrApplication = await _cotext.TeacherApplications.Include(x => x.User).FirstOrDefaultAsync(x=>x.Id==Model.Id);
+            if (teachrApplication == null)
+                return "wrong id";
             var Teacher = new Teacher { UserID = teachrApplication.UserID};
             await _cotext.Teachers.AddAsync(Teacher);
             await _cotext.SaveChangesAsync();
@@ -58,6 +60,8 @@ namespace Backend.Services
         public async Task<string> RejectionApplication(TeacherApplicationDto Model)
         {
             var teachrApplication = await _cotext.TeacherApplications.Include(x => x.User).FirstOrDefaultAsync(x => x.Id == Model.Id);
+            if (teachrApplication == null)
+                return "wrong id";
             _emailSender.SendEmailAsync(teachrApplication.User.Email, "Teacher Applications", "Your application has been rejected,sorry");
             _cotext.TeacherApplications.Remove(teachrApplication);
             await _cotext.SaveChangesAsync();

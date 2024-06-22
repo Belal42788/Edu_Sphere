@@ -28,5 +28,16 @@ namespace Backend.Controllers
             var result=await _studentService.JointCourseAsync(userID, model);
             return Ok(result);
         }
+        [Authorize]
+        [HttpGet("MyCourses")]
+        public async Task<IActionResult> MyCoursesAsync() 
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var userID = HttpContext.User.FindFirst("uid").Value;
+            var result = await _studentService.GetMyCoursesAsync(userID);
+            return Ok(result);
+        }
+
     }
 }

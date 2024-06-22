@@ -44,6 +44,14 @@ namespace Backend.Controllers
             return Ok(result);
 
         }
+        [Authorize]
+        [HttpGet("AllCoures")]
+        public async Task<IActionResult> AllCourseAsync()
+        {
+            var result = await _courseService.AllCoursesAsync();
+            return Ok(result);
+
+        }
 
     }
 }

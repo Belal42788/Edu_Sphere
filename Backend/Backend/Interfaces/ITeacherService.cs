@@ -7,5 +7,8 @@ namespace Backend.Interfaces
     {
        Task<TeacherModel> AddTeacherAsync(TeacherDto model,User user);
        Task<IEnumerable<CourseModel>> GetMyCoursesAsync(string userId);
+       Task<IEnumerable<StudentModel>> GetMyStudnetAsync(string userId);
+
+
     }
 }

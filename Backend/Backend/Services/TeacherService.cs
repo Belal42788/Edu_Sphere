@@ -49,7 +49,8 @@ namespace Backend.Services
         }
         public async Task<IEnumerable<CourseModel>> GetMyCoursesAsync(string userId){
             var user =   _cotext.Users.Include(x => x.Teacher).FirstOrDefault(x => x.Id == userId);
-            var teacher = await _cotext.Teachers.Include(x => x.Courses).FirstOrDefaultAsync(x=>x.Id==user.Teacher.Id);
+            var teacher = await _cotext.Teachers.Include(x => x.Courses)
+                .FirstOrDefaultAsync(x=>x.Id==user.Teacher.Id);
             var courseModels = new List<CourseModel>();
 
             foreach (var course in teacher.Courses)
@@ -73,6 +74,27 @@ namespace Backend.Services
 
 
         }
-    
-}
+        public async Task<IEnumerable<StudentModel>> GetMyStudnetAsync(string userId) 
+        {
+            var students =await _cotext.Teachers.Include(x=>x.User).Include(x=>x.Courses)
+                .ThenInclude(x=>x.StudentCourses)
+                .ThenInclude(x=>x.Student)
+        .Where(t => t.UserID ==userId)
+        .SelectMany(t => t.Courses)
+        .SelectMany(c => c.StudentCourses)
+        .Select(sc => sc.Student)
+        .Select(x=>new StudentModel { Imgae= "https://localhost:7225"+x.User.ImageUrl,
+        Name=x.User.FirstName + x.User.LastName})
+        .Distinct()
+        .ToListAsync();
+            
+                
+            return students;
+
+         
+
+
+        }
+
+    }
 }

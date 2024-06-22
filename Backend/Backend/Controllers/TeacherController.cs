@@ -45,6 +45,18 @@ namespace Backend.Controllers
 
 
         }
+        [Authorize]
+        [HttpGet("GetMyStudent")]
+        public async Task<IActionResult> GetMyStudentAsync()
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var userID = HttpContext.User.FindFirst("uid").Value;
+            var result = await _teacherService.GetMyStudnetAsync(userID);
+            return Ok(result);
+
+
+        }
     }
 
     }
