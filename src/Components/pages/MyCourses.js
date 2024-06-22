@@ -42,6 +42,7 @@ import '../../Styles/plugins/magnific-popup.css'
 import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
+import { FaEllipsisH, FaStar } from 'react-icons/fa';
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import { useNavigate } from 'react-router-dom';
 
@@ -61,46 +62,280 @@ function MyCourses() {
             <Navbar name='My' name2='courses' name3="MyCourses" />
             <div class="section section-padding">
                 <div class="container">
-                    <div class="courses-wrapper-02">
-                        <div class="row">
-                            {
-                            coursesinf.map((item) => (
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses">
-                                        <div class="courses-images">
-                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
-                                            <div class="courses-option dropdown">
-                                                <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
-                                                    <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
-                                                    <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
-                                                    <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
-                                                </ul>
+
+                <div class="courses-category-wrapper">
+                    <div class="courses-search search-2">
+                        <input type="text" placeholder="Search here"/>
+                        <button><i class="icofont-search"></i></button>
+                    </div>
+
+                    
+                </div>
+
+
+                
+                <div class="courses-wrapper-02">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses">
+                                <div class="courses-images">
+                                    <a href="courses-details.html"><img src={courseImg1} alt="Courses"/></a>
+
+                                    <div class="courses-option dropdown">
+                                        <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                            <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                            <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                            <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="courses-author">
+                                        <div class="author">
+                                            <div class="author-thumb">
+                                                <a href="#"><img src={author1 }alt="Author"/></a>
+                                            </div>
+                                            <div class="author-name">
+                                                <a class="name" href="#">Jason Williams</a>
+                                                <a class="name-2" href="#">Ohula Malsh</a>
                                             </div>
                                         </div>
-                                        <div class="courses-content">
-                                            <div class="courses-author">
-                                                <div class="author">
-                                                    <div class="author-thumb">
-                                                        <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
-                                                    </div>
-                                                    <div class="author-name">
-                                                        <a class="name" href="#">{item.instructor}</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="Coursedetails">{item.title}</a></h4>
+                                    </div>
+
+                                    <h4 class="title"><a href="courses-details.html">Data Science and Machine Learning with Python - Hands On!</a></h4>
+
+                                    <div class="courses-rating">
+                                        <p>38% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line"style={{width: '38%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '80%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses">
+                                <div class="courses-images">
+                                    <a href="courses-details.html"><img src={courseImg10} alt="Courses"/></a>
+
+                                    <div class="courses-option dropdown">
+                                        <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                            <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                            <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                            <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="courses-author">
+                                        <div class="author">
+                                            <div class="author-thumb">
+                                                <a href="#"><img src={author2} alt="Author"/></a>
+                                            </div>
+                                            <div class="author-name">
+                                                <a class="name" href="#">Pamela Foster </a>
+                                                <a class="name-2" href="#">Ohula Malsh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="title"><a href="courses-details.html">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
+
+                                    <div class="courses-rating">
+                                        <p>80% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line" style={{width: '80%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '0%'}}></span>
+                                            </span>
+                                            <p><a href="#">Leave a rating</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses">
+                                <div class="courses-images">
+                                    <a href="courses-details.html"><img src={courseImg11} alt="Courses"/></a>
+
+                                    <div class="courses-option dropdown">
+                                        <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                            <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                            <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                            <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="courses-author">
+                                        <div class="author">
+                                            <div class="author-thumb">
+                                                <a href="#"><img src={author11} alt="Author"/></a>
+                                            </div>
+                                            <div class="author-name">
+                                                <a class="name" href="#">Rose Simmons</a>
+                                                <a class="name-2" href="#">Ohula Malsh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="title"><a href="courses-details.html">Culture & Leadership: Strategies for a Successful Business</a></h4>
+
+                                    <div class="courses-rating">
+                                        <p>15% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line" style={{width: '15%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '80%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses">
+                                <div class="courses-images">
+                                    <a href="courses-details.html"><img src={courseImg12} alt="Courses"/></a>
+
+                                    <div class="courses-option dropdown">
+                                        <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                            <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                            <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                            <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="courses-author">
+                                        <div class="author">
+                                            <div class="author-thumb">
+                                                <a href="#"><img src={author14} alt="Author"/></a>
+                                            </div>
+                                            <div class="author-name">
+                                                <a class="name" href="#">Jason Williams</a>
+                                                <a class="name-2" href="#">Ohula Malsh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="title"><a href="courses-details.html">Finance Series: Learn to Budget and Calculate your Net Worth.</a></h4>
+
+                                    <div class="courses-rating">
+                                        <p>45% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line" style={{width: '45%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '80%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-courses">
+                                <div class="courses-images">
+                                    <a href="courses-details.html"><img src={courseImg15} alt="Courses"/></a>
+
+                                    <div class="courses-option dropdown">
+                                        <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                            <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                            <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                            <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-content">
+                                    <div class="courses-author">
+                                        <div class="author">
+                                            <div class="author-thumb">
+                                                <a href="#"><img src={author3} alt="Author"/></a>
+                                            </div>
+                                            <div class="author-name">
+                                                <a class="name" href="#">Pamela Foster</a>
+                                                <a class="name-2" href="#">Ohula Malsh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="title"><a href="courses-details.html">Build Brand Into Marketing: Tackling the New Marketing Landscape</a></h4>
+
+                                    <div class="courses-rating">
+                                        <p>38% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line" style={{width: '38%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar"style={{width: '38%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
                     </div>
+                </div>
+ 
+
+                    
                 </div>
             </div>
             <div><Advertise /></div>

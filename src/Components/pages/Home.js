@@ -11,6 +11,10 @@ import '../../Styles/plugins/magnific-popup.css'
 import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
+import "../../Styles/plugins/icofont.min.css"
+import "../../Styles/plugins/font-awesome.min.css"
+import "../../Styles/flaticon.css"
+
 import Image1 from "../../assets/images/logo-icon.png"
 import Image2 from "../../assets/images/shape/shape-8.png"
 import Image3 from "../../assets/images/shape/shape-23.png"
@@ -211,7 +215,7 @@ function Home() {
                                     <li>
                                         <a href="#">Course</a>
                                         <ul className="sub-menu">
-                                            <li><a href="courses">All Courses</a></li>
+                                        
                                             <li><a href="MyCourses">My Courses</a></li>
                                             <li><a href="Coursedetails">Courses Details</a></li>
                                         </ul>
@@ -242,7 +246,26 @@ function Home() {
                       </ul>
                         )}
                                     </li>
+
+
+                                    <li>
+                                    <a href="blog">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="blog">Blog</a>
+                                            
+                                        </li>
+                                        <li>
+                                            <a href="blogdetails">Blog Details</a>
+                                            
+                                        </li>
+                                    </ul>
+                                </li>
                                     <li><a href="contact">Contact</a></li>
+
+
+
+                                   
                                 </ul>
                             </div>
                             <div className="header-sign-in-up d-none d-lg-block">
@@ -358,12 +381,24 @@ function Home() {
                     </div>
                 </div>
             </div>
+     
+
             <div class="section section-padding-02">
                 <div class="container">
                     <div class="courses-top">
                         <div class="section-title shape-01">
                             <h2 class="main-title">Most popular <span>Courses</span> of EduSphere</h2>
                         </div>
+
+
+                        <div class="courses-search">
+                        <form action="#">
+                            <input type="text" placeholder="Search your course"/>
+                            <button><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    
+
                     </div>
                     <div className="tab-content courses-tab-content">
                         <div className="tab-pane fade show active" id="tabs1">
@@ -435,7 +470,7 @@ function Home() {
                             </div>
                             <div class="col-md-6">
                                 <div class="call-to-action-btn">
-                                    <a class="btn btn-primary btn-hover-dark" href="TeacherRegisteration">Drop Information</a>
+                                    <a class="btn btn-primary btn-hover-dark" href="TeacherRegisteration">Become A Instructor</a>
                                 </div>
                             </div>
                         </div>

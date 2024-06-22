@@ -48,7 +48,7 @@ const [photo, setPhoto] = useState(Image7);
                                     <li>
                                         <a href="#">Course</a>
                                         <ul className="sub-menu">
-                                            <li><a href="courses">All Courses</a></li>
+                                           
                                             <li><a href="MyCourses">My Courses</a></li>
                                             <li><a href="Coursedetails">Courses Details</a></li>
                                         </ul>
@@ -76,8 +76,26 @@ const [photo, setPhoto] = useState(Image7);
                                             <li><a href="createLesson">Create lesson</a></li>
                                             <li><a href="TeacherRegisteration">Become A Instructor</a></li>
                                         </ul>) }
+
+
                                         
                                     </li>
+
+
+                                    
+                                    <li>
+                                    <a href="blog">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="blog">Blog</a>
+                                            
+                                        </li>
+                                        <li>
+                                            <a href="blogdetails">Blog Details</a>
+                                            
+                                        </li>
+                                    </ul>
+                                </li>
                                     <li><a href="contact">Contact</a></li>
                                 </ul>
                             </div>

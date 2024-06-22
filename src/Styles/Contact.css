@@ -1469,6 +1469,10 @@ progress {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
+  .col-lg-13 {
+    flex: 0 0 auto;
+    /* width: 66.66666667%; */
+  }
   .col-lg-9 {
     flex: 0 0 auto;
     width: 75%;
@@ -16642,10 +16646,12 @@ img {
     margin-top: 0;
   }
 }
+
 .courses-search {
   position: relative;
   max-width: 500px;
   width: 100%;
+
 }
 @media only screen and (max-width: 767px) {
   .courses-search {
@@ -16689,8 +16695,8 @@ img {
   font-size: 16px;
   color: #309255;
 }
-.courses-search.search-2 {
-  max-width: 100%;
+ .search-2 {
+ width: 1000px;
 }
 @media only screen and (min-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1599px) {
   .courses-search.search-2 {
@@ -17079,7 +17085,143 @@ img {
     letter-spacing: 1px;
   }
 }
-.single-courses .courses-content .courses-rating p {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.card-header {
+  position: relative;
+}
+
+.course-image {
+  width: 100%;
+  height: auto;
+}
+
+.ellipsis-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.author-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.author-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name,
+.co-author-name {
+  font-size: 14px;
+}
+
+.course-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.course-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.progress {
+  height: 4px;
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-size: 12px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  margin-right: 8px;
+}
+
+.star {
+  color: #ffd700;
+}
+
+.star.grey {
+  color: #e0e0e0;
+}
+
+.rating-text {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.courses-content .courses-rating  {
   font-size: 14px;
   font-weight: 400;
   color: #52565b;
@@ -17154,7 +17296,7 @@ img {
 
 .courses-category-wrapper {
   background-color: #e7f8ee;
-  padding: 10px 40px 40px;
+  padding: 10px 450px 40px;
   border-radius: 10px;
 }
 @media only screen and (min-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1599px) {
