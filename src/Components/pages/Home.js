@@ -59,28 +59,38 @@ import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
 
 function Home() {
-
-    const hundelSignOut = (e) => {
-        e.preventDefault();
-        localStorage.removeItem('UserToken');
-        localStorage.removeItem('Email');
-        localStorage.removeItem('UserName');
-        localStorage.removeItem('Image');
-    }
-
+    const [photo, setPhoto] = useState(author7);
     const [sign, setSign] = useState(false);
+    const hundelSignOut = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('UserToken');
+    localStorage.removeItem('Email');
+    localStorage.removeItem('UserName');
+        localStorage.removeItem('Image');
+        setSign(true);
+   }
+
+    
 
 
-    useEffect(() => {
-        const token = localStorage.getItem('UserToken');
-
-        if (!token) {
-            console.error('No authentication token found');
-            setSign(true);
-            // You might want to redirect to the login page or handle this case accordingly
-            return;
-        }
-    }, []);
+  useEffect(() => {
+    const token = localStorage.getItem('UserToken');
+      
+      if (!token) {
+          console.error('No authentication token found');
+          setSign(true);
+        // You might want to redirect to the login page or handle this case accordingly
+        return;
+      }
+   const image = localStorage.getItem('Image');
+    if (!image) {
+      setPhoto(author7);
+      setSign(true);
+    } else { 
+      setPhoto(image);
+      setSign(false);
+    }
+  }, []);
 
     const coursesinf = [
         {
@@ -236,11 +246,17 @@ function Home() {
                                 </ul>
                             </div>
                             <div className="header-sign-in-up d-none d-lg-block">
-                                {sign ? (<ul><li>
-                                    <a className="sign-up" href="login" onClick={hundelSignOut}>
-                                        <i className="icofont-logout"></i> Sign Out
-                                    </a>
-                                </li></ul>) : (<ul>
+                                {!sign ? (
+                                    <div className="login-header-action ml-auto">
+                                        <a className="action author" href="profile">
+                    <img src={photo} alt="Author" />
+                  </a>
+                                    <ul><li>
+                        <a className="sign-up" href="login" onClick={hundelSignOut}>
+                          <i className="icofont-logout"></i> Sign Out
+                        </a>
+                      </li></ul>
+                      </div>):(<ul>
                                     <li><a className="sign-in" href="login">Sign In</a></li>
                                     <li><a className="sign-up" href="register">Sign Up</a></li>
                                 </ul>)}

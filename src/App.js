@@ -18,10 +18,12 @@ import CreateLesson from "./Components/pages/CreateLesson"
 import Profile from "./Components/pages/Profile";
 import TeacherRegisteration from "./Components/pages/TeacherRegisteration";
 import Lessons from "./Components/pages/Lessons";
+import Admin from "./Components/pages/Admin";
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/Admin" element={<Admin/>} />
         <Route path="/" element={<Home />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/TeacherRegisteration" element={<TeacherRegisteration />} />

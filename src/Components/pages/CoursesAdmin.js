@@ -59,6 +59,49 @@ import TidioChat from './Tidiochat';
 
 function CoursesAdmin() {
 
+    const [sign, setSign] = useState(false);
+    const [applications, setApplications] = useState([]);
+    const [instructorImage, setInstructorImage] = useState("");
+    const [instructorName, setInstructorName] = useState("");
+
+    const fetchApplications = async () => {
+        try {
+            const token = localStorage.getItem('UserToken');
+            const instructorImg = localStorage.getItem('Image');
+            const instructorNm = localStorage.getItem('UserName');
+            console.log(instructorImg);
+            if (!token) {
+                console.error('No authentication token found');
+                // You might want to redirect to the login page or handle this case accordingly
+                return;
+            }
+      
+            const response = await axios.get('https://localhost:7225/api/Teacher/GetMyCourses', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+      
+            console.log('Getdata successful', response.data);
+            setSign(true);
+            setApplications(response.data);
+            setInstructorImage(instructorImg);
+            setInstructorName(instructorNm);
+            
+            
+        } catch (error) {
+            console.error('Error during getting data', error);
+            if (error.response) {
+                console.error('Response data:', error.response.data);
+                console.error('Response status:', error.response.status);
+                console.error('Response headers:', error.response.headers);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
 
     const courses = [
         {
@@ -140,29 +183,29 @@ function CoursesAdmin() {
                         <div class="admin-courses-tab-content">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab1">
-                                    {courses.map((item)=>(
+                                    {applications.map((item)=>(
                                     <div class="courses-item">
                                         <div class="item-thumb">
                                             <a href="#">
-                                                <img src={item.itemThumb} alt={item.alt} />
+                                                    <img src={item.image} />
                                             </a>
                                         </div>
                                         <div class="content-title">
-                                            <h3 class="title"><a href="#">{item.title}.</a></h3>
+                                            <h3 class="title"><a href="#">{item.courseName}.</a></h3>
                                         </div>
                                         <div class="content-wrapper">
                                             <div class="content-box">
                                                 <p>Earned</p>
-                                                <span class="count">{item.earned}</span>
+                                                <span class="count">$3,200.00</span>
                                             </div>
                                             <div class="content-box">
                                                 <p>Enrollment’s</p>
-                                                <span class="count">{item.enrollments}</span>
+                                                <span class="count"> 5,728 </span>
                                             </div>
                                             <div class="content-box">
                                                 <p>Course Rating</p>
                                                 <span class="count">
-                                                {item.rating}
+                                                4.5
                                                     <span class="rating-star">
                                                         <span class="rating-bar" style={{width: '80%'}}></span>
                                                     </span>
