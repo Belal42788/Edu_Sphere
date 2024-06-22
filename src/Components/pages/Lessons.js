@@ -18,6 +18,9 @@ import "../../Styles/plugins/apexcharts.css";
 import "../../Styles/plugins/jqvmap.min.css";
 import "../../Styles/Contact.css";
 import AdminHeader from "../AdminHeader";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 function Lessons() {
   const videoLinks = [
@@ -346,6 +349,8 @@ function Lessons() {
 <div>
 <Footer />
 </div>
+            <FloatingChatbot />
+            <TidioChat />
 </>
 );
 }

@@ -2,6 +2,9 @@ import React from 'react'
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import '../../Styles/Contact.css'
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 function Faq() {
   const programmingData = [
     {
@@ -77,6 +80,8 @@ function Faq() {
         </div>
       </div>
       <div><Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
     </div>
   )
 }

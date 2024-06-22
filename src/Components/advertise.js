@@ -13,7 +13,7 @@ function Advertise() {
             <div class="container">
                 <div class="download-app-wrapper mt-n6">
                     <div class="section-title section-title-white">
-                        <h5 class="sub-title">stay tuned</h5>
+                        <h5 class="sub-title">Stay tuned!</h5>
                         <h2 class="main-title">our mobile app coming soon.</h2>
                     </div>
                     <img class="shape-1 animation-right" src={image3} alt="Shape" />

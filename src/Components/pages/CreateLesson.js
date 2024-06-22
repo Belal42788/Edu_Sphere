@@ -8,6 +8,9 @@ import Advertise from "../advertise";
 import axios from "axios";
 import AdminHeader from '../AdminHeader';
 import { useNavigate } from 'react-router-dom';
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 function CreateLesson() {
     const navigate = useNavigate();
@@ -125,6 +128,8 @@ function CreateLesson() {
                 </div>
             </div>
             <div><Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
         </div>
     );
 }

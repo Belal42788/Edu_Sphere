@@ -6,6 +6,9 @@ import React, { useState, useEffect } from "react";
 import profilePicture from "../../assets/images/author/author-07.jpg"; // Updated profile picture path
 import { useNavigate } from 'react-router-dom';
 import AdminHeader from "../AdminHeader";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 export default function Profile() {
   const [userName, setUserName] = useState("");
@@ -46,6 +49,8 @@ export default function Profile() {
         </div>
       </div>
       <Footer />
+            <FloatingChatbot />
+            <TidioChat />
     </div>
   );
 }

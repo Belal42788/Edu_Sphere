@@ -55,7 +55,7 @@ const [photo, setPhoto] = useState(Image7);
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        {!sign ? (<ul className="sub-menu">
+                                        {sign ? (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="404-error">404 Error</a></li>

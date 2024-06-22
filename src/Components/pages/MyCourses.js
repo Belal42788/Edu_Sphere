@@ -44,6 +44,9 @@ import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import { useNavigate } from 'react-router-dom';
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 
 function MyCourses() {
 
@@ -112,7 +115,7 @@ function MyCourses() {
                                 <div class="col-lg-4 col-md-6">
                                     <div class="single-courses">
                                         <div class="courses-images">
-                                            <a href="Coursedetails"><img src={item.image} alt="Courses" /></a>
+                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
@@ -146,7 +149,7 @@ function MyCourses() {
                                 <div class="col-lg-4 col-md-6">
                                     <div class="single-courses">
                                         <div class="courses-images">
-                                            <a href="Coursedetails"><img style={{width:'40%'}} src={item.image} alt="Courses" /></a>
+                                            <a href="Coursedetails"><img style={{width:'40%'}} src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
@@ -184,6 +187,8 @@ function MyCourses() {
             <div><Advertise /></div>
             <div>
                 <Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
         </>
     );
 };

@@ -22,6 +22,9 @@ import '../../Styles/plugins/magnific-popup.css'
 import '../../Styles/plugins/nice-select.css'
 import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 function FreeCourse() {
   const coursesinf = [
     {
@@ -407,6 +410,8 @@ function FreeCourse() {
       </div>
       <div><Advertise /></div>
       <div><Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
     </>
   );
 }

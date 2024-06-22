@@ -53,6 +53,9 @@ import "../../Styles/plugins/jqvmap.min.css";
 import "../../Styles/Contact.css";
 import Footer from "../Footer";
 import AdminHeader from "../AdminHeader";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 function LessonsAdmin() {
     const courses = [
         {
@@ -172,6 +175,8 @@ function LessonsAdmin() {
                 </div>
             </div>
             <div><Footer /></div>
+            <FloatingChatbot />
+            <TidioChat />
         </>
     );
 }

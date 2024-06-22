@@ -3,6 +3,9 @@ import React from "react";
 import studentImage from "../../assets/images/author/author-04.jpg";
 import "../../Styles/Contact.css";
 // import "./Sidebar.css";
+import FloatingChatbot from './floatingChatbot';
+import TidioChat from './Tidiochat';
+
 const Sidebar = () => {
   return (
     <div className="sidebarprofile">

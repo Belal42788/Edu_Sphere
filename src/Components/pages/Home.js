@@ -61,26 +61,26 @@ import TidioChat from './Tidiochat';
 function Home() {
 
     const hundelSignOut = (e) => {
-    e.preventDefault();
-    localStorage.removeItem('UserToken');
-    localStorage.removeItem('Email');
-    localStorage.removeItem('UserName');
-    localStorage.removeItem('Image');
-   }
+        e.preventDefault();
+        localStorage.removeItem('UserToken');
+        localStorage.removeItem('Email');
+        localStorage.removeItem('UserName');
+        localStorage.removeItem('Image');
+    }
 
     const [sign, setSign] = useState(false);
 
 
-  useEffect(() => {
-    const token = localStorage.getItem('UserToken');
-      
-      if (!token) {
-          console.error('No authentication token found');
-          setSign(true);
-        // You might want to redirect to the login page or handle this case accordingly
-        return;
-      }
-  }, []);
+    useEffect(() => {
+        const token = localStorage.getItem('UserToken');
+
+        if (!token) {
+            console.error('No authentication token found');
+            setSign(true);
+            // You might want to redirect to the login page or handle this case accordingly
+            return;
+        }
+    }, []);
 
     const coursesinf = [
         {
@@ -128,7 +128,7 @@ function Home() {
         {
             id: 4,
             title: 'Finance Series: Learn to Budget and Calculate your Net Worth.',
-            instructor: 'Jason Williams',
+            instructor: 'lewis momo',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg9,
             ImageUlrinstr: author4,
@@ -142,7 +142,7 @@ function Home() {
         {
             id: 5,
             title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape',
-            instructor: 'Jason Williams',
+            instructor: 'sam Williams',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg5,
             ImageUlrinstr: author5,
@@ -156,7 +156,7 @@ function Home() {
         {
             id: 6,
             title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes',
-            instructor: 'Jason Williams',
+            instructor: 'Jon Will',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg6,
             ImageUlrinstr: author6,
@@ -208,43 +208,43 @@ function Home() {
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        {!sign? (<ul className="sub-menu">
-                      <li><a href="about">About</a></li>
-                      <li><a href="faq">FAQ</a></li>
-                      <li><a href="404-error">404 Error</a></li>
-                      <li><a href="Afterenroll">After Enroll</a></li>
-                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                      <li><a href="createcourse">Create Course</a></li>
-                      <li><a href="createLesson">Create lesson</a></li>
-                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
-                    </ul>) :(
-                    <ul className="sub-menu">
-                      <li><a href="about">About</a></li>
-                      <li><a href="register">Register</a></li>
-                      <li><a href="login">Login</a></li>
-                      <li><a href="faq">FAQ</a></li>
-                      <li><a href="404-error">404 Error</a></li>
-                      <li><a href="Afterenroll">After Enroll</a></li>
-                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                      <li><a href="createcourse">Create Course</a></li>
-                      <li><a href="createLesson">Create lesson</a></li>
-                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
-                      </ul>
-                        )}
+                                        {sign ? (<ul className="sub-menu">
+                                            <li><a href="about">About</a></li>
+                                            <li><a href="faq">FAQ</a></li>
+                                            <li><a href="404-error">404 Error</a></li>
+                                            <li><a href="Afterenroll">After Enroll</a></li>
+                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
+                                            <li><a href="createcourse">Create Course</a></li>
+                                            <li><a href="createLesson">Create lesson</a></li>
+                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                        </ul>) : (
+                                            <ul className="sub-menu">
+                                                <li><a href="about">About</a></li>
+                                                <li><a href="register">Register</a></li>
+                                                <li><a href="login">Login</a></li>
+                                                <li><a href="faq">FAQ</a></li>
+                                                <li><a href="404-error">404 Error</a></li>
+                                                <li><a href="Afterenroll">After Enroll</a></li>
+                                                <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
+                                                <li><a href="createcourse">Create Course</a></li>
+                                                <li><a href="createLesson">Create lesson</a></li>
+                                                <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                            </ul>
+                                        )}
                                     </li>
                                     <li><a href="contact">Contact</a></li>
                                 </ul>
                             </div>
                             <div className="header-sign-in-up d-none d-lg-block">
-                                {!sign ? (<ul><li>
-                        <a className="sign-up" href="login" onClick={hundelSignOut}>
-                          <i className="icofont-logout"></i> Sign Out
-                        </a>
-                      </li></ul>):(<ul>
+                                {sign ? (<ul><li>
+                                    <a className="sign-up" href="login" onClick={hundelSignOut}>
+                                        <i className="icofont-logout"></i> Sign Out
+                                    </a>
+                                </li></ul>) : (<ul>
                                     <li><a className="sign-in" href="login">Sign In</a></li>
                                     <li><a className="sign-up" href="register">Sign Up</a></li>
-                                </ul>) }
-                                
+                                </ul>)}
+
                             </div>
                             <div className="header-toggle d-lg-none">
                                 <a className="menu-toggle" href="javascript:void(0)">
@@ -355,7 +355,7 @@ function Home() {
                                 <div className="row">
                                     {coursesinf.map((item) => (
                                         <div className="col-lg-4 col-md-6">
-                                            <div className="single-courses" style={{height:'500px'}}>
+                                            <div className="single-courses" style={{ height: '500px' }}>
                                                 <div className="courses-images">
                                                     <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                                 </div>
@@ -366,7 +366,7 @@ function Home() {
                                                                 <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
                                                             </div>
                                                             <div className="author-name">
-                                                                <a className="name" href="#">Jason Williams</a>
+                                                                <a className="name" href="#">{item.instructor}</a>
                                                             </div>
                                                         </div>
                                                         <div className="tag">
