@@ -3,6 +3,7 @@ import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import courseImg1 from "../../assets/images/courses/courses-01.jpg";
 
 function Coursesdetailsadmain() {
   const initialVideoLinks = [
@@ -50,6 +51,10 @@ function Coursesdetailsadmain() {
 
   const [videoLinks, setVideoLinks] = useState(initialVideoLinks);
   const [editableIndex, setEditableIndex] = useState(-1);
+  const [courseName, setCourseName] = useState('Data Science and Machine Learning with Python - Hands On!');
+  const [editableCourseName, setEditableCourseName] = useState(false);
+  const [courseImage, setCourseImage] = useState(courseImg1);
+  const [editableImage, setEditableImage] = useState(false);
 
   const handleInputChange = (e, index, field) => {
     const newVideoLinks = [...videoLinks];
@@ -65,13 +70,64 @@ function Coursesdetailsadmain() {
     setEditableIndex(-1);
   };
 
-  const coursename = [{ title: 'Data Science and Machine Learning with Python - Hands On!' }];
+  const handleCourseNameChange = (e) => {
+    setCourseName(e.target.value);
+  };
+
+  const handleCourseNameEdit = () => {
+    setEditableCourseName(true);
+  };
+
+  const handleCourseNameSave = () => {
+    setEditableCourseName(false);
+  };
+
+  const handleImageChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setCourseImage(URL.createObjectURL(e.target.files[0]));
+    }
+  };
+
+  const handleImageEdit = () => {
+    setEditableImage(true);
+  };
+
+  const handleImageSave = () => {
+    setEditableImage(false);
+  };
 
   return (
     <div>
       <Navbar name='courses' name2='details' name3="courses details" />
       <div className="container">
-        {coursename.map((item) => (<h2 style={{ paddingTop: '10px' }}>{item.title}</h2>))}
+        {editableCourseName ? (
+          <div>
+            <div className="single-form">
+            <input type="text" value={courseName} onChange={handleCourseNameChange} />
+            </div>
+            <button onClick={handleCourseNameSave}>Save</button>
+          </div>
+        ) : (
+          <div>
+            <h2 style={{ paddingTop: '10px' }}>{courseName}</h2>
+            <button onClick={handleCourseNameEdit}>Edit Course Name</button>
+          </div>
+        )}
+        {editableImage ? (
+          <div>
+                        <div className="single-form">
+
+            <input type="file" onChange={handleImageChange} />
+            </div>
+            <button onClick={handleImageSave}>Save</button>
+          </div>
+        ) : (
+          <div>
+            {courseImage && <img src={courseImage} alt="Course" style={{ width: '500px' }} />}
+            <br></br>
+            <button onClick={handleImageEdit}>Edit Course Image</button>
+          </div>
+        )}
       </div>
       <div className="section section-padding mt-n10">
         <div className="row col-10" style={{ padding: '20px', margin: 'auto' }}>
@@ -80,33 +136,27 @@ function Coursesdetailsadmain() {
               <div className="student-content">
                 {editableIndex === index ? (
                   <>
-                                      <div className="single-form   ">
-
-                    <input
-                      type="text"
-                      value={item.title}
-                      onChange={(e) => handleInputChange(e, index, 'title')}
-                    
-                    />
+                    <div className="single-form">
+                      <input
+                        type="text"
+                        value={item.title}
+                        onChange={(e) => handleInputChange(e, index, 'title')}
+                      />
                     </div>
-                    <div className="single-form   ">
-
-                    <input
-                      type="text"
-                      value={item.url}
-                      onChange={(e) => handleInputChange(e, index, 'url')}
-                    
-                    />
-                                        </div>
-                                        <div className="single-form   ">
-
-                    <input
-                      type="text"
-                      value={item.description}
-                      onChange={(e) => handleInputChange(e, index, 'description')}
-                    />
-                                                            </div>
-
+                    <div className="single-form">
+                      <input
+                        type="text"
+                        value={item.url}
+                        onChange={(e) => handleInputChange(e, index, 'url')}
+                      />
+                    </div>
+                    <div className="single-form">
+                      <input
+                        type="text"
+                        value={item.description}
+                        onChange={(e) => handleInputChange(e, index, 'description')}
+                      />
+                    </div>
                     <button onClick={handleSaveClick}>Save</button>
                   </>
                 ) : (
