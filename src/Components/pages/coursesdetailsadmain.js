@@ -171,6 +171,9 @@ function Coursesdetailsadmain() {
             </div>
           ))}
         </div>
+        <div className='container '>
+        <button  style={{marginTop:'7px' , marginBottom:'5px' , margin:'auto'}} className="btn btn-primary btn-hover-dark" ><a href='CreateLesson'>Add Lesson</a></button>
+        </div>
       </div>
       <Footer />
       <FloatingChatbot />
