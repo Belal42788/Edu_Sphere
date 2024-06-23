@@ -52,6 +52,14 @@ namespace Backend.Controllers
             return Ok(result);
 
         }
+        [Authorize]
+        [HttpGet("FindCourseBySubject")]
+        public async Task<IActionResult> FindCourseBySubjectAsync([FromBody] string Subject)
+        {
+            var result = await _courseService.FindCourseBySubjectAsync(Subject);
+            return Ok(result);
+
+        }
 
     }
 }

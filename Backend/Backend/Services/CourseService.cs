@@ -71,7 +71,7 @@ namespace Backend.Services
 
         public async Task<IEnumerable<CourseModel>> FindCourseAsync(string Name)
         {
-            var Courses =await _cotext.Courses.Where(x=>x.CourseName==Name).ToListAsync();
+            var Courses =await _cotext.Courses.Include(x => x.Teacher).ThenInclude(x => x.User).Where(x=>x.CourseName==Name).ToListAsync();
 
 
             var courseModels = new List<CourseModel>();
@@ -89,7 +89,9 @@ namespace Backend.Services
                     Image = "https://localhost:7225" + course.ImgUrl,
                     Language = course.Language,
                     StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
-                    link=course.link
+                    link=course.link,
+                    TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
+                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl
 
                 };
 
@@ -101,7 +103,8 @@ namespace Backend.Services
         }
         public async Task<IEnumerable<CourseModel>> AllCoursesAsync()
         {
-            var Courses = await _cotext.Courses.OrderBy(x => x.StudentCount).ToListAsync();
+            var Courses = await _cotext.Courses.Include(x=>x.Teacher).ThenInclude(x=>x.User)
+                .OrderByDescending(x => x.StudentCount).ToListAsync();
             var courseModels = new List<CourseModel>();
 
             foreach (var course in Courses)
@@ -117,13 +120,48 @@ namespace Backend.Services
                     Image = "https://localhost:7225" + course.ImgUrl,
                     Language = course.Language,
                     StudentCount = course.StudentCount,
-                    link = course.link
+                    link = course.link,
+                    TeacherName=course.Teacher.User.FirstName+ course.Teacher.User.LastName,
+                    TeacherImage= "https://localhost:7225" + course.Teacher.User.ImageUrl
 
                 };
 
                 courseModels.Add(courseModel);
             }
             return courseModels;
+
+        }
+        public async Task<IEnumerable<CourseModel>> FindCourseBySubjectAsync(string Subject) 
+        {
+            var Courses = await _cotext.Courses.Include(x => x.Teacher).ThenInclude(x => x.User)
+                .Where(x => x.Subject==Subject).ToListAsync();
+
+
+            var courseModels = new List<CourseModel>();
+
+            foreach (var course in Courses)
+            {
+                var courseModel = new CourseModel
+                {
+                    Id = course.Id,
+                    CourseName = course.CourseName,
+                    CourseDescription = course.CourseDescription,
+                    Cost = course.Cost,
+                    Subject = course.Subject,
+                    TeacherID = course.TeacherID,
+                    Image = "https://localhost:7225" + course.ImgUrl,
+                    Language = course.Language,
+                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
+                    link = course.link,
+                    TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
+                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl
+
+                };
+
+                courseModels.Add(courseModel);
+            }
+            return courseModels;
+
 
         }
     }

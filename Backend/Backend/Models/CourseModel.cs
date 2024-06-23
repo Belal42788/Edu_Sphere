@@ -8,6 +8,8 @@
         public string Subject { get; set; }
         public string Cost { get; set; }
         public int TeacherID { get; set; }
+        public string TeacherName { get; set; } 
+        public string TeacherImage { get; set; }
         public string Image { get; set; }
         public string Message { get; set; }
         public string Language { get; set; }

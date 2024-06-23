@@ -8,6 +8,6 @@ namespace Backend.Interfaces
         Task<CourseModel> CreateCourseAsync(CreateCourse Model,string userUid);
         Task<IEnumerable<CourseModel>> FindCourseAsync( string Name);
         Task<IEnumerable<CourseModel>> AllCoursesAsync();
-        
+        Task<IEnumerable<CourseModel>> FindCourseBySubjectAsync(string Subject);
     }
 }

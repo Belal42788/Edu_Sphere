@@ -73,7 +73,8 @@ namespace Backend.Services
         }
         public async Task<IEnumerable<CourseModel>>  GetMyCoursesAsync(string userId)
         {
-            var Courses = await _cotext.StudentCourses.Include(x => x.Course).Include(X => X.Student)
+            var Courses = await _cotext.StudentCourses.Include(x => x.Course).ThenInclude(x=>x.Teacher).ThenInclude(x=>x.User)
+                .Include(X => X.Student)
                 .Where(x => x.Student.UserID == userId).ToListAsync();
             var courseModels = new List<CourseModel>();
 
@@ -90,7 +91,9 @@ namespace Backend.Services
                     Image = "https://localhost:7225" + course.Course.ImgUrl,
                     Language = course.Course.Language,
                     StudentCount = course.Course.StudentCount,
-                    link = course.Course.link
+                    link = course.Course.link,
+                    TeacherName = course.Course.Teacher.User.FirstName + course.Course.Teacher.User.LastName,
+                    TeacherImage = "https://localhost:7225" + course.Course.Teacher.User.ImageUrl
 
                 };
                 courseModels.Add(courseModel);

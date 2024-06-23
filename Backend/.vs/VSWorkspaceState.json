@@ -6,6 +6,6 @@
     "\\Backend\\Dtos",
     "\\Backend\\Services"
   ],
-  "SelectedNode": "\\Backend.sln",
+  "SelectedNode": "\\Backend\\Services\\TeacherService.cs",
   "PreviewInSolutionExplorer": false
 }
