@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import courseImg1 from "../../assets/images/courses/courses-01.jpg";
-import courseImg2 from "../../assets/images/courses/courses-02.jpg";
+import courseImg1 from "../../assets/images/courses/courses-12.jpg";
+import courseImg2 from "../../assets/images/courses/courses-17.jpg";
 import courseImg3 from "../../assets/images/courses/courses-03.jpg";
 import courseImg4 from "../../assets/images/courses/courses-04.jpg";
 
