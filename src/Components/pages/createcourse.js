@@ -19,6 +19,7 @@ function Createcourse() {
   const [subject, setSubject] = useState("");
   const [language, setlanguage] = useState("");
   const [courseCost, setCourseCost] = useState("");
+  const [url, setUrlCost] = useState("");
   const [courseImage, setCourseImage] = useState(null);
   const [description, setDescription] = useState("");
 
@@ -26,6 +27,7 @@ function Createcourse() {
   const handleSubjectChange = (e) => setSubject(e.target.value);
   const handleVideoUrlChange = (e) => setlanguage(e.target.value);
   const handleCourseCostChange = (e) => setCourseCost(e.target.value);
+  const handleUrlChange = (e) => setUrlCost(e.target.value);
   const handleCourseImageChange = (e) => setCourseImage(e.target.files[0]);
   const handleDescriptionChange = (e) => setDescription(e.target.value);
 
@@ -37,7 +39,7 @@ function Createcourse() {
     formData.append("CourseName", courseName);
     formData.append("CourseDescription", description);
     formData.append("Subject", subject);
-    // formData.append("videoUrl", videoUrl);
+    formData.append("Link", url);
     // formData.append("TeacherID", ",mndsfkj");
     formData.append("Cost", courseCost);
     formData.append("Language", language);
@@ -50,7 +52,7 @@ function Createcourse() {
     // Log form data to console (for demonstration purposes)
     // Replace this with actual form submission logic (e.g., API call)
         const token = localStorage.getItem('UserToken');
-
+    console.log(token);
     if (!token) {
       console.error('No authentication token found');
       navigate('/Login');
@@ -114,6 +116,9 @@ function Createcourse() {
                       </div>
                       <div className="single-form">
                         <input type="text" placeholder="Cost of course" value={courseCost} onChange={handleCourseCostChange} />
+                      </div>
+                      <div className="single-form">
+                        <input type="text" placeholder="Url of video" value={url} onChange={handleUrlChange} />
                       </div>
                       <div className="single-form">
                         <label style={{ textTransform: 'capitalize' }}>Upload image of course</label>

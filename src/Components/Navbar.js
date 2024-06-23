@@ -7,13 +7,22 @@ import Image4 from "../assets/images/shape/shape-5.png"
 import Image5 from "../assets/images/shape/shape-6.png"
 import Image6 from "../assets/images/shape/shape-24.png"
 import Image7 from "../assets/images/author/author-06.jpg"
+import author10 from "../assets/images/author/author-01.jpg";
 import Belal from "../assets/images/author/Belal.jpg"
 import "../Styles/Contact.css"
 import '../Styles/flaticon.css'
 function Navbar(props) {
-const [photo, setPhoto] = useState(Belal);
+const [photo, setPhoto] = useState(author10);
   const [sign, setSign] = useState(true);
-
+    const hundelSignOut = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('UserToken');
+    localStorage.removeItem('Email');
+    localStorage.removeItem('UserName');
+    localStorage.removeItem('Image');
+    setSign(true);
+    window.location.reload(); // This will reload the page
+}
 
   useEffect(() => {
     const token = localStorage.getItem('UserToken');
@@ -26,7 +35,7 @@ const [photo, setPhoto] = useState(Belal);
       }
       const image = localStorage.getItem('Image');
     if (!image) {
-      setPhoto(Image7);
+      setPhoto(author10);
       setSign(true);
     } else { 
       setPhoto(image);
@@ -49,9 +58,8 @@ const [photo, setPhoto] = useState(Belal);
                                     <li>
                                         <a href="#">Course</a>
                                         <ul className="sub-menu">
-                                           
+                                           <li><a href="courses">All Courses</a></li>
                                             <li><a href="MyCourses">My Courses</a></li>
-                                            <li><a href="Coursedetails">Courses Details</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -91,10 +99,6 @@ const [photo, setPhoto] = useState(Belal);
                                             <a href="blog">Blog</a>
                                             
                                         </li>
-                                        <li>
-                                            <a href="blogdetails">Blog Details</a>
-                                            
-                                        </li>
                                     </ul>
                                 </li>
                                     <li><a href="contact">Contact</a></li>
@@ -128,7 +132,7 @@ const [photo, setPhoto] = useState(Belal);
                                                 </a>
                                             </li>)}
                                             <li>
-                                                <a className="" href="login">
+                                                <a className="" href="login" onClick={hundelSignOut}>
                                                     <i className="icofont-logout"></i> Sign Out
                                                 </a>
                                             </li>

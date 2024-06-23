@@ -64,16 +64,18 @@ import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
 
 function Home(props) {
-    const [photo, setPhoto] = useState(Belal);
+    const [photo, setPhoto] = useState(author10);
     const [sign, setSign] = useState(false);
     const hundelSignOut = (e) => {
-        e.preventDefault();
-        localStorage.removeItem('UserToken');
-        localStorage.removeItem('Email');
-        localStorage.removeItem('UserName');
-        localStorage.removeItem('Image');
-        setSign(true);
-    }
+    e.preventDefault();
+    localStorage.removeItem('UserToken');
+    localStorage.removeItem('Email');
+    localStorage.removeItem('UserName');
+    localStorage.removeItem('Image');
+    setSign(true);
+    window.location.reload(); // This will reload the page
+}
+
 
 
 
@@ -89,7 +91,7 @@ function Home(props) {
         }
         const image = localStorage.getItem('Image');
         if (!image) {
-            setPhoto(author7);
+            setPhoto(author10);
             setSign(true);
         } else {
             setPhoto(image);
@@ -217,8 +219,8 @@ function Home(props) {
                                         <a href="#">Course</a>
                                         <ul className="sub-menu">
                                         
+                                            <li><a href="courses">All Courses</a></li>
                                             <li><a href="MyCourses">My Courses</a></li>
-                                            <li><a href="Coursedetails">Courses Details</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -256,7 +258,6 @@ function Home(props) {
                                             
                                         </li>
                                         <li>
-                                            <a href="blogdetails">Blog Details</a>
                                             
                                         </li>
                                     </ul>
@@ -296,7 +297,7 @@ function Home(props) {
                                                 </a>
                                             </li>)}
                                             <li>
-                                                <a className="" href="login">
+                                                <a className="" href="login" onClick={hundelSignOut}>
                                                     <i className="icofont-logout"></i> Sign Out
                                                 </a>
                                             </li>
@@ -343,7 +344,7 @@ function Home(props) {
                             <a href="#">Course</a>
                             <ul className="sub-menu">
                                 <li><a href="courses">All Courses</a></li>
-                                <li><a href="Coursedetails">Courses Details</a></li>
+                                <li><a href="MyCourses">My Courses</a></li>
                             </ul>
                         </li>
                         <li>

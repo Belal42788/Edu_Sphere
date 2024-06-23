@@ -2,19 +2,21 @@ import React, { useEffect, useState } from "react";
 import Belal from "../assets/images/author/Belal.jpg";
 import Image1 from "../assets/images/logo-icon.png";
 import "../Styles/Contact.css";
+import author10 from "../assets/images/author/author-01.jpg";
 
 function AdminHeader(props) {
-  const [photo, setPhoto] = useState(Belal);
+  const [photo, setPhoto] = useState(author10);
   const [sign, setSign] = useState(true);
 
-  const hundelSignOut = (e) => {
+    const hundelSignOut = (e) => {
     e.preventDefault();
     localStorage.removeItem('UserToken');
     localStorage.removeItem('Email');
     localStorage.removeItem('UserName');
-        localStorage.removeItem('Image');
-        setSign(true);
-   }
+    localStorage.removeItem('Image');
+    setSign(true);
+    window.location.reload(); // This will reload the page
+}
 
   useEffect(() => {
     const token = localStorage.getItem('UserToken');
@@ -26,7 +28,7 @@ function AdminHeader(props) {
       }
    const image = localStorage.getItem('Image');
     if (!image) {
-      setPhoto(Belal);
+      setPhoto(author10);
       setSign(true);
     } else { 
       setPhoto(image);
@@ -55,7 +57,6 @@ function AdminHeader(props) {
                     <ul className="sub-menu">
                       <li><a href="courses">All Courses</a></li>
                       <li><a href="MyCourses">My Courses</a></li>
-                      <li><a href="Coursedetails">Courses Details</a></li>
                     </ul>
                   </li>
                   <li>

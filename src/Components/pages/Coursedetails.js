@@ -52,27 +52,27 @@ const coursesinf = [
     Certificate: 'Yes', image:courseImg1,imageIns:author1
   },
   {
-    id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', lecture: '29', price: '428', Language: 'English',
+    id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', lecture: '29', price: '400', Language: 'English',
     Certificate: 'Yes', image:courseImg2,imageIns:author2
   },
   {
-    id: 3, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', lecture: '29', price: '428', Language: 'English',
+    id: 3, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', lecture: '29', price: '348', Language: 'English',
     Certificate: 'Yes', image:courseImg5,imageIns:author3
   },
   {
-    id: 4, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', lecture: '29', price: '428', Language: 'English',
+    id: 4, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', lecture: '29', price: '499', Language: 'English',
     Certificate: 'Yes', image:courseImg11,imageIns:author4
   },
   {
-    id: 5, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', lecture: '29', price: '428', Language: 'English',
+    id: 5, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', lecture: '29', price: '295', Language: 'English',
     Certificate: 'Yes', image:courseImg12,imageIns:author5
   },
   {
-    id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', lecture: '29', price: '428', Language: 'English',
+    id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', lecture: '29', price: '299', Language: 'English',
     Certificate: 'Yes', image:courseImg9,imageIns:author6
   },
   {
-    id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', lecture: '29', price: '428', Language: 'English',
+    id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', lecture: '29', price: '399', Language: 'English',
     Certificate: 'Yes', image:courseImg8,imageIns:author7
   },
   {
@@ -80,29 +80,11 @@ const coursesinf = [
     Certificate: 'Yes', image:courseImg3,imageIns:author8
   },
   {
-    id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', lecture: '29', price: '428', Language: 'English',
+    id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', lecture: '29', price: '200', Language: 'English',
     Certificate: 'Yes', image:courseImg10,imageIns:author9
   }
 ]
 
-const coursesinfo = [
-  { id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', duration: '4 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author1 },
-  { id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', duration: '6 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author2 },
-  { id: 3, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', duration: '8 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author4 },
- 
- 
-  { id: 4, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', duration: '6 weeks', ImageUlrcourses: courseImg11, ImageUlrinstr: author5 },
-  { id: 5, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', duration: '7 weeks', ImageUlrcourses: courseImg12, ImageUlrinstr: author8 },
-
-  { id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', duration: '5 weeks', ImageUlrcourses: courseImg9, ImageUlrinstr: author10 },
-
-  { id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', duration: '10 weeks', ImageUlrcourses: courseImg8, ImageUlrinstr: author9 },
-
-
-  { id: 8, title: 'The Art of Public Speaking', instructor: 'Daniel Harris', duration: '4 weeks', ImageUlrcourses: courseImg3, ImageUlrinstr: author11 },
-
-  { id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author13 },
-];
 
 
 

@@ -112,7 +112,7 @@ function Blog() {
         <div key={blog.id} className="col-lg-4 col-md-6">
           <div className="single-blog">
             <div className="blog-image">
-              <a href={blog.link}><img src={blog.imageSrc} alt="Blog" /></a>
+              <a key={blog.id} href={`Blogdetails/${blog.id}`}><img src={blog.imageSrc} alt="Blog" /></a>
             </div>
             <div className="blog-content">
               <div className="blog-author">

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import courseImg1 from "../../assets/images/courses/courses-14.jpg";
 import courseImg2 from "../../assets/images/courses/courses-13.jpg";
 import courseImg3 from "../../assets/images/courses/courses-16.jpg";
@@ -45,6 +47,46 @@ import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
 
 function Courses() {
+    const [sign, setSign] = useState(false);
+    const [applications, setApplications] = useState([]);
+    const [instructorImage, setInstructorImage] = useState("");
+    const [instructorName, setInstructorName] = useState("");
+
+    const fetchApplications = async () => {
+        try {
+            const token = localStorage.getItem('UserToken');
+
+            if (!token) {
+                console.error('No authentication token found');
+                // You might want to redirect to the login page or handle this case accordingly
+                return;
+            }
+      
+            const response = await axios.get('https://localhost:7225/api/Course/AllCoures', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+      
+            console.log('Getdata successful', response.data);
+            setSign(true);
+            setApplications(response.data);
+            
+            
+        } catch (error) {
+            console.error('Error during getting data', error);
+            if (error.response) {
+                console.error('Response data:', error.response.data);
+                console.error('Response status:', error.response.status);
+                console.error('Response headers:', error.response.headers);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
+
     const coursesinf = [
         { id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', duration: '4 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author1 },
         { id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', duration: '6 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author2 },
@@ -79,7 +121,42 @@ function Courses() {
                                 <div className="col-lg-4 col-md-6" >
                                     <div className="single-courses" style={{height:'400px'}}>
                                         <div className="courses-images">
-                                            <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                            <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                            <div class="courses-option dropdown">
+                                                <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                                    <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                                    <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                                    <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="courses-content" style={{marginBottom:'20px'}}>
+                                            <div className="courses-author">
+                                                <div className="author">
+                                                    <div className="author-thumb">
+                                                        <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
+                                                    </div>
+                                                    <div class="author-name">
+                                                        <a class="name" href="#">{item.instructor}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h4 className="title" ><a href="Coursedetails">{item.title}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                            {coursesinf.map((item) => (
+                                <div className="col-lg-4 col-md-6" >
+                                    <div className="single-courses" style={{height:'400px'}}>
+                                        <div className="courses-images">
+                                            <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>

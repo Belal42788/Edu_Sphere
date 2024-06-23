@@ -183,6 +183,37 @@ function CoursesAdmin() {
                         <div class="admin-courses-tab-content">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab1">
+                                    {courses.map((item)=>(
+                                    <div class="courses-item">
+                                        <div class="item-thumb">
+                                            <a href="#">
+                                                    <img src={item.itemThumb} />
+                                            </a>
+                                        </div>
+                                        <div class="content-title">
+                                            <h3 class="title"><a href="#">{item.title}.</a></h3>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="content-box">
+                                                <p>Earned</p>
+                                                <span class="count">{item.earned}</span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Enrollment’s</p>
+                                                <span class="count"> {item.enrollments} </span>
+                                            </div>
+                                            <div class="content-box">
+                                                <p>Course Rating</p>
+                                                <span class="count">
+                                                {item.rating}
+                                                    <span class="rating-star">
+                                                        <span class="rating-bar" style={{width: '80%'}}></span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ))  }
                                     {applications.map((item)=>(
                                     <div class="courses-item">
                                         <div class="item-thumb">
