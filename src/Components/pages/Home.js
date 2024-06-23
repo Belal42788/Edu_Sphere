@@ -434,7 +434,7 @@ function Home(props) {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-courses" style={{ height: '500px' }}>
                                                 <div className="courses-images">
-                                                    <a href="Coursedetails"><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                                    <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt={"Courses"} /></a>
                                                 </div>
                                                 <div className="courses-content">
                                                     <div className="courses-author">
