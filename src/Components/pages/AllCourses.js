@@ -117,9 +117,9 @@ function Courses() {
                 <div class="container">
                     <div class="courses-wrapper-02">
                         <div class="row">
-                            {coursesinf.map((item) => (
+                            {/* {coursesinf.map((item) => (
                                 <div className="col-lg-4 col-md-6" >
-                                    <div className="single-courses" style={{height:'400px'}}>
+                                    <div className="single-courses" style={{height:'500px'}}>
                                         <div className="courses-images">
                                             <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
@@ -151,10 +151,10 @@ function Courses() {
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            ))} */}
                             {coursesinf.map((item) => (
                                 <div className="col-lg-4 col-md-6" >
-                                    <div className="single-courses" style={{height:'400px'}}>
+                                    <div className="single-courses" >
                                         <div className="courses-images">
                                             <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
@@ -183,7 +183,22 @@ function Courses() {
                                                 </div>
                                             </div>
                                             <h4 className="title" ><a href="Coursedetails">{item.title}</a></h4>
+                                            <div class="courses-rating">
+                                        <p>38% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line"style={{width: '38%'}}></div>
                                         </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '80%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
+                                        </div>
+                                    </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             ))}
