@@ -32,7 +32,7 @@ function App() {
         <Route path="/Profile" element={<Profile />} />
         <Route path="/TeacherRegisteration" element={<TeacherRegisteration />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/Blogdetails" element={<Blogdetails />} />
+        <Route path="/Blogdetails/:id" element={<Blogdetails />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
        
         <Route path="/MyCourses" element={<MyCourses />} />

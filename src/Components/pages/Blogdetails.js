@@ -59,6 +59,7 @@ const blogData = [
           date: "24 April, 2023",
           likes: "3,487+",
           link: "blog-details-left-sidebar.html",
+        
         },
         {
           id: 4,
@@ -93,7 +94,7 @@ const blogData = [
           likes: "2,568+",
           link: "blog-details-left-sidebar.html",
         },
-       
+
       ];
 
 function Blogdetails() {
@@ -105,7 +106,7 @@ function Blogdetails() {
     <div>
       <Navbar
         name="Our"
-        name2="The principles every UI/UX designer needs."
+        name2={blog.title}
         name3="Blogdetails"
       />
 
@@ -148,7 +149,7 @@ function Blogdetails() {
 
                 <div class="blog-details-description">
                   <p>
-                  The principles of UI/UX design are essential for creating effective and user-friendly interfaces. These principles guide designers in making decisions that enhance the overall user experience and usability of a product.
+                 
                   </p>
 
                   <p>
