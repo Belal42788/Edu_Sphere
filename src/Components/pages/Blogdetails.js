@@ -69,7 +69,7 @@ function Blogdetails() {
                   Understanding these principles is crucial as they have been developed through extensive research and practice within the industry. They have stood the test of time and technological advancements, remaining relevant and integral to design practices. Popularized through educational resources and professional discourse, these principles form the foundation of good design.
                   </p>
 
-                  <img src={details1} alt="Blog Details" />
+                 
 
                   <h3>Intrinsic Cognitive Load</h3>
 

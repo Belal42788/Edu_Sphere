@@ -25,10 +25,10 @@ import Image7 from "../../assets/images/author/author-06.jpg"
 import Belal from "../../assets/images/author/Belal.jpg";
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
-import author3 from "../../assets/images/author/author-17.jpg";
+import author3 from "../../assets/images/author/author-04.jpg";
 import author4 from "../../assets/images/author/author-04.jpg";
-import author5 from "../../assets/images/author/author-20.jpg";
-import author6 from "../../assets/images/author/author-19.jpg";
+import author5 from "../../assets/images/author/author-06.jpg";
+import author6 from "../../assets/images/author/author-17.jpg";
 import author7 from "../../assets/images/author/author-07.jpg";
 import author8 from "../../assets/images/author/author-06.jpg";
 import author9 from "../../assets/images/author/author-01.jpg";
@@ -36,11 +36,11 @@ import author10 from "../../assets/images/author/author-01.jpg";
 import courseImg9 from "../../assets/images/courses/courses-15.jpg";
 import courseImg1 from "../../assets/images/courses/courses-14.jpg";
 import courseImg2 from "../../assets/images/courses/courses-13.jpg";
-import courseImg3 from "../../assets/images/courses/courses-03.jpg";
+import courseImg3 from "../../assets/images/courses/courses-09.jpg";
 import courseImg4 from "../../assets/images/courses/courses-04.jpg";
-import courseImg5 from "../../assets/images/courses/courses-11.jpg";
+import courseImg5 from "../../assets/images/courses/courses-12.jpg";
 import courseImg6 from "../../assets/images/courses/courses-05.jpg";
-import courseImg8 from "../../assets/images/courses/courses-08.jpg";
+import courseImg8 from "../../assets/images/courses/courses-11.jpg";
 import slider1 from "../../assets/images/slider/slider-1.png";
 import shape1 from "../../assets/images/shape/shape-1.png"
 import Shape2 from "../../assets/images/shape/shape-2.png"
@@ -101,7 +101,7 @@ function Home(props) {
         {
             id: 1,
             title: 'Data Science and Machine Learning with Python - Hands On!',
-            instructor: 'Jason Williams',
+            instructor: 'John Doe',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg1,
             ImageUlrinstr: author1,
@@ -115,7 +115,7 @@ function Home(props) {
         {
             id: 2,
             title: 'Create Amazing Color Schemes for Your UX Design Projects',
-            instructor: 'Pamela Foster',
+            instructor: 'Jemi Smith',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg2,
             ImageUlrinstr: author2,
@@ -128,10 +128,10 @@ function Home(props) {
         },
         {
             id: 3,
-            title: 'Culture & Leadership: Strategies for a Successful Business',
-            instructor: 'Rose Simmons',
+            title: 'Finance Series: Learn to Budget and Calculate your Net Worth.',
+            instructor: 'lary Brown',
             duration: '8 hr 15 mins',
-            ImageUlrcourses: courseImg6,
+            ImageUlrcourses: courseImg9,
             ImageUlrinstr: author3,
             tag: 'Science',
             lectures: '29 Lectures',
@@ -142,10 +142,10 @@ function Home(props) {
         },
         {
             id: 4,
-            title: 'Finance Series: Learn to Budget and Calculate your Net Worth.',
-            instructor: 'lewis momo',
+            title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape',
+            instructor: 'lMichael Clark',
             duration: '8 hr 15 mins',
-            ImageUlrcourses: courseImg9,
+            ImageUlrcourses: courseImg8,
             ImageUlrinstr: author4,
             tag: 'Finance',
             lectures: '29 Lectures',
@@ -156,8 +156,8 @@ function Home(props) {
         },
         {
             id: 5,
-            title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape',
-            instructor: 'sam Williams',
+            title: 'Effective Communication Skills for Managers',
+            instructor: 'Lan Garcia',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg5,
             ImageUlrinstr: author5,
@@ -170,8 +170,8 @@ function Home(props) {
         },
         {
             id: 6,
-            title: 'Graphic Design: Illustrating Badges and Icons with Geometric Shapes',
-            instructor: 'Jon Will',
+            title: 'Practical Project Management: Strategies and Tools',
+            instructor: 'Tim Lee',
             duration: '8 hr 15 mins',
             ImageUlrcourses: courseImg3,
             ImageUlrinstr: author6,
