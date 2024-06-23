@@ -21988,7 +21988,7 @@ img {
 }
 .single-student .student-content {
   padding-left: 30px;
-  max-width: 220px;
+  max-width: 400px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (max-width: 575px) {
   .single-student .student-content {

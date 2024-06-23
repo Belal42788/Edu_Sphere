@@ -21,6 +21,7 @@ import Lessons from "./Components/pages/Lessons";
 import Admin from "./Components/pages/Admin";
 import Blog from "./Components/pages/Blog";
 import Blogdetails from "./Components/pages/Blogdetails";
+import Coursesdetailsadmain from "./Components/pages/coursesdetailsadmain"
 function App() {
   return (
     <Router>
@@ -44,6 +45,8 @@ function App() {
         <Route path="/Courses" element={<Courses />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/Coursesdetailsadmain" element={<Coursesdetailsadmain />} />
+
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>
