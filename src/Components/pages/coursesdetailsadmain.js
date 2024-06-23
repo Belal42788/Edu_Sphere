@@ -105,12 +105,12 @@ function Coursesdetailsadmain() {
             <div className="single-form">
             <input type="text" value={courseName} onChange={handleCourseNameChange} />
             </div>
-            <button onClick={handleCourseNameSave}>Save</button>
+            <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={handleCourseNameSave}>Save</button>
           </div>
         ) : (
           <div>
             <h2 style={{ paddingTop: '10px' }}>{courseName}</h2>
-            <button onClick={handleCourseNameEdit}>Edit Course Name</button>
+            <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={handleCourseNameEdit}>Edit Course Name</button>
           </div>
         )}
         {editableImage ? (
@@ -119,13 +119,13 @@ function Coursesdetailsadmain() {
 
             <input type="file" onChange={handleImageChange} />
             </div>
-            <button onClick={handleImageSave}>Save</button>
+            <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={handleImageSave}>Save</button>
           </div>
         ) : (
           <div>
             {courseImage && <img src={courseImage} alt="Course" style={{ width: '500px' }} />}
             <br></br>
-            <button onClick={handleImageEdit}>Edit Course Image</button>
+            <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={handleImageEdit}>Edit Course Image</button>
           </div>
         )}
       </div>
@@ -157,14 +157,14 @@ function Coursesdetailsadmain() {
                         onChange={(e) => handleInputChange(e, index, 'description')}
                       />
                     </div>
-                    <button onClick={handleSaveClick}>Save</button>
+                    <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={handleSaveClick}>Save</button>
                   </>
                 ) : (
                   <>
                     <p>{item.title}</p>
                     <a href={item.url}><p className="name">{item.url}</p></a>
                     <span className="date"><i className="icofont-ui-calendar"></i> {item.description}</span>
-                    <button onClick={() => handleEditClick(index)}>Edit</button>
+                    <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={() => handleEditClick(index)}>Edit</button>
                   </>
                 )}
               </div>
