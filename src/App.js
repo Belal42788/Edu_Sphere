@@ -17,7 +17,7 @@ import MyCourses from "./Components/pages/MyCourses";
 import CreateLesson from "./Components/pages/CreateLesson"
 import Profile from "./Components/pages/Profile";
 import TeacherRegisteration from "./Components/pages/TeacherRegisteration";
-import Lessons from "./Components/pages/Lessons";
+
 import Admin from "./Components/pages/Admin";
 import Blog from "./Components/pages/Blog";
 import Blogdetails from "./Components/pages/Blogdetails";
@@ -33,7 +33,7 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Blogdetails" element={<Blogdetails />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
-        <Route path="/Lessons" element={<Lessons />} />
+       
         <Route path="/MyCourses" element={<MyCourses />} />
         <Route path="/CoursesAdmin" element={<CoursesAdmin />} />
         <Route path="/createcourse" element={<Createcourse />} />

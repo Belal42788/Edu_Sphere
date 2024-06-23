@@ -401,11 +401,7 @@ function FreeCourse() {
 
             ))}
           </div>
-                 <div class="lesson-btn">
-                      <a href="lessons" class="btn btn-primary btn-hover-dark">
-                       Lessons
-                      </a>
-                    </div>
+              
         </div>
       </div>
       <div><Advertise /></div>
