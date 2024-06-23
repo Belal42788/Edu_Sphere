@@ -22,6 +22,7 @@ import Admin from "./Components/pages/Admin";
 import Blog from "./Components/pages/Blog";
 import Blogdetails from "./Components/pages/Blogdetails";
 import Coursesdetailsadmain from "./Components/pages/coursesdetailsadmain"
+
 function App() {
   return (
     <Router>
@@ -41,7 +42,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Coursedetails" element={<Coursedetails />} />
+        <Route path="/Coursedetails/:id" element={<Coursedetails />} />
+        
         <Route path="/Courses" element={<Courses />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/register" element={<Register />} />

@@ -64,6 +64,10 @@ function Courses() {
         { id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author13 },
     ];
     
+
+
+
+    
     return (
         <>
             <Navbar name='All' name2='courses' name3="courses" />

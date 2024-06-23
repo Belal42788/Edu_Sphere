@@ -79,8 +79,7 @@ function MyCourses() {
                         <div class="col-lg-4 col-md-6">
                             <div class="single-courses">
                                 <div class="courses-images">
-                                    <a href="courses-details.html"><img src={item.ImageUlrcourses} alt="Courses"/></a>
-
+                                    <a href="coursesdetails"><img src={item.ImageUlrcourses} alt="Courses"/></a>
                                     <div class="courses-option dropdown">
                                         <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span></span>

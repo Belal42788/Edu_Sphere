@@ -1,15 +1,35 @@
 import React from "react";
 import detail1 from "../../assets/images/courses/courses-details.jpg";
 import detail2 from "../../assets/images/courses/circle-shape.png";
-import courseImg03 from "../../assets/seo.png";
-import courseImg04 from "../../assets/ui-ux.png";
+import courseImg1 from "../../assets/images/courses/courses-14.jpg";
+import courseImg2 from "../../assets/images/courses/courses-13.jpg";
+import courseImg3 from "../../assets/images/courses/courses-16.jpg";
+import courseImg4 from "../../assets/images/courses/courses-04.jpg";
+import courseImg5 from "../../assets/images/courses/courses-15.jpg";
+import courseImg6 from "../../assets/images/courses/courses-06.jpg";
+import courseImg7 from "../../assets/images/courses/courses-07.jpg";
+import courseImg8 from "../../assets/images/courses/courses-08.jpg";
+import courseImg9 from "../../assets/images/courses/courses-09.jpg";
+import courseImg10 from "../../assets/images/courses/courses-10.jpg";
+import courseImg11 from "../../assets/images/courses/courses-11.jpg";
+import courseImg12 from "../../assets/images/courses/courses-12.jpg";
+
+
 import author1 from "../../assets/images/author/author-01.jpg";
 import author2 from "../../assets/images/author/author-02.jpg";
-import author3 from "../../assets/images/author/author-17.jpg";
+import author3 from "../../assets/images/author/author-04.jpg";
 import author4 from "../../assets/images/author/author-04.jpg";
-import author6 from "../../assets/images/author/author-06.jpg";
-import author7 from "../../assets/images/author/author-07.jpg";
-import Advertise from "../advertise"
+import author5 from "../../assets/images/author/author-06.jpg";
+import author6 from "../../assets/images/author/author-17.jpg";
+import author7 from "../../assets/images/author/author-18.jpg";
+import author8 from "../../assets/images/author/author-19.jpg";
+import author9 from "../../assets/images/author/author-20.jpg";
+import author10 from "../../assets/images/author/author-01.jpg";
+import author11 from "../../assets/images/author/author-06.jpg";
+import author12 from "../../assets/images/author/author-24.jpg";
+import author13 from "../../assets/images/author/author-21.jpg";
+import author14 from "../../assets/images/author/author-22.jpg";
+import author15 from "../../assets/images/author/author-23.jpg";import Advertise from "../advertise"
 //import FreeCourseCard from "./FreeCourseCard";
 import "../../Styles/Contact.css";
 import Navbar from "../Navbar";
@@ -24,13 +44,72 @@ import '../../Styles/plugins/apexcharts.css'
 import '../../Styles/plugins/jqvmap.min.css'
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
+import { useParams } from 'react-router-dom';
+
+const coursesinf = [
+  {
+    id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg1,imageIns:author1
+  },
+  {
+    id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg2,imageIns:author2
+  },
+  {
+    id: 3, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg5,imageIns:author3
+  },
+  {
+    id: 4, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg11,imageIns:author4
+  },
+  {
+    id: 5, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg12,imageIns:author5
+  },
+  {
+    id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg9,imageIns:author6
+  },
+  {
+    id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg8,imageIns:author7
+  },
+  {
+    id: 8, title: 'The Art of Public Speaking', instructor: 'Daniel Harris', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg3,imageIns:author8
+  },
+  {
+    id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', lecture: '29', price: '428', Language: 'English',
+    Certificate: 'Yes', image:courseImg10,imageIns:author9
+  }
+]
+
+const coursesinfo = [
+  { id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', duration: '4 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author1 },
+  { id: 2, title: 'Create Amazing Color Schemes for Your UX Design Projects', instructor: 'Jemi Smith', duration: '6 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author2 },
+  { id: 3, title: 'Finance Series: Learn to Budget and Calculate your Net Worth.', instructor: 'lary Brown', duration: '8 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author4 },
+ 
+ 
+  { id: 4, title: 'Build Brand Into Marketing: Tackling the New Marketing Landscape', instructor: 'Michael Clark', duration: '6 weeks', ImageUlrcourses: courseImg11, ImageUlrinstr: author5 },
+  { id: 5, title: 'Effective Communication Skills for Managers', instructor: 'Lan Garcia', duration: '7 weeks', ImageUlrcourses: courseImg12, ImageUlrinstr: author8 },
+
+  { id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', duration: '5 weeks', ImageUlrcourses: courseImg9, ImageUlrinstr: author10 },
+
+  { id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', duration: '10 weeks', ImageUlrcourses: courseImg8, ImageUlrinstr: author9 },
+
+
+  { id: 8, title: 'The Art of Public Speaking', instructor: 'Daniel Harris', duration: '4 weeks', ImageUlrcourses: courseImg3, ImageUlrinstr: author11 },
+
+  { id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author13 },
+];
+
+
 
 function FreeCourse() {
-  const coursesinf = [
-    {
-      id: 1, title: 'Data Science and Machine Learning with Python - Hands On!', instructor: 'John Doe', lecture: '29', price: '428', Language: 'English',
-      Certificate: 'Yes'
-    }]
+
+  const { id } = useParams();
+  const course = coursesinf.find(c => c.id === parseInt(id));
 
   const teamInfo = [
     {
@@ -87,7 +166,7 @@ function FreeCourse() {
             <div class="col-lg-8">
               <div class="courses-details">
                 <div class="courses-details-images">
-                  <img src={detail1} alt="Courses Details" />
+                  <img src={course.image} alt="Courses Details" />
                   <span class="tags">Finance</span>
                   <div class="courses-play">
                     <img src={detail2} alt="Play" />
@@ -100,17 +179,16 @@ function FreeCourse() {
                   </div>
                 </div>
                 <h2 class="title">
-                  Finance & Investment Series: Learn to Budget and Calculate
-                  Your Net Worth.
+                 {course.title}
                 </h2>
                 <div class="courses-details-admin">
                   <div class="admin-author">
                     <div class="author-thumb">
-                      <img src={author1} alt="Author" />
+                      <img src={course.imageIns} alt="Author" />
                     </div>
                     <div class="author-content">
                       <a class="name" href="#">
-                        Pamela Foster
+                       {course.instructor}
                       </a>
                       <span class="Enroll">286 Enrolled Students</span>
                     </div>
@@ -325,7 +403,7 @@ function FreeCourse() {
                 </div>
               </div>
             </div>
-            {coursesinf.map((item) => (
+          
 
               <div class="col-lg-4">
                 <div class="sidebar">
@@ -333,27 +411,27 @@ function FreeCourse() {
 
 
                     <div class="info-price">
-                      <span class="price">${item.price}</span>
+                      <span class="price">${course.price}</span>
                     </div>
                     <div class="info-list">
                       <ul>
                         <li>
                           <i class="icofont-man-in-glasses"></i>{" "}
-                          <strong>Instructor</strong> <span>{item.instructor}</span>
+                          <strong>Instructor</strong> <span>{course.instructor}</span>
                         </li>
 
                         <li>
                           <i class="icofont-ui-video-play"></i>{" "}
-                          <strong>Lectures</strong> <span>{item.lecture}</span>
+                          <strong>Lectures</strong> <span>{course.lecture}</span>
                         </li>
 
                         <li>
                           <i class="icofont-book-alt"></i>{" "}
-                          <strong>Language</strong> <span>{item.Language}</span>
+                          <strong>Language</strong> <span>{course.Language}</span>
                         </li>
                         <li>
                           <i class="icofont-certificate-alt-1"></i>{" "}
-                          <strong>Certificate</strong> <span>{item.Certificate}</span>
+                          <strong>Certificate</strong> <span>{course.Certificate}</span>
                         </li>
                       </ul>
                     </div>
@@ -399,7 +477,7 @@ function FreeCourse() {
                 </div>
               </div>
 
-            ))}
+       
           </div>
               
         </div>
