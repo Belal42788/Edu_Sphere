@@ -13,7 +13,7 @@ export default function Profile() {
     id: 1,
     instructor: 'John Doe',
     Email: 'ahmedre126@gmail.com',
-    password: '1662002',
+  
     courseName: 'Effective Communication Skills for Managers',
     Certificate: 'Yes'
   };
@@ -79,19 +79,7 @@ export default function Profile() {
                           <span>{profile.Email}</span>
                         )}
                       </li>
-                      <li>
-                        <strong>Password</strong>
-                        {isEditing ? (
-                          <p style={{display:'flex' , flexDirection:'column'}}> 
-                       <div className="single-form">
-                         <input type="password" name="password" value={profile.password} onChange={handleChange} />
-                        </div>
-                        </p>
-                        ) : (
-
-                          <span>{profile.password}</span>
-                        )}
-                      </li>
+                     
                       <li>
                         <strong>Course Name</strong>
                         {isEditing ? (
