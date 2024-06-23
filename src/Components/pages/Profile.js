@@ -99,9 +99,9 @@ export default function Profile() {
                   </div>
                   <div className="info-actions">
                     {isEditing ? (
-                      <button onClick={handleSave}>Save</button>
+                      <button className="btn btn-primary btn-hover-dark" onClick={handleSave}>Save</button>
                     ) : (
-                      <button onClick={handleEdit}>Edit Profile</button>
+                      <button className="btn btn-primary btn-hover-dark" onClick={handleEdit}>Edit Profile</button>
                     )}
                   
 
