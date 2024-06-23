@@ -1,9 +1,9 @@
 import React from "react";
-import courseImg1 from "../../assets/images/courses/courses-01.jpg";
-import courseImg2 from "../../assets/images/courses/courses-02.jpg";
+import courseImg1 from "../../assets/images/courses/courses-14.jpg";
+import courseImg2 from "../../assets/images/courses/courses-13.jpg";
 import courseImg3 from "../../assets/images/courses/courses-03.jpg";
 import courseImg4 from "../../assets/images/courses/courses-04.jpg";
-import courseImg5 from "../../assets/images/courses/courses-05.jpg";
+import courseImg5 from "../../assets/images/courses/courses-15.jpg";
 import courseImg6 from "../../assets/images/courses/courses-06.jpg";
 import courseImg7 from "../../assets/images/courses/courses-07.jpg";
 import courseImg8 from "../../assets/images/courses/courses-08.jpg";
@@ -56,12 +56,12 @@ function Courses() {
 
         { id: 6, title: 'Practical Project Management: Strategies and Tools', instructor: 'Tim Lee', duration: '5 weeks', ImageUlrcourses: courseImg9, ImageUlrinstr: author10 },
 
-        { id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', duration: '10 weeks', ImageUlrcourses: courseImg5, ImageUlrinstr: author9 },
+        { id: 7, title: 'Web Development Bootcamp with HTML, CSS, and JavaScript', instructor: 'James Martinez', duration: '10 weeks', ImageUlrcourses: courseImg8, ImageUlrinstr: author9 },
 
 
         { id: 8, title: 'The Art of Public Speaking', instructor: 'Daniel Harris', duration: '4 weeks', ImageUlrcourses: courseImg2, ImageUlrinstr: author11 },
 
-        { id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author13 },
+        { id: 9, title: 'Digital Photography: Learn Your Camera and Take Stunning Photos', instructor: 'Christopher Wilson', duration: '5 weeks', ImageUlrcourses: courseImg10, ImageUlrinstr: author13 },
     ];
     
     return (
