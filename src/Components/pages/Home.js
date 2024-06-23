@@ -3,6 +3,7 @@ import "../../Styles/Contact.css"
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Advertise from "../advertise"
+import axios from 'axios';
 import '../../Styles/plugins/icofont.min.css'
 import '../../Styles/plugins/icofont.min.css'
 import '../../Styles/plugins/animate.min.css'
@@ -78,11 +79,48 @@ function Home(props) {
 
 
 
+const [applications, setApplications] = useState([]);
+    const [instructorImage, setInstructorImage] = useState("");
+    const [instructorName, setInstructorName] = useState("");
+
+    const fetchApplications = async () => {
+        try {
+            const token = localStorage.getItem('UserToken');
+
+            if (!token) {
+                console.error('No authentication token found');
+                // You might want to redirect to the login page or handle this case accordingly
+                return;
+            }
+      
+            const response = await axios.get('https://localhost:7225/api/Course/AllCoures', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+      
+            console.log('Getdata successful', response.data);
+            setSign(false);
+            setApplications(response.data);
+            
+            
+        } catch (error) {
+            console.error('Error during getting data', error);
+            if (error.response) {
+                console.error('Response data:', error.response.data);
+                console.error('Response status:', error.response.status);
+                console.error('Response headers:', error.response.headers);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
 
 
     useEffect(() => {
         const token = localStorage.getItem('UserToken');
-
         if (!token) {
             console.error('No authentication token found');
             setSign(true);
@@ -225,7 +263,7 @@ function Home(props) {
                                     </li>
                                     <li>
                                         <a href="#">Pages </a>
-                                        {sign ? (<ul className="sub-menu">
+                                        {!sign ? (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="404-error">404 Error</a></li>
@@ -431,47 +469,41 @@ function Home(props) {
                         <div className="tab-pane fade show active" id="tabs1">
                             <div className="courses-wrapper">
                                 <div className="row">
-                                    {coursesinf.map((item) => (
-                                        <div className="col-lg-4 col-md-6">
-                                            <div className="single-courses" style={{ height: '500px' }}>
-                                                <div className="courses-images">
-                                                    <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt={"Courses"} /></a>
-                                                </div>
-                                                <div className="courses-content">
-                                                    <div className="courses-author">
-                                                        <div className="author">
-                                                            <div className="author-thumb">
-                                                                <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
-                                                            </div>
-                                                            <div className="author-name">
-                                                                <a className="name" href="#">{item.instructor}</a>
-                                                            </div>
-                                                        </div>
-                                                        <div className="tag">
-                                                            <a href="#">Science</a>
-                                                        </div>
+                                    {applications.map((item) => (
+                                <div className="col-lg-4 col-md-6" >
+                                    <div className="single-courses" style={{height:'400px'}}>
+                                        <div className="courses-images">
+                                            <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.image} alt="Courses" /></a>
+                                            <div class="courses-option dropdown">
+                                                <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#"><i class="icofont-share-alt"></i> Share</a></li>
+                                                    <li><a href="#"><i class="icofont-plus"></i> Create Collection</a></li>
+                                                    <li><a href="#"><i class="icofont-star"></i> Favorite</a></li>
+                                                    <li><a href="#"><i class="icofont-archive"></i> Archive</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="courses-content" style={{marginBottom:'20px'}}>
+                                            <div className="courses-author">
+                                                <div className="author">
+                                                    <div className="author-thumb">
+                                                        <a href="#"><img src={item.teacherImage} alt="Author" /></a>
                                                     </div>
-                                                    <h4 className="title"><a href="Coursedetails">{item.title}</a></h4>
-                                                    <div className="courses-meta">
-                                                        <span> <i className="icofont-clock-time"></i> {item.duration}</span>
-                                                        <span> <i className="icofont-read-book"></i> {item.lectures}</span>
-                                                    </div>
-                                                    <div className="courses-price-review">
-                                                        <div className="courses-price">
-                                                            <span className="sale-parice">{item.salePrice}</span>
-                                                            <span className="old-parice">{item.oldPrice}</span>
-                                                        </div>
-                                                        <div className="courses-review">
-                                                            <span className="rating-count">{item.ratingBar}</span>
-                                                            <span className="rating-star">
-                                                                <span className="rating-bar" style={{ width: '80%' }}></span>
-                                                            </span>
-                                                        </div>
+                                                    <div class="author-name">
+                                                        <a class="name" href="#">{item.teacherName}</a>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <h4 className="title" ><a href="Coursedetails">{item.courseName}</a></h4>
                                         </div>
-                                    ))};
+                                    </div>
+                                </div>
+                            ))}
                                 </div>
                             </div>
                         </div>

@@ -119,7 +119,7 @@ function Courses() {
                         <div class="row">
                             {/* {coursesinf.map((item) => (
                                 <div className="col-lg-4 col-md-6" >
-                                    <div className="single-courses" style={{height:'500px'}}>
+                                    <div className="single-courses" style={{height:'400px'}}>
                                         <div className="courses-images">
                                             <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
@@ -152,11 +152,11 @@ function Courses() {
                                     </div>
                                 </div>
                             ))} */}
-                            {coursesinf.map((item) => (
+                            {applications.map((item) => (
                                 <div className="col-lg-4 col-md-6" >
                                     <div className="single-courses" >
                                         <div className="courses-images">
-                                            <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.ImageUlrcourses} alt="Courses" /></a>
+                                            <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.image} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
                                                 <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <span></span>
@@ -175,14 +175,14 @@ function Courses() {
                                             <div className="courses-author">
                                                 <div className="author">
                                                     <div className="author-thumb">
-                                                        <a href="#"><img src={item.ImageUlrinstr} alt="Author" /></a>
+                                                        <a href="#"><img src={item.teacherImage} alt="Author" /></a>
                                                     </div>
                                                     <div class="author-name">
-                                                        <a class="name" href="#">{item.instructor}</a>
+                                                        <a class="name" href="#">{item.teacherName}</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 className="title" ><a href="Coursedetails">{item.title}</a></h4>
+                                            <h4 className="title" ><a href="Coursedetails">{item.courseName}</a></h4>
                                             <div class="courses-rating">
                                         <p>38% Complete</p>
 
@@ -199,8 +199,9 @@ function Courses() {
                                     </div>
                                         </div>
                                         
+                                        </div>
                                     </div>
-                                </div>
+                                
                             ))}
                         </div>
                     </div>

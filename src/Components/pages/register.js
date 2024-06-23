@@ -70,8 +70,10 @@ export default function Register() {
 
     useEffect(() => {
         const result = passwordRegex.test(passwordregister);
+        console.log(result);
         const match = passwordregister === confirmpasswordregister;
         setValidConPwd(match);
+        setValidPwd(result);
     }, [passwordregister, confirmpasswordregister])
 
     useEffect(() => {
@@ -148,12 +150,11 @@ export default function Register() {
                 }
             });
             const token = response.data.token;
-            localStorage.setItem('UserToken', token);
             const userName = FirstName + " " + LASTName;
             localStorage.setItem('UserToken', token);
             localStorage.setItem('Email', emailregister);
             localStorage.setItem('UserName',userName);
-            localStorage.setItem('Image', imageFile);
+            localStorage.setItem('Image', response.data.image);
             console.log('Registration successful', response.data);
             alert('Registration successful');
             navigate("/");

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import detail1 from "../../assets/images/courses/courses-details.jpg";
 import detail2 from "../../assets/images/courses/circle-shape.png";
 import courseImg1 from "../../assets/images/courses/courses-14.jpg";
@@ -87,11 +89,49 @@ const coursesinf = [
 
 
 
+    
+
 
 function FreeCourse() {
+  const [applications, setApplications] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchApplications = async () => {
+    try {
+      const token = localStorage.getItem('UserToken');
+
+      if (!token) {
+        console.error('No authentication token found');
+        // You might want to redirect to the login page or handle this case accordingly
+        return;
+      }
+
+      const response = await axios.get('https://localhost:7225/api/Course/AllCoures', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      console.log('Getdata successful', response.data);
+      setApplications(response.data);
+      setLoading(false); // Set loading to false once data is fetched
+    } catch (error) {
+      console.error('Error during getting data', error);
+      if (error.response) {
+        console.error('Response data:', error.response.data);
+        console.error('Response status:', error.response.status);
+        console.error('Response headers:', error.response.headers);
+      }
+      setLoading(false); // Set loading to false even if there's an error
+    }
+  };
+
+  useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
 
   const { id } = useParams();
-  const course = coursesinf.find(c => c.id === parseInt(id));
+  const course = applications.find(c => c.id === parseInt(id));
 
   const teamInfo = [
     {
@@ -145,32 +185,33 @@ function FreeCourse() {
       <div class="section section-padding mt-n10">
         <div class="container">
           <div class="row gx-10">
+            {loading ? (<div className="loading">Loading...</div>) : (<>
             <div class="col-lg-8">
               <div class="courses-details">
                 <div class="courses-details-images">
                   <img src={course.image} alt="Courses Details" />
-                  <span class="tags">Finance</span>
+                  <span class="tags">{course.subject}</span>
                   <div class="courses-play">
                     <img src={detail2} alt="Play" />
-                    <a
-                      class="play video-popup"
-                      href="https://www.youtube.com/watch?v=Wif4ZkwC0AM"
+                      <a
+                        class="play video-popup"
+                        href={course.link}
                     >
                       <i class="flaticon-play"></i>
                     </a>
                   </div>
                 </div>
                 <h2 class="title">
-                 {course.title}
+                 {course.courseName}
                 </h2>
                 <div class="courses-details-admin">
                   <div class="admin-author">
                     <div class="author-thumb">
-                      <img src={course.imageIns} alt="Author" />
+                      <img src={course.teacherImage} alt="Author" />
                     </div>
                     <div class="author-content">
                       <a class="name" href="#">
-                       {course.instructor}
+                       {course.teacherName}
                       </a>
                       <span class="Enroll">286 Enrolled Students</span>
                     </div>
@@ -210,7 +251,7 @@ function FreeCourse() {
                           <div class="description-wrapper">
                             <h3 class="tab-title">Description:</h3>
                             <p>
-                            This comprehensive course is designed to help you master the essentials of budgeting and net worth calculation. You will learn practical strategies for managing your finances, setting financial goals, and making informed investment decisions. Our expert instructors provide clear, step-by-step guidance to ensure you understand and apply key concepts effectively. By the end of the course, you will have the tools and knowledge needed to take control of your financial future.
+                            {course.courseDescription}
                             </p>
                           </div>
                           {/* <div class="description-wrapper">
@@ -393,27 +434,27 @@ function FreeCourse() {
 
 
                     <div class="info-price">
-                      <span class="price">${course.price}</span>
+                      <span class="price">${course.cost}</span>
                     </div>
                     <div class="info-list">
                       <ul>
                         <li>
                           <i class="icofont-man-in-glasses"></i>{" "}
-                          <strong>Instructor</strong> <span>{course.instructor}</span>
+                          <strong>Instructor</strong> <span>{course.teacherName}</span>
                         </li>
 
                         <li>
                           <i class="icofont-ui-video-play"></i>{" "}
-                          <strong>Lectures</strong> <span>{course.lecture}</span>
+                          <strong>Lectures</strong> <span>1</span>
                         </li>
 
                         <li>
                           <i class="icofont-book-alt"></i>{" "}
-                          <strong>Language</strong> <span>{course.Language}</span>
+                          <strong>Language</strong> <span>{course.language}</span>
                         </li>
                         <li>
                           <i class="icofont-certificate-alt-1"></i>{" "}
-                          <strong>Certificate</strong> <span>{course.Certificate}</span>
+                          <strong>Certificate</strong> <span>Yes</span>
                         </li>
                       </ul>
                     </div>
@@ -458,8 +499,8 @@ function FreeCourse() {
                   
                 </div>
               </div>
-
-       
+              </>
+              ) }
           </div>
               
         </div>
