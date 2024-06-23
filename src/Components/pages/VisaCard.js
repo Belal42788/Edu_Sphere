@@ -95,8 +95,13 @@ function VisaCard() {
             </div>
           </form>
           </div>
+          <div className="single-form col-6 " style={{margin:'auto'}}>
+                                                <button type="submit" className="btn btn-primary btn-hover-dark w-100">Create Lesson</button>
+                                            </div>
         </div>
       </div>
+   
+
     </div>
     </>
   );
