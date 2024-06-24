@@ -17,7 +17,7 @@ const FloatingChatbot = () => {
             {isOpen && (
                 <div className="chatbot-iframe">
                     <iframe
-                        src="https://docsbot.ai/iframe/lPQ2MmlhZhvswtjX2VC7/hseKoy44pT8rYTKGzfbW"
+                        src="https://docsbot.ai/iframe/iyrmXK9Z1cDblbO888bk/2m7mjSQjlQ7dT9FwQzTq"
                         width="350"
                         height="617"
                         allowTransparency="true"
