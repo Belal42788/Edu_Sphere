@@ -65,7 +65,9 @@ namespace Backend.Services
                     TeacherID = course.TeacherID,
                     Image = "https://localhost:7225" + course.ImgUrl,
                     Language = course.Language,
-                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id)
+                    StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
+                    TeacherName=user.FirstName+" "+user.LastName,
+                    TeacherImage= "https://localhost:7225" + user.ImageUrl
                 };
 
                 courseModels.Add(courseModel);

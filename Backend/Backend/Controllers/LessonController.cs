@@ -37,7 +37,18 @@ namespace Backend.Controllers
             return Ok(result);
 
         }
+        [Authorize]
+        [HttpPut("UpdateLesson")]
+        public async Task<IActionResult> UpdateLessonAsync([FromForm]UpdateLesson model)
+        {
 
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _LessonService.UpdateLessonAsync(model);
+            return Ok(result);
 
         }
+
+
+    }
 }

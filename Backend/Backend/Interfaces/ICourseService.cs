@@ -9,5 +9,7 @@ namespace Backend.Interfaces
         Task<IEnumerable<CourseModel>> FindCourseAsync( string Name);
         Task<IEnumerable<CourseModel>> AllCoursesAsync();
         Task<IEnumerable<CourseModel>> FindCourseBySubjectAsync(string Subject);
+        Task<CourseModel> UpdateCousreName(UpdateCourseName model);
+        Task<CourseModel> UpdateCousreImage(UpdateCourseImage model);
     }
 }

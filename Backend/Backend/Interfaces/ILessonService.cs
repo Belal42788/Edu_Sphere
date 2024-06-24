@@ -7,5 +7,7 @@ namespace Backend.Interfaces
     {
         Task<LessonModel> CreateLessonAsync(CreateLesson Model);
         Task<IEnumerable<LessonModel>> GetAllLessonAsync(CourseDto model);
+        Task<LessonModel> UpdateLessonAsync(UpdateLesson  Model);
+
     }
 }

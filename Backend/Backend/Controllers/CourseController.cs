@@ -61,5 +61,23 @@ namespace Backend.Controllers
 
         }
 
+        [Authorize]
+        [HttpPut("UpdateCourseName")]
+        public async Task<IActionResult> UpdateCourseNameAsync([FromBody] UpdateCourseName model)
+        {
+            var result = await _courseService.UpdateCousreName(model);
+            return Ok(result);
+
+        }
+        [Authorize]
+        [HttpPut("UpdateCourseImage")]
+        public async Task<IActionResult> UpdateCourseImageAsync([FromForm] UpdateCourseImage model)
+        {
+            var result = await _courseService.UpdateCousreImage(model);
+            return Ok(result);
+
+        }
+
+
     }
 }

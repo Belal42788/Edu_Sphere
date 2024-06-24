@@ -67,5 +67,24 @@ namespace Backend.Services
             return lessonModels;
 
         }
+        public async Task<LessonModel> UpdateLessonAsync(UpdateLesson Model)
+        {
+            var lesson = await _cotext.Lessons.FindAsync(Model.LessonId);
+            lesson.Title = Model.Title;
+            lesson.Topic = Model.Topic;
+            lesson.Video = _imageService.UpdateImage(Model.Video,lesson.Video);
+            lesson.LessonMaterial=_imageService.UpdateImage(Model.LessonMaterial,lesson.LessonMaterial);
+            _cotext.Lessons.Update(lesson);
+            await _cotext.SaveChangesAsync();
+            var lessonModel = new LessonModel
+            {
+                Id = lesson.Id,
+                Title = lesson.Title,
+                Topic = lesson.Topic,
+                Video = "https://localhost:7225" + lesson.Video,
+                LessonMaterial = "https://localhost:7225" + lesson.LessonMaterial
+            };
+            return lessonModel;
+        }
     }
 }

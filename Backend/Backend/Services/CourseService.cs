@@ -91,7 +91,8 @@ namespace Backend.Services
                     StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
                     link=course.link,
                     TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
-                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl
+                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl,
+                    LessonCount = await _cotext.Lessons.CountAsync(m => m.CourseID == course.Id)
 
                 };
 
@@ -122,7 +123,8 @@ namespace Backend.Services
                     StudentCount = course.StudentCount,
                     link = course.link,
                     TeacherName=course.Teacher.User.FirstName+ course.Teacher.User.LastName,
-                    TeacherImage= "https://localhost:7225" + course.Teacher.User.ImageUrl
+                    TeacherImage= "https://localhost:7225" + course.Teacher.User.ImageUrl,
+                    LessonCount = await _cotext.Lessons.CountAsync(m => m.CourseID == course.Id)
 
                 };
 
@@ -154,7 +156,8 @@ namespace Backend.Services
                     StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
                     link = course.link,
                     TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
-                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl
+                    TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl,
+                    LessonCount = await _cotext.Lessons.CountAsync(m => m.CourseID == course.Id)
 
                 };
 
@@ -162,6 +165,63 @@ namespace Backend.Services
             }
             return courseModels;
 
+
+        }
+        public async Task<CourseModel> UpdateCousreName(UpdateCourseName model)
+        {
+            var course = await _cotext.Courses
+                .Include(x => x.Teacher).ThenInclude(x => x.User)
+                .FirstOrDefaultAsync(x=>x.Id==model.Id);
+            course.CourseName = model.CourseName;
+            _cotext.Courses.Update(course);
+            await _cotext.SaveChangesAsync();
+            var courseModel = new CourseModel
+            {
+                Id = course.Id,
+                CourseName = course.CourseName,
+                CourseDescription = course.CourseDescription,
+                Cost = course.Cost,
+                Subject = course.Subject,
+                TeacherID = course.TeacherID,
+                Image = "https://localhost:7225" + course.ImgUrl,
+                Language = course.Language,
+                StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
+                link = course.link,
+                TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
+                TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl,
+                LessonCount = await _cotext.Lessons.CountAsync(m => m.CourseID == course.Id)
+
+            };
+            return courseModel;
+
+
+        }
+        public async Task<CourseModel> UpdateCousreImage(UpdateCourseImage model)
+        {
+            var course = await _cotext.Courses
+                .Include(x => x.Teacher).ThenInclude(x => x.User)
+                .FirstOrDefaultAsync(x => x.Id == model.Id);
+            course.CourseName = _imageService.UpdateImage(model.Image,course.ImgUrl);
+            _cotext.Courses.Update(course);
+            await _cotext.SaveChangesAsync();
+            var courseModel = new CourseModel
+            {
+                Id = course.Id,
+                CourseName = course.CourseName,
+                CourseDescription = course.CourseDescription,
+                Cost = course.Cost,
+                Subject = course.Subject,
+                TeacherID = course.TeacherID,
+                Image = "https://localhost:7225" + course.ImgUrl,
+                Language = course.Language,
+                StudentCount = await _cotext.StudentCourses.CountAsync(m => m.CourseId == course.Id),
+                link = course.link,
+                TeacherName = course.Teacher.User.FirstName + course.Teacher.User.LastName,
+                TeacherImage = "https://localhost:7225" + course.Teacher.User.ImageUrl,
+                LessonCount = await _cotext.Lessons.CountAsync(m => m.CourseID == course.Id)
+
+            };
+            return courseModel;
 
         }
     }

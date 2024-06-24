@@ -14,6 +14,7 @@
         public string Message { get; set; }
         public string Language { get; set; }
         public int StudentCount { get; set; }
+        public int LessonCount { get; set; }
         public string link { get; set; }
     }
 }
