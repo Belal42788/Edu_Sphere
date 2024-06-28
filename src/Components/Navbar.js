@@ -60,6 +60,7 @@ const [photo, setPhoto] = useState(author10);
                                         <ul className="sub-menu">
                                            <li><a href="courses">All Courses</a></li>
                                             <li><a href="MyCourses">My Courses</a></li>
+                                            <li><a href="/CoursesAdmin">CoursesDashboard</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -67,30 +68,14 @@ const [photo, setPhoto] = useState(author10);
                                         {!sign ? (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
-                                            <li><a href="404-error">404 Error</a></li>
-                                            <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                                            <li><a href="createcourse">Create Course</a></li>
-                                            <li><a href="createLesson">Create lesson</a></li>
-                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                            <li><a href="contact">Contact</a></li>
                                         </ul>) : (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
-                                            <li><a href="register">Register</a></li>
-                                            <li><a href="login">Login</a></li>
-                                            <li><a href="faq">FAQ</a></li>
-                                            <li><a href="404-error">404 Error</a></li>
-                                            <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                                            <li><a href="createcourse">Create Course</a></li>
-                                            <li><a href="createLesson">Create lesson</a></li>
-                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                                <li><a href="faq">FAQ</a></li>
+                                                <li><a href="contact">Contact</a></li>
                                         </ul>) }
 
-
-                                        
                                     </li>
-
-
                                     
                                     <li>
                                     <a href="blog">Blog</a>
@@ -101,12 +86,12 @@ const [photo, setPhoto] = useState(author10);
                                         </li>
                                     </ul>
                                 </li>
-                                    <li><a href="contact">Contact</a></li>
+                                    
                                 </ul>
                             </div>
-                            {!props.isUserSignedIn ? (
+                            {!sign ? (
                                 <div className="login-header-action ml-auto">
-                                    <a className="action author" href="profile">
+                                    <a className="action author" href="/profile">
                                         <img src={photo} alt="Author" />
                                     </a>
                                     <div className="dropdown">
@@ -117,12 +102,12 @@ const [photo, setPhoto] = useState(author10);
                                         </button>
                                         <ul className="dropdown-menu">
                                             <li>
-                                                <a className="" href="profile">
+                                                <a className="" href="/profile">
                                                     <i className="icofont-user"></i> Profile
                                                 </a>
                                             </li>
                                             {!props.isInstructor ? (<li>
-                                                <a className="" href="TeacherRegisteration">
+                                                <a className="" href="/TeacherRegisteration">
                                                     <i className="icofont-education"></i> Become an instructor
                                                 </a>
                                             </li>):(
@@ -142,8 +127,8 @@ const [photo, setPhoto] = useState(author10);
                             ) : (
                                 <div className="header-sign-in-up d-none d-lg-block">
                                     <ul>
-                                        <li><a className="sign-in" href="login">Sign In</a></li>
-                                        <li><a className="sign-up" href="register">Sign Up</a></li>
+                                        <li><a className="sign-in" href="/login">Sign In</a></li>
+                                        <li><a className="sign-up" href="/register">Sign Up</a></li>
                                     </ul>
                                 </div>
                             )}

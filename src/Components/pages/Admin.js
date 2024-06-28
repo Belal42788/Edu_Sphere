@@ -41,6 +41,7 @@ export default function Admin() {
                 console.error('Response headers:', error.response.headers);
             }
         }
+        window.location.reload(); 
     };
 
     const handleReject = async (applicationId) => {
@@ -117,7 +118,7 @@ export default function Admin() {
                     <div className="tab-pane fade show active" id="tabs1">
                         <div className="courses-wrapper">
                             <div className="row">
-                                <div className="col-lg-4 col-md-6">
+                                <div className="col-lg-4 col-md-6" style={{ marginLeft: '12%' }}>
                                     <div className="single-courses" style={{ height: '300px' }}>
                                         <span>Image Degree</span>
                                         <div style={{ width: '20%' }}>

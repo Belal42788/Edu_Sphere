@@ -57,6 +57,7 @@ function AdminHeader(props) {
                     <ul className="sub-menu">
                       <li><a href="courses">All Courses</a></li>
                       <li><a href="MyCourses">My Courses</a></li>
+                      <li><a href="/CoursesAdmin">CoursesDashboard</a></li>
                     </ul>
                   </li>
                   <li>
@@ -64,28 +65,16 @@ function AdminHeader(props) {
                     {!sign? (<ul className="sub-menu">
                       <li><a href="about">About</a></li>
                       <li><a href="faq">FAQ</a></li>
-                      <li><a href="404-error">404 Error</a></li>
-                      <li><a href="Afterenroll">After Enroll</a></li>
-                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                      <li><a href="createcourse">Create Course</a></li>
-                      <li><a href="createLesson">Create lesson</a></li>
-                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                      <li><a href="contact">Contact</a></li>
                     </ul>) :(
                     <ul className="sub-menu">
                       <li><a href="about">About</a></li>
-                      <li><a href="register">Register</a></li>
-                      <li><a href="login">Login</a></li>
                       <li><a href="faq">FAQ</a></li>
-                      <li><a href="404-error">404 Error</a></li>
-                      <li><a href="Afterenroll">After Enroll</a></li>
-                      <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                      <li><a href="createcourse">Create Course</a></li>
-                      <li><a href="createLesson">Create lesson</a></li>
-                      <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                    <li><a href="contact">Contact</a></li>
                       </ul>
                         )}
                   </li>
-                  <li><a href="contact">Contact</a></li>
+                  
                 </ul>
               </div>
               {!sign ? (
@@ -107,7 +96,7 @@ function AdminHeader(props) {
                       </li>
                       {!props.isInstructor ? (
                         <li>
-                          <a className="" href="TeacherRegisteration">
+                          <a className="" href="/TeacherRegisteration">
                             <i className="icofont-education"></i> Become an instructor
                           </a>
                         </li>

@@ -2,7 +2,6 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Advertise from "../advertise";
 import React, { useState, useEffect } from "react";
-import profilePicture from "../../assets/images/author/author-07.jpg";
 import { useNavigate } from 'react-router-dom';
 import AdminHeader from "../AdminHeader";
 import FloatingChatbot from './floatingChatbot';
@@ -19,19 +18,20 @@ export default function Profile() {
   };
 
   const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
   const [profile, setProfile] = useState(initialProfile);
   const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
-  
+
   useEffect(() => {
     const storedEmail = localStorage.getItem('Email');
     const storedUsername = localStorage.getItem('UserName');
     const storedImage = localStorage.getItem('Image');
     if (storedEmail) setEmail(storedEmail);
     if (storedUsername) setUsername(storedUsername);
-    if (storedImage) setImageFile(storedImage);
+    if (storedImage) setImagePreview(storedImage);
   }, []);
 
   const handleChange = (e) => {
@@ -47,37 +47,42 @@ export default function Profile() {
   };
 
   const handleImageChange = (e) => {
-    setImageFile(e.target.files[0]);
+    const file = e.target.files[0];
+    setImageFile(file);
+    setImagePreview(URL.createObjectURL(file));
   };
 
   const handleSave = async (e) => {
-  e.preventDefault();
-  const formData = new FormData();
-  formData.append("Image", imageFile);
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("Image", imageFile);
 
-        console.log("FormData entries:");
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ': ' + pair[1]);
+    console.log("FormData entries:");
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+    try {
+      const token = localStorage.getItem('UserToken');
+      const response = await axios.put('https://localhost:7225/api/User/ChangeImage', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Authorization': `Bearer ${token}`
         }
-  try {
-    const token = localStorage.getItem('UserToken');
-    const response = await axios.put('https://localhost:7225/api/User/ChangeImage', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        'Authorization': `Bearer ${token}`
-      }
-    });
+      });
 
-    console.log('Login successful', response.data);
-    setImageFile(response.data.image);
-    setMessage('Profile updated successfully!');
-  } catch (error) {
-    console.error('Error saving profile:', error);
-    setMessage('An error occurred. Please check your profile details and image.'); // Provide a user-friendly error message
-  } finally {
-    setIsEditing(false);
-  }
-};
+      console.log('Updated successfully', response.data);
+      alert('Updated successfully');
+      setImageFile(response.data.image);
+      setImagePreview(response.data.image);
+      setMessage('Profile updated successfully!');
+      localStorage.setItem('Image', response.data.image);
+    } catch (error) {
+      console.error('Error saving profile:', error);
+      setMessage('An error occurred. Please check your profile details and image.');
+    } finally {
+      setIsEditing(false);
+    }
+  };
 
   return (
     <>
@@ -89,14 +94,14 @@ export default function Profile() {
               <div className="sidebar">
                 <div className="sidebar-widget widget-information">
                   <div className="info-price">
-                    <img style={{ borderRadius: '50%' }} src={imageFile} alt="Profile" />
+                    <img style={{ borderRadius: '50%' }} src={imagePreview} alt="Profile" />
                   </div>
                   <div className="info-list">
                     <ul>
                       <li>
                         <strong>Name</strong>
                         {isEditing ? (
-                          <p style={{display:'flex' , flexDirection:'column'}}>  
+                          <p style={{ display: 'flex', flexDirection: 'column' }}>
                             <div className="single-form">
                               <input type="text" name="instructor" value={username} onChange={handleChange} />
                             </div>
@@ -108,7 +113,7 @@ export default function Profile() {
                       <li>
                         <strong>Email</strong>
                         {isEditing ? (
-                          <p style={{display:'flex' , flexDirection:'column'}}> 
+                          <p style={{ display: 'flex', flexDirection: 'column' }}>
                             <div className="single-form">
                               <input type="email" name="Email" value={email} onChange={handleChange} />
                             </div>
@@ -120,7 +125,7 @@ export default function Profile() {
                       <li>
                         <strong>Course Name</strong>
                         {isEditing ? (
-                          <p style={{display:'flex' , flexDirection:'column'}}>  
+                          <p style={{ display: 'flex', flexDirection: 'column' }}>
                             <div className="single-form">
                               <input type="text" name="courseName" value={profile.courseName} onChange={handleChange} />
                             </div>
@@ -131,7 +136,7 @@ export default function Profile() {
                       </li>
                       <li>
                         {isEditing ? (
-                          <p style={{display:'flex' , flexDirection:'column'}}>  
+                          <p style={{ display: 'flex', flexDirection: 'column' }}>
                             <div className="single-form">
                               <input type="file" onChange={handleImageChange} />
                             </div>

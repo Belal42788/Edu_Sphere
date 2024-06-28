@@ -198,10 +198,8 @@ function Courses() {
                                         </div>
                                     </div>
                                         </div>
-                                        
-                                        </div>
                                     </div>
-                                
+                                </div>
                             ))}
                         </div>
                     </div>

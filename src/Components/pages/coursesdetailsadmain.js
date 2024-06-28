@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import courseImg1 from "../../assets/images/courses/courses-01.jpg";
+import { useParams,useLocation } from 'react-router-dom';
+import "../../Styles/Contact.css";
 
 function Coursesdetailsadmain() {
   const initialVideoLinks = [
@@ -49,9 +52,106 @@ function Coursesdetailsadmain() {
     }
   ];
 
+
+  const [applications, setApplications] = useState([]);
+    const [instructorImage, setInstructorImage] = useState("");
+    const [instructorName, setInstructorName] = useState("");
+  const { id } = useParams();
+  const location = useLocation();
+    const { data } = location.state;
+    const dCourse = data.find(e => e.id === parseInt(id));
+  const fetchApplications = async () => {
+    
+    console.log(dCourse);
+    setCourseName(dCourse.courseName);
+    setCourseImage(dCourse.image);
+      try {
+        const token = localStorage.getItem('UserToken');
+        console.log(token);
+        if (!token) {
+          
+                console.error('No authentication token found');
+                // You might want to redirect to the login page or handle this case accordingly
+                return;
+        }
+        const Id = {
+          id : id
+        }
+        console.log(id);
+        const response = await axios.post("https://localhost:7225/api/Lesson/GetAllLessonAsync", Id ,{
+              headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+            });
+      
+            console.log('Getdata successful', response.data);
+            setApplications(response.data);
+        } catch (error) {
+            console.error('Error during getting data', error);
+            if (error.response) {
+                console.error('Response data:', error.response.data);
+                console.error('Response status:', error.response.status);
+                console.error('Response headers:', error.response.headers);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
+
+    const handleSave = async () => {
+    
+      const newData = {
+        id: id,
+        courseName: courseName
+      }
+    try {
+      const token = localStorage.getItem('UserToken');
+      const response = await axios.put('https://localhost:7225/api/Course/UpdateCourseName', newData, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      console.log('Updated successfully', response.data);
+      setCourseName(response.data.courseName);
+      alert('Updated successfully');
+    } catch (error) {
+      console.error('Error saving profile:', error);
+      }
+  };
+
+  const handleSaveImage = async () => {
+    
+      const formData = new FormData();
+    formData.append("Image", courseImage);
+    formData.append("Id", id);
+    for (var pair of formData.entries()) {
+    console.log(pair[0]+ ', ' + pair[1]); 
+}
+    try {
+      const token = localStorage.getItem('UserToken');
+      const response = await axios.put('https://localhost:7225/api/Course/UpdateCourseImage', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      console.log('Updated successfully', response.data);
+      setCourseImage(response.data.courseImage);
+      alert('Updated successfully');
+    } catch (error) {
+      console.error('Error ', error);
+      }
+  };
+
   const [videoLinks, setVideoLinks] = useState(initialVideoLinks);
   const [editableIndex, setEditableIndex] = useState(-1);
-  const [courseName, setCourseName] = useState('Data Science and Machine Learning with Python - Hands On!');
+  const [courseName, setCourseName] = useState('');
   const [editableCourseName, setEditableCourseName] = useState(false);
   const [courseImage, setCourseImage] = useState(courseImg1);
   const [editableImage, setEditableImage] = useState(false);
@@ -80,11 +180,12 @@ function Coursesdetailsadmain() {
 
   const handleCourseNameSave = () => {
     setEditableCourseName(false);
+    handleSave();
   };
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setCourseImage(URL.createObjectURL(e.target.files[0]));
+      setCourseImage(e.target.files[0]);
     }
   };
 
@@ -94,6 +195,7 @@ function Coursesdetailsadmain() {
 
   const handleImageSave = () => {
     setEditableImage(false);
+    handleSaveImage();
   };
 
   return (
@@ -131,7 +233,7 @@ function Coursesdetailsadmain() {
       </div>
       <div className="section section-padding mt-n10">
         <div className="row col-10" style={{ padding: '20px', margin: 'auto' }}>
-          {videoLinks.map((item, index) => (
+          {/* {videoLinks.map((item, index) => (
             <div className="single-student col-5" style={{ margin: '10px' }} key={index}>
               <div className="student-content">
                 {editableIndex === index ? (
@@ -166,13 +268,21 @@ function Coursesdetailsadmain() {
                     <span className="date"><i className="icofont-ui-calendar"></i> {item.description}</span>
                     <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" onClick={() => handleEditClick(index)}>Edit</button>
                   </>
-                )}
+                // )}
               </div>
             </div>
+          ))} */}
+          {applications ? (<></>) : (applications.map((item) => <>
+                    <p>{item.title}</p>
+            <a href={item.video}><p className="name">{item.video}</p></a>
+            <a href={item.lessonMaterial}><p className="name">{item.lessonMaterial}</p></a>
+                    <span className="date"><i className="icofont-ui-calendar"></i> {item.topic}</span>
+                    <button  style={{marginTop:'7px' , marginBottom:'5px'}} className="btn btn-primary btn-hover-dark" >Edit</button>
+                  </>
           ))}
         </div>
         <div className='container '>
-        <button  style={{marginTop:'7px' , marginBottom:'5px' , margin:'auto'}} className="btn btn-primary btn-hover-dark" ><a href='CreateLesson'>Add Lesson</a></button>
+        <button  style={{marginTop:'7px' , marginBottom:'5px' , margin:'auto'}} className="btn btn-primary btn-hover-dark" ><a href='/CreateLesson'>Add Lesson</a></button>
         </div>
       </div>
       <Footer />

@@ -63,8 +63,10 @@ import Shape17 from "../../assets/images/shape/shape-17.png"
 import Shape18 from "../../assets/images/shape/shape-18.png"
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
+import { useNavigate } from 'react-router-dom';
 
 function Home(props) {
+    const navigate = useNavigate();
     const [photo, setPhoto] = useState(author10);
     const [sign, setSign] = useState(false);
     const hundelSignOut = (e) => {
@@ -74,7 +76,7 @@ function Home(props) {
     localStorage.removeItem('UserName');
     localStorage.removeItem('Image');
     setSign(true);
-    window.location.reload(); // This will reload the page
+        window.location.reload(); // This will reload the page
 }
 
 
@@ -259,30 +261,19 @@ const [applications, setApplications] = useState([]);
                                         
                                             <li><a href="courses">All Courses</a></li>
                                             <li><a href="MyCourses">My Courses</a></li>
+                                            <li><a href="/CoursesAdmin">CoursesDashboard</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Pages </a>
+                                        <a href="#">Contact </a>
                                         {!sign ? (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
-                                            <li><a href="404-error">404 Error</a></li>
-                                            <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                                            <li><a href="createcourse">Create Course</a></li>
-                                            <li><a href="createLesson">Create lesson</a></li>
-                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                            <li><a href="contact">Contact</a></li>
                                         </ul>) : (<ul className="sub-menu">
                                             <li><a href="about">About</a></li>
-                                            <li><a href="register">Register</a></li>
-                                            <li><a href="login">Login</a></li>
-                                            <li><a href="faq">FAQ</a></li>
-                                            <li><a href="404-error">404 Error</a></li>
-                                            <li><a href="Afterenroll">After Enroll</a></li>
-                                            <li><a href="CoursesAdmin">Instructor Dashboard</a></li>
-                                            <li><a href="createcourse">Create Course</a></li>
-                                            <li><a href="createLesson">Create lesson</a></li>
-                                            <li><a href="TeacherRegisteration">Become A Instructor</a></li>
+                                                <li><a href="faq">FAQ</a></li>
+                                                <li><a href="contact">Contact</a></li>
                                         </ul>) }
                                         
                                     </li>
@@ -300,14 +291,14 @@ const [applications, setApplications] = useState([]);
                                         </li>
                                     </ul>
                                 </li>
-                                    <li><a href="contact">Contact</a></li>
+                                    
 
 
 
                                    
                                 </ul>
                             </div>
-                            {!props.isUserSignedIn ? (
+                            {!sign ? (
                                 <div className="login-header-action ml-auto">
                                     <a className="action author" href="profile">
                                         <img src={photo} alt="Author" />
@@ -325,7 +316,7 @@ const [applications, setApplications] = useState([]);
                                                 </a>
                                             </li>
                                             {!props.isInstructor ? (<li>
-                                                <a className="" href="TeacherRegisteration">
+                                                <a className="" href="/TeacherRegisteration">
                                                     <i className="icofont-education"></i> Become an instructor
                                                 </a>
                                             </li>):(
@@ -471,7 +462,7 @@ const [applications, setApplications] = useState([]);
                                 <div className="row">
                                     {applications.map((item) => (
                                 <div className="col-lg-4 col-md-6" >
-                                    <div className="single-courses" style={{height:'400px'}}>
+                                    <div className="single-courses" style={{width:'100%'}}>
                                         <div className="courses-images">
                                             <a key={item.id} href={`Coursedetails/${item.id}`}><img src={item.image} alt="Courses" /></a>
                                             <div class="courses-option dropdown">
@@ -499,7 +490,21 @@ const [applications, setApplications] = useState([]);
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h4 className="title" ><a href="Coursedetails">{item.courseName}</a></h4>
+                                                    <h4 className="title" ><a href="Coursedetails">{item.courseName}</a></h4>
+                                                                                                <div class="courses-rating">
+                                        <p>38% Complete</p>
+
+                                        <div class="rating-progress-bar">
+                                            <div class="rating-line"style={{width: '38%'}}></div>
+                                        </div>
+
+                                        <div class="rating-meta">
+                                            <span class="rating-star">
+													<span class="rating-bar" style={{width: '80%'}}></span>
+                                            </span>
+                                            <p>Your rating</p>
+                                        </div>
+                                    </div>
                                         </div>
                                     </div>
                                 </div>

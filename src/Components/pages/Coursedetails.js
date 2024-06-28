@@ -461,7 +461,7 @@ function FreeCourse() {
 
 
                     <div class="info-btn">
-                      <a href="#" class="btn btn-primary btn-hover-dark">
+                      <a key={id} href={`/VisaCard/${id}`} class="btn btn-primary btn-hover-dark">
                         Enroll Now
                       </a>
                     </div>

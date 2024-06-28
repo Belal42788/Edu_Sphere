@@ -47,7 +47,41 @@ import TidioChat from './Tidiochat';
 
 function MyCourses() {
 
-        const navigate = useNavigate();
+    const navigate = useNavigate();
+    const [applications, setApplications] = useState([]);
+
+  const fetchApplications = async () => {
+    try {
+      const token = localStorage.getItem('UserToken');
+
+      if (!token) {
+        console.error('No authentication token found');
+        // You might want to redirect to the login page or handle this case accordingly
+        return;
+      }
+
+      const response = await axios.get('https://localhost:7225/api/Student/MyCourses', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      console.log('Getdata successful', response.data);
+        setApplications(response.data);
+    } catch (error) {
+      console.error('Error during getting data', error);
+      if (error.response) {
+        console.error('Response data:', error.response.data);
+        console.error('Response status:', error.response.status);
+        console.error('Response headers:', error.response.headers);
+      }
+    }
+  };
+
+  useEffect(() => {
+        fetchApplications();
+    }, []); // Empty dependency array means this effect runs once when the component mounts
+
 
     const coursesinf = [
         { id: 8, title: 'Effective Communication Skills for Managers', instructor: 'Laura Garcia', duration: '7 weeks', ImageUlrcourses: courseImg1, ImageUlrinstr: author8 },
@@ -75,11 +109,11 @@ function MyCourses() {
                 
                 <div class="courses-wrapper-02">
                     <div class="row">
-                        {coursesinf.map((item)=>(
+                        {applications.map((item)=>(
                         <div class="col-lg-4 col-md-6">
                             <div class="single-courses">
                                 <div class="courses-images">
-                                    <a href="coursesdetails"><img src={item.ImageUlrcourses} alt="Courses"/></a>
+                                    <a href="coursesdetails"><img src={item.image} alt="Courses"/></a>
                                     <div class="courses-option dropdown">
                                         <button class="option-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span></span>
@@ -98,16 +132,16 @@ function MyCourses() {
                                     <div class="courses-author">
                                         <div class="author">
                                             <div class="author-thumb">
-                                                <a href="#"><img src={item.ImageUlrinstr}alt="Author"/></a>
+                                                <a href="#"><img src={item.teacherImage}alt="Author"/></a>
                                             </div>
                                             <div class="author-name">
-                                                <a class="name" href="#">{item.instructor}</a>
+                                                <a class="name" href="#">{item.teacherName}</a>
                                                 <a class="name-2" href="#">Ohula Malsh</a>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <h4 class="title"><a href="courses-details.html">{item.title}</a></h4>
+                                    <h4 class="title"><a href="courses-details.html">{item.courseName}</a></h4>
 
                                     <div class="courses-rating">
                                         <p>38% Complete</p>

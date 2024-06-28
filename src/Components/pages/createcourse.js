@@ -66,7 +66,11 @@ function Createcourse() {
             }
         });
         console.log('CreateCourse successful', response.data);
-        alert('Course created successfully!');
+        if (response.data.message) { 
+          alert('Sorry,You are not a teacher');
+          return;
+        }
+        alert(`Course created successfully! Course ID: ${response.data.id}`);
         // Handle successful registration, e.g., redirect to login or home page
       } catch (error) {
         if (error.response && error.response.status === 403) {

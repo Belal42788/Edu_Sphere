@@ -27,7 +27,7 @@ namespace Backend.Controllers
             return Ok(result);
         }
         [Authorize]
-        [HttpGet("GetAllLessonAsync")]
+        [HttpPost("GetAllLessonAsync")]
         public async Task<IActionResult> GetAllLessonAsync(CourseDto model)
         {
 

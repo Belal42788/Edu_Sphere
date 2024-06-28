@@ -3,8 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../../Styles/Contact.css";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function VisaCard() {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [cardInfo, setCardInfo] = useState({
     cvc: "",
     expiry: "",
@@ -12,6 +17,37 @@ function VisaCard() {
     name: "",
     number: "",
   });
+
+  const hundelChange = async (e) => { 
+  const token = localStorage.getItem('UserToken');
+  if (!token) {
+    alert('User is not logged in');
+    return;
+  }
+
+  const Id = { id: id }; // replace with your actual course ID
+
+  try {
+    const response = await axios.post('https://localhost:7225/api/Student/JoinCourse', Id, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    console.log(response.data);
+    alert('Join successful');
+    navigate('/Afterenroll', { state: { data: response.data } });
+  } catch (error) {
+    console.error('Error joining course', error);
+    if (error.response && error.response.status === 401) {
+      alert('Unauthorized. Please log in again.');
+      // Redirect to login or show login modal
+      navigate('/login'); // adjust this to your login route
+    } else {
+      alert('An error occurred. Please try again later.');
+    }
+  }
+}
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +57,7 @@ function VisaCard() {
   return (
     <>
 
-<div className="container" style={{ position: 'relative' }} >
+<div className="container" style={{ position: 'relative',marginTop:'14%' }} >
       <div className="box justify-content-center align-items-center" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, 20%)' }}>
         <div className="formDiv row">
           <div className="creditCard mb-3 col-6">
@@ -96,7 +132,7 @@ function VisaCard() {
           </form>
           </div>
           <div className="single-form col-6 " style={{margin:'auto'}}>
-                                                <button type="submit" className="btn btn-primary btn-hover-dark w-100">Create Lesson</button>
+              <button type="submit" onClick={hundelChange} className="btn btn-primary btn-hover-dark w-100">Join</button>
                                             </div>
         </div>
       </div>

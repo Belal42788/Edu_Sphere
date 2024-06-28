@@ -8,7 +8,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import AdminHeader from "../AdminHeader";
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
@@ -151,6 +151,9 @@ export default function Login() {
                           <a className="btn btn-secondary btn-outline w-100" href="#">
                             Login with Google
                           </a>
+                          <p>
+      You don't have an email? <Link to="/register">Register</Link>
+    </p>
                         </div>
                       </form>
                     </div>

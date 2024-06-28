@@ -20,9 +20,13 @@ import "../../Styles/Contact.css";
 import AdminHeader from "../AdminHeader";
 import FloatingChatbot from './floatingChatbot';
 import TidioChat from './Tidiochat';
+import { useLocation } from 'react-router-dom';
 
 
 function Afterenroll() {
+    const location = useLocation();
+    const { data } = location.state;
+    console.log(data);
   const videoLinks = [
     {
       title: "01. The Complete Medicine Masterclass",
@@ -135,7 +139,7 @@ function Afterenroll() {
             </div>
             <div className="courses-enroll-content">
               <div className="courses-enroll-title">
-                <h2 className="title">Finance & Investment Series: Learn to Budget and Calculate Your Net Worth.</h2>
+                <h2 className="title">{data.courseName}</h2>
               </div>
               <div className="courses-enroll-tab">
                 <div className="enroll-tab-menu">
@@ -163,14 +167,6 @@ function Afterenroll() {
                                             </div>
                                             <div class="col-lg-8">
                                                 <div class="enroll-tab-content">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                        industry. Lorem Ipsum has been industry's standard dummy text
-                                                        ever since the 1500s when andom unknown printer took a galley of
-                                                        type scrambled it to make a type specimen book. It has survived
-                                                        not’s only and five centuries, but also the lea into electronic
-                                                        typesetting, remaining priting essentially unchanged. It was
-                                                        popularsed in the 1960 with containing Lorem Ipsum passages
-                                                        desktop publishing software.</p>
                                                     <table class="table">
                                                     {coursesinf.map((item)=>(
                                                         <tbody>
@@ -220,26 +216,7 @@ function Afterenroll() {
                                             </div>
                                             <div class="col-lg-8">
                                                 <div class="enroll-tab-content">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                        industry. Lorem Ipsum has been industry's standard dummy text
-                                                        ever since the 1500s when andom unknown printer took a galley of
-                                                        type scrambled it to make a type specimen book. It has survived
-                                                        not’s only and five centuries, but also the lea into electronic
-                                                        typesetting, remaining priting essentially unchanged. It was
-                                                        popularsed in the 1960 with containing Lorem Ipsum passages
-                                                        desktop publishing software.</p>
-                                                    <p class="text">“Lorem Ipsum is simply dummy text of the printing
-                                                        and typesetting industry. Lorem Ipsum has industry's standard
-                                                        dummy text ever since the 1500s when andom unknown printer took
-                                                        a galley scrambled it to make a type specimen book.”</p>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                        industry. Lorem Ipsum has been industry's standard dummy text
-                                                        ever since the 1500s when andom unknown printer took a galley of
-                                                        type scrambled it to make a type specimen book. It has survived
-                                                        not’s only and five centuries, but also the lea into electronic
-                                                        typesetting, remaining priting essentially unchanged. It was
-                                                        popularsed in the 1960 with containing Lorem Ipsum passages
-                                                        desktop publishing software.</p>
+                                                   {data.courseDescription}
                                                 </div>
                                             </div>
                                         </div>

@@ -1,0 +1,149 @@
+grammar ArithmeticExpressions;
+
+options {output=AST;}
+
+tokens{
+StartgeneralArithExpr;
+Goal;
+VarDeclaration;
+MethodDeclaration;
+Exp;
+Term;
+Factor;
+MAIN;
+Class;
+Scope;
+IFstm;
+WhileStm;
+PRINT;
+Assignment;
+Indexing;
+Objc;
+Negation;
+This;
+}
+@members {
+String s="";
+}
+
+startgeneralArithExpr 	:	(goal) ->^(StartgeneralArithExpr goal);
+
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+   
+finally { s = s + "Exit..."+"\n"; }
+
+goal	:	(mainClass (classDeclaration)*) ->^(Goal mainClass (classDeclaration)*) ;
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+    
+mainClass	:('class' Identifier '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' Identifier ')' '{' statement '}' '}')
+->^(MAIN 'class' Identifier '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' Identifier ')' '{' statement '}' '}')
+;
+
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+    
+
+classDeclaration	:('class' Identifier ( 'extends' Identifier )? '{' decl* '}')
+			->^(Class 'class' Identifier ( 'extends' Identifier )? '{' decl* '}')
+;
+
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+
+varDeclaration	:	(type Identifier ';');
+
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+
+decl	:
+	(varDeclaration ->^(VarDeclaration varDeclaration)
+        |methodDeclaration ->^(MethodDeclaration methodDeclaration) )
+        ;
+        
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+
+methodDeclaration	:('public' type Identifier '(' ( type Identifier ( ',' type Identifier )* )? ')' '{' ( varDeclaration )* ( statement )* ('return' expression ';')?'}')
+
+;
+
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+type	:	('int' '[' ']'
+|	'boolean'
+|	'int'
+|	Identifier)
+;
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+statement	:('{' ( statement )* '}') ->^(Scope '{' ( statement )* '}')
+|	('if' '(' expression ')' statement ('else' statement)?) ->^(IFstm 'if' '(' expression ')' statement ('else' statement)?)
+|	('while' '(' expression ')' statement) ->^(WhileStm 'while' '(' expression ')' statement)
+|	('System.out.println' '(' expression ')' ';') ->^(PRINT 'System.out.println' '(' expression ')' ';')
+|	(Identifier '=' expression ';') ->^(Assignment Identifier '=' expression ';')
+|	(Identifier '[' expression ']' '=' expression ';') ->^(Indexing Identifier '[' expression ']' '=' expression ';')
+;
+expression	:	(factor (term)*) ->^(Exp factor (term)*);
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+    
+
+term	:'&&' factor ->^(Term  '&&' factor)
+         | '<' factor ->^(Term '<' factor)
+         | '+' factor ->^(Term '+' factor)
+         | '-' factor ->^(Term '-' factor)
+         | '*' factor ->^(Term '*' factor)
+         | ('[' expression ']') ->^(Indexing  '[' expression ']')
+         | (('.' Identifier '(' ( expression ( ',' expression )* )? ')' )
+         | ('.' 'length') )^
+         ; 
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+                                                         
+factor	:(Identifier) ->^(Factor Identifier)
+        | (Num) ->^(Factor Num)
+        | (TRorFL) ->^(Factor TRorFL)
+        | ('this') ->^(This 'this')
+        | ('new' 'int' '[' expression ']') ->^(Objc 'new' 'int' '[' expression ']' )
+        | ('new' Identifier '(' ')') ->^(Objc 'new' Identifier '(' ')')
+        | ('!' expression )->^(Negation '!' expression )
+        |('(' expression ')') ->^(Factor '(' expression ')') ;
+// catch blocks go first
+catch[MismatchedTokenException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[NoViableAltException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+catch[RecognitionException e] { s = s +getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e) +"\n";}
+
+TRorFL	:	'true' | 'false';
+Identifier	:	('a'..'z'|'A'..'Z'|'$'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'$')*;
+Num	:	'0'..'9'+ | '0'..'9'+ '.' '0'..'9'+ ;
+Strings	:	'"' (.)* '"';
+ML_COMMENT	:	'/*' ( options {greedy=false;} : .)* '*/'+{skip();};
+SL_COMMENT	:	'//' (.)*'\n'+{skip();};
+Ws  :   (' '|'\n'|'\r'|'\t')+ {skip();};

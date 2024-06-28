@@ -22,7 +22,7 @@ import Admin from "./Components/pages/Admin";
 import Blog from "./Components/pages/Blog";
 import Blogdetails from "./Components/pages/Blogdetails";
 import Coursesdetailsadmain from "./Components/pages/coursesdetailsadmain"
-
+import VisaCard from "./Components/pages/VisaCard"
 function App() {
   return (
     <Router>
@@ -34,6 +34,7 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Blogdetails/:id" element={<Blogdetails />} />
         <Route path="/Afterenroll" element={<Afterenroll />} />
+        <Route path="/VisaCard/:id" element={<VisaCard />} />
        
         <Route path="/MyCourses" element={<MyCourses />} />
         <Route path="/CoursesAdmin" element={<CoursesAdmin />} />
@@ -47,7 +48,7 @@ function App() {
         <Route path="/Courses" element={<Courses />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/Coursesdetailsadmain" element={<Coursesdetailsadmain />} />
+        <Route path="/Coursesdetailsadmain/:id" element={<Coursesdetailsadmain />} />
 
         <Route path="*" element={<Error404 />} />
       </Routes>
